@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /* 
@@ -37,6 +34,6 @@ public class HsSplash : MonoBehaviour {
 	}
 
 	public void NewGame(){
-		SceneManager.LoadScene("Game");
+		SceneManager.LoadScene("_Calendar");
 	}
 }

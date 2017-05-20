@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /* 
 	@author Hudson Schumaker
@@ -9,7 +7,18 @@ using UnityEngine;
 
 public class HsKey : MonoBehaviour {
 
+
+	private float speed;
+	private GameObject gameEngine;
+
+	private HsEngine hsengine;
+
+
 	private void Start () {
+		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
+		this.hsengine = (HsEngine) gameEngine.GetComponent (typeof(HsEngine));
+		this.speed = hsengine.GetLevelSpeed ();
+
 	}
 
 	private void Update () {
@@ -18,10 +27,23 @@ public class HsKey : MonoBehaviour {
 				RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (t.position), -Vector2.up);
 				if (hit.collider != null) {
 					if (hit.collider.gameObject == this.gameObject) {
-						Destroy (this.gameObject);
+						if(transform.position.y < -2.0f){
+							Destroy (this.gameObject);
+							Invoke ("backFrame", 0.5f);
+							hsengine.AddScore ();
+						}
 					}
 				}
 			}	
+		}
+		this.transform.Translate (new Vector3 (0.0f,-speed * Time.deltaTime,0.0f));// Make fall
+		this.isOutOfScreen ();
+	}
+
+	private void isOutOfScreen(){
+		if(this.transform.position.y < -6.10) {
+			Destroy (this.gameObject);
+			Handheld.Vibrate();
 		}
 	}
 }

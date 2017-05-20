@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\HsBackground.cs" />
+     <Compile Include="Assets\Scripts\HsCalendar.cs" />
+     <Compile Include="Assets\Scripts\HsEngine.cs" />
      <Compile Include="Assets\Scripts\HsKey.cs" />
      <Compile Include="Assets\Scripts\HsSplash.cs" />
      <Compile Include="Assets\Scripts\HsTitle.cs" />
