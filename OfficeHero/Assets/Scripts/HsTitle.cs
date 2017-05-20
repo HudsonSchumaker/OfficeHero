@@ -10,7 +10,7 @@ public class HsTitle : MonoBehaviour {
 
 	private float delay;
 	void Start () {
-		delay = 1.5f;
+		delay = 1.9f;
 	}
 
 	void Update () {
