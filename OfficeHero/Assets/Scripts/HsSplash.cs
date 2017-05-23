@@ -11,29 +11,28 @@ public class HsSplash : MonoBehaviour {
 	private SpriteRenderer grafico;
 	private float larguraImagem;
 	private float alturaImagem;
-
 	private float alturaTela;
 	private float larguraTela;
+	private float delay;
 
 	private void Start () {
-		grafico = GetComponent<SpriteRenderer> ();
+		this.delay = 1.9f;
 
-		larguraImagem = grafico.sprite.bounds.size.x;
-		alturaImagem = grafico.sprite.bounds.size.y;
-
-		alturaTela = Camera.main.orthographicSize * 2.0f;
-		larguraTela = alturaTela / Screen.height * Screen.width;
-
+		this.grafico = GetComponent<SpriteRenderer> ();
+		this.larguraImagem = grafico.sprite.bounds.size.x;
+		this.alturaImagem = grafico.sprite.bounds.size.y;
+		this.alturaTela = Camera.main.orthographicSize * 2.0f;
+		this.larguraTela = alturaTela / Screen.height * Screen.width;
 		Vector2 novaEscala = transform.localScale;
-		novaEscala.x = larguraTela/larguraImagem; // + 0.25f para nao risco em background scrooler 
+		novaEscala.x = larguraTela/larguraImagem;
 		novaEscala.y = alturaTela/alturaImagem;
 		this.transform.localScale = novaEscala;
 	}
 
 	private void Update () {
-	}
-
-	public void NewGame(){
-		SceneManager.LoadScene("_Calendar");
+		delay -= Time.deltaTime;
+		if(delay <= 0.0f){
+			SceneManager.LoadScene("_MainScreen");
+		}
 	}
 }

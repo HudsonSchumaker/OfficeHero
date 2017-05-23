@@ -6,19 +6,14 @@
 */
 
 public class HsKey : MonoBehaviour {
-
-
 	private float speed;
 	private GameObject gameEngine;
-
 	private HsEngine hsengine;
-
 
 	private void Start () {
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsengine = (HsEngine) gameEngine.GetComponent (typeof(HsEngine));
 		this.speed = hsengine.GetLevelSpeed ();
-
 	}
 
 	private void Update () {
@@ -29,7 +24,6 @@ public class HsKey : MonoBehaviour {
 					if (hit.collider.gameObject == this.gameObject) {
 						if(transform.position.y < -2.0f){
 							Destroy (this.gameObject);
-							Invoke ("backFrame", 0.5f);
 							hsengine.AddScore ();
 						}
 					}
