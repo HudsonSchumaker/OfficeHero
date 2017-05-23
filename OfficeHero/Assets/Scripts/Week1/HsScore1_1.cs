@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 /* 
 	@author Hudson Schumaker
 	@version 1.0.0
-
 */
 
-public class HsSchumakerTeam : MonoBehaviour {
+public class HsScore1_1 : MonoBehaviour {
 
 	private SpriteRenderer grafico;
+	public  Text score;
+	public  Text strike;
 	private float larguraImagem;
 	private float alturaImagem;
 	private float alturaTela;
@@ -17,8 +19,7 @@ public class HsSchumakerTeam : MonoBehaviour {
 	private float delay;
 
 	private void Start () {
-		this.delay = 5.0f;
-
+		this.delay = 5.5f;
 		this.grafico = GetComponent<SpriteRenderer> ();
 		this.larguraImagem = grafico.sprite.bounds.size.x;
 		this.alturaImagem = grafico.sprite.bounds.size.y;
@@ -28,12 +29,14 @@ public class HsSchumakerTeam : MonoBehaviour {
 		novaEscala.x = larguraTela/larguraImagem;
 		novaEscala.y = alturaTela/alturaImagem;
 		this.transform.localScale = novaEscala;
+		score.text = "Score: " + PlayerPrefs.GetInt("ScoreLv1-1");
+		strike.text = "Longest Strike: "+ PlayerPrefs.GetInt("StrikeLv1-1");
 	}
 
 	private void Update () {
 		delay -= Time.deltaTime;
 		if(delay <= 0.0f){
-			SceneManager.LoadScene("_SplashScreen");
+			SceneManager.LoadScene("_Week1-2");
 		}
 	}
 }

@@ -11,6 +11,7 @@ public class HsKey1_1 : MonoBehaviour {
 	private GameObject gameEngine;
 	private HsWeek1_1 hsEngine;
 
+
 	private void Start () {
 		this.speed = 1.5f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
@@ -26,6 +27,8 @@ public class HsKey1_1 : MonoBehaviour {
 						if(transform.position.y < -2.0f){
 							Destroy (this.gameObject);
 							hsEngine.AddScore ();
+							hsEngine.RemoveOneKey ();
+							hsEngine.Strike ();
 						}
 					}
 				}
@@ -39,6 +42,8 @@ public class HsKey1_1 : MonoBehaviour {
 		if(this.transform.position.y < -6.10) {
 			Destroy (this.gameObject);
 			Handheld.Vibrate();
+			hsEngine.RemoveOneKey ();
+			hsEngine.EndStrike ();
 		}
 	}
 }

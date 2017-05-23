@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Week1\HsKey1_3.cs" />
      <Compile Include="Assets\Scripts\Week1\HsKey1_4.cs" />
      <Compile Include="Assets\Scripts\Week1\HsKey1_5.cs" />
+     <Compile Include="Assets\Scripts\Week1\HsScore1_1.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_1.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_2.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_3.cs" />

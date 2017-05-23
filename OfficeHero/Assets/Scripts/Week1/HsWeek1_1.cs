@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /* 
 	@author Hudson Schumaker
@@ -16,10 +17,13 @@ public class HsWeek1_1 : MonoBehaviour {
 
 	private int numberOfKeys;
 	private int score;
+	private int longStrike;
+	private int strike;
 	private float x1, x2, x3, x4;
 	private float y;
 	private float z;
 	private float interval;
+
 
 	private void Start () {
 		this.score = 0;
@@ -31,23 +35,26 @@ public class HsWeek1_1 : MonoBehaviour {
 		this.y = 5.5f;
 		this.z = 0.0f;
 		this.interval = 1.1f;
-		this.numberOfKeys = 1000;
+		this.numberOfKeys = 122;
 		this.TheLevel();
-
+		this.longStrike = strike = 0;
 	}
 
 	private void Update () {
 		if(Input.touchCount > 0){
-			hero.SetActive(true);
+			hero.SetActive(false);
 			Invoke ("BackFrame", 0.4f);
 		}
 		scoreStr.text = "Score: " + score;
+		if(numberOfKeys <= 0){
+			EndStrike ();//Se nao errar nao entra
+			PlayerPrefs.SetInt ("StrikeLv1-1", longStrike);
+			PlayerPrefs.SetInt ("ScoreLv1-1", score);
+			SceneManager.LoadScene("_EndWeek1-1");
+		}
 	}
 
 	private void TheLevel(){		
-
-
-
 		Invoke ("CreateKey1", 0.1f);
 		Invoke ("CreateKey3", 0.5f);
 		Invoke ("CreateKey1", interval);
@@ -109,7 +116,6 @@ public class HsWeek1_1 : MonoBehaviour {
 		Invoke ("CreateKey3", interval*42);
 		Invoke ("CreateKey1", interval*43);
 		Invoke ("CreateKey1", interval*44);
-
 		Invoke ("CreateKey1", interval*45);
 		Invoke ("CreateKey3", interval*45);
 		Invoke ("CreateKey1", interval*46);
@@ -169,30 +175,28 @@ public class HsWeek1_1 : MonoBehaviour {
 		Invoke ("CreateKey1", interval*88);
 		Invoke ("CreateKey1", interval*89);
 		Invoke ("CreateKey1", interval*90);
+		Invoke ("CreateKey3", interval*91);
+		Invoke ("CreateKey3", interval*92);
 	}
 		
 	private void BackFrame(){
-		hero.SetActive(false);
+		hero.SetActive(true);
 	}
 
 	private void CreateKey1 () {
 		Instantiate (key, new Vector3 (x1, y, z), Quaternion.identity);
-		numberOfKeys--;
 	}
 
 	private void CreateKey2 () {
 		Instantiate (key, new Vector3 (x2, y, z), Quaternion.identity);	
-		numberOfKeys--;
 	}
 
 	private void CreateKey3 () {
 		Instantiate (key, new Vector3 (x3, y, z), Quaternion.identity);	
-		numberOfKeys--;
 	}
 
 	private void CreateKey4 () {
 		Instantiate (key, new Vector3 (x4, y, z), Quaternion.identity);	
-		numberOfKeys--;
 	}
 
 	public void AddScore () {
@@ -201,5 +205,20 @@ public class HsWeek1_1 : MonoBehaviour {
 
 	public void AddScore (int value) {
 		score += value;
+	}
+
+	public void RemoveOneKey(){
+		numberOfKeys--;
+	}
+
+	public void Strike(){
+		strike++;
+	}
+
+	public void EndStrike(){
+		if(strike > longStrike){
+			longStrike = strike;
+		}
+		strike = 0;
 	}
 }
