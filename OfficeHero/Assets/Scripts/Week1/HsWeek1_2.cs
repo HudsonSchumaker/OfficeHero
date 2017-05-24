@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /* 
 	@author Hudson Schumaker
@@ -16,12 +15,16 @@ public class HsWeek1_2 : MonoBehaviour {
 
 	private int numberOfKeys;
 	private int score;
+	private int longStrike;
+	private int error;
+	private int strike;
 	private float x1, x2, x3, x4;
 	private float y;
 	private float z;
 	private float interval;
 
 	private void Start () {
+		this.error = 0;
 		this.score = 0;
 		scoreStr.text = "Score: " + score;
 		this.x1 = -2.0f;
@@ -31,22 +34,25 @@ public class HsWeek1_2 : MonoBehaviour {
 		this.y = 5.5f;
 		this.z = 0.0f;
 		this.interval = 1.1f;
-		this.numberOfKeys = 1000;
+		this.numberOfKeys = 125;
 		this.TheLevel();
-
+		this.longStrike = strike = 0;
 	}
 
 	private void Update () {
-		if(Input.touchCount > 0){
-			hero.SetActive(false);
-			Invoke ("BackFrame", 0.4f);
+		scoreStr.text = "Score: " + score;
+		if(numberOfKeys <= 0){
+			EndStrike ();//Se nao errar nao entra
+			PlayerPrefs.SetInt ("StrikeLv1-2", longStrike);
+			PlayerPrefs.SetInt ("ScoreLv1-2", score);
+			SceneManager.LoadScene("_EndWeek1-2");
+		}
+		if(error >= 8){
+			SceneManager.LoadScene("_GameOver");
 		}
 	}
 
 	private void TheLevel(){		
-
-
-
 		Invoke ("CreateKey4", 0.1f);
 		Invoke ("CreateKey2", 0.5f);
 		Invoke ("CreateKey4", interval);
@@ -108,7 +114,6 @@ public class HsWeek1_2 : MonoBehaviour {
 		Invoke ("CreateKey2", interval*42);
 		Invoke ("CreateKey4", interval*43);
 		Invoke ("CreateKey4", interval*44);
-
 		Invoke ("CreateKey4", interval*45);
 		Invoke ("CreateKey2", interval*45);
 		Invoke ("CreateKey4", interval*46);
@@ -168,6 +173,11 @@ public class HsWeek1_2 : MonoBehaviour {
 		Invoke ("CreateKey4", interval*88);
 		Invoke ("CreateKey4", interval*89);
 		Invoke ("CreateKey4", interval*90);
+		Invoke ("CreateKey4", interval*91);
+		Invoke ("CreateKey2", interval*91);
+		Invoke ("CreateKey4", interval*92);
+		Invoke ("CreateKey4", interval*93);
+		Invoke ("CreateKey2", interval*92);	
 	}
 
 	private void BackFrame(){
@@ -176,29 +186,46 @@ public class HsWeek1_2 : MonoBehaviour {
 
 	private void CreateKey1 () {
 		Instantiate (key, new Vector3 (x1, y, z), Quaternion.identity);
-		numberOfKeys--;
 	}
 
 	private void CreateKey2 () {
 		Instantiate (key, new Vector3 (x2, y, z), Quaternion.identity);	
-		numberOfKeys--;
 	}
 
 	private void CreateKey3 () {
 		Instantiate (key, new Vector3 (x3, y, z), Quaternion.identity);	
-		numberOfKeys--;
 	}
 
 	private void CreateKey4 () {
 		Instantiate (key, new Vector3 (x4, y, z), Quaternion.identity);	
-		numberOfKeys--;
 	}
 
 	public void AddScore () {
+		hero.SetActive(false);
+		Invoke ("BackFrame", 0.4f);
 		score++;
 	}
 
 	public void AddScore (int value) {
 		score += value;
+	}
+
+	public void RemoveOneKey(){
+		numberOfKeys--;
+	}
+
+	public void Error(){
+		error++;
+	}
+
+	public void Strike(){
+		strike++;
+	}
+
+	public void EndStrike(){
+		if(strike > longStrike){
+			longStrike = strike;
+		}
+		strike = 0;
 	}
 }

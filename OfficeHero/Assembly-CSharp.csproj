@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\HsBackground.cs" />
      <Compile Include="Assets\Scripts\HsEngine.cs" />
+     <Compile Include="Assets\Scripts\HsGameOver.cs" />
      <Compile Include="Assets\Scripts\HsKey.cs" />
      <Compile Include="Assets\Scripts\HsMainMenu.cs" />
      <Compile Include="Assets\Scripts\HsSchumakerTeam.cs" />
@@ -58,7 +59,16 @@
      <Compile Include="Assets\Scripts\Week1\HsKey1_3.cs" />
      <Compile Include="Assets\Scripts\Week1\HsKey1_4.cs" />
      <Compile Include="Assets\Scripts\Week1\HsKey1_5.cs" />
+     <Compile Include="Assets\Scripts\Week1\HsPreWeek1_1.cs" />
+     <Compile Include="Assets\Scripts\Week1\HsPreWeek1_2.cs" />
+     <Compile Include="Assets\Scripts\Week1\HsPreWeek1_3.cs" />
+     <Compile Include="Assets\Scripts\Week1\HsPreWeek1_4.cs" />
+     <Compile Include="Assets\Scripts\Week1\HsPreWeek1_5.cs" />
      <Compile Include="Assets\Scripts\Week1\HsScore1_1.cs" />
+     <Compile Include="Assets\Scripts\Week1\HsScore1_2.cs" />
+     <Compile Include="Assets\Scripts\Week1\HsScore1_3.cs" />
+     <Compile Include="Assets\Scripts\Week1\HsScore1_5.cs" />
+     <Compile Include="Assets\Scripts\Week1\HsScore_1_4.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_1.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_2.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_3.cs" />

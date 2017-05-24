@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -18,14 +16,15 @@ public class HsWeek1_1 : MonoBehaviour {
 	private int numberOfKeys;
 	private int score;
 	private int longStrike;
+	private int error;
 	private int strike;
 	private float x1, x2, x3, x4;
 	private float y;
 	private float z;
 	private float interval;
 
-
 	private void Start () {
+		this.error = 0;
 		this.score = 0;
 		scoreStr.text = "Score: " + score;
 		this.x1 = -2.0f;
@@ -35,22 +34,21 @@ public class HsWeek1_1 : MonoBehaviour {
 		this.y = 5.5f;
 		this.z = 0.0f;
 		this.interval = 1.1f;
-		this.numberOfKeys = 122;
+		this.numberOfKeys = 120;
 		this.TheLevel();
 		this.longStrike = strike = 0;
 	}
 
 	private void Update () {
-		if(Input.touchCount > 0){
-			hero.SetActive(false);
-			Invoke ("BackFrame", 0.4f);
-		}
 		scoreStr.text = "Score: " + score;
 		if(numberOfKeys <= 0){
 			EndStrike ();//Se nao errar nao entra
 			PlayerPrefs.SetInt ("StrikeLv1-1", longStrike);
 			PlayerPrefs.SetInt ("ScoreLv1-1", score);
 			SceneManager.LoadScene("_EndWeek1-1");
+		}
+		if(error >= 8){
+			SceneManager.LoadScene("_GameOver");
 		}
 	}
 
@@ -60,11 +58,9 @@ public class HsWeek1_1 : MonoBehaviour {
 		Invoke ("CreateKey1", interval);
 		Invoke ("CreateKey3", interval);
 		Invoke ("CreateKey1", interval*2);
-		Invoke ("CreateKey3", interval*2);
 		Invoke ("CreateKey1", interval*3);
 		Invoke ("CreateKey1", interval*4);
 		Invoke ("CreateKey1", interval*5);
-		Invoke ("CreateKey3", interval*3);
 		Invoke ("CreateKey1", interval*6);
 		Invoke ("CreateKey1", interval*7);
 		Invoke ("CreateKey1", interval*8);
@@ -200,6 +196,8 @@ public class HsWeek1_1 : MonoBehaviour {
 	}
 
 	public void AddScore () {
+		hero.SetActive(false);
+		Invoke ("BackFrame", 0.4f);
 		score++;
 	}
 
@@ -209,6 +207,10 @@ public class HsWeek1_1 : MonoBehaviour {
 
 	public void RemoveOneKey(){
 		numberOfKeys--;
+	}
+
+	public void Error(){
+		error++;
 	}
 
 	public void Strike(){
