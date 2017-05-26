@@ -12,6 +12,7 @@ public class HsWeek1_4 : MonoBehaviour {
 	public GameObject key;
 	public Text scoreStr;
 	public GameObject hero;
+	private AudioSource audioSource;
 
 	private int numberOfKeys;
 	private int score;
@@ -37,6 +38,7 @@ public class HsWeek1_4 : MonoBehaviour {
 		this.numberOfKeys = 140;
 		this.TheLevel();
 		this.longStrike = strike = 0;
+		this.audioSource = GetComponent<AudioSource> ();
 	}
 
 	private void Update () {

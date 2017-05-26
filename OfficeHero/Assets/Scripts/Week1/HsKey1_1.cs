@@ -24,10 +24,10 @@ public class HsKey1_1 : MonoBehaviour {
 				if (hit.collider != null) {
 					if (hit.collider.gameObject == this.gameObject) {
 						if(transform.position.y < -2.0f){
-							Destroy (this.gameObject);
 							hsEngine.AddScore ();
 							hsEngine.RemoveOneKey ();
 							hsEngine.Strike ();
+							Destroy (this.gameObject);
 						}
 					}
 				}
