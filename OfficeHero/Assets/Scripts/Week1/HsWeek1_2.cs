@@ -40,7 +40,7 @@ public class HsWeek1_2 : MonoBehaviour {
 	}
 
 	private void Update () {
-		scoreStr.text = "Score: " + score;
+		scoreStr.text = "SCORE: " + score;
 		if(numberOfKeys <= 0){
 			EndStrike ();//Se nao errar nao entra
 			PlayerPrefs.SetInt ("StrikeLv1-2", longStrike);
@@ -181,7 +181,7 @@ public class HsWeek1_2 : MonoBehaviour {
 	}
 
 	private void BackFrame(){
-		hero.SetActive(true);
+		hero.SetActive(false);
 	}
 
 	private void CreateKey1 () {
@@ -201,8 +201,8 @@ public class HsWeek1_2 : MonoBehaviour {
 	}
 
 	public void AddScore () {
-		hero.SetActive(false);
-		Invoke ("BackFrame", 0.4f);
+		hero.SetActive(true);
+		Invoke ("BackFrame", 0.25f);
 		score++;
 	}
 

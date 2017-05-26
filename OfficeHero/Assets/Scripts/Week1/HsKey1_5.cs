@@ -23,6 +23,8 @@ public class HsKey1_5 : MonoBehaviour {
 						if(transform.position.y < -2.0f){
 							Destroy (this.gameObject);
 							hsEngine.AddScore ();
+							hsEngine.RemoveOneKey ();
+							hsEngine.Strike ();
 						}
 					}
 				}
@@ -33,9 +35,12 @@ public class HsKey1_5 : MonoBehaviour {
 	}
 
 	private void isOutOfScreen(){
-		if(this.transform.position.y < -6.10) {
+		if(this.transform.position.y < -6.10f) {
 			Destroy (this.gameObject);
 			Handheld.Vibrate();
+			hsEngine.RemoveOneKey ();
+			hsEngine.Error ();
+			hsEngine.EndStrike ();
 		}
 	}
 }

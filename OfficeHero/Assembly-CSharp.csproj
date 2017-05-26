@@ -67,14 +67,19 @@
      <Compile Include="Assets\Scripts\Week1\HsScore1_1.cs" />
      <Compile Include="Assets\Scripts\Week1\HsScore1_2.cs" />
      <Compile Include="Assets\Scripts\Week1\HsScore1_3.cs" />
+     <Compile Include="Assets\Scripts\Week1\HsScore1_4.cs" />
      <Compile Include="Assets\Scripts\Week1\HsScore1_5.cs" />
-     <Compile Include="Assets\Scripts\Week1\HsScore_1_4.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_1.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_2.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_3.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_4.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_5.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeekCalendar1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKey2_1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsPreWeek2_1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsScore2_1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsWeek2_1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsWeekCalendar2.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

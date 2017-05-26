@@ -38,7 +38,7 @@ public class HsKey1_3 : MonoBehaviour {
 	}
 
 	private void isOutOfScreen(){
-		if(this.transform.position.y < -6.0f) {
+		if(this.transform.position.y < -6.10f) {
 			Destroy (this.gameObject);
 			Handheld.Vibrate();
 			hsEngine.RemoveOneKey ();
