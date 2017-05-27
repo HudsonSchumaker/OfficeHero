@@ -11,8 +11,13 @@ public class HsWeek1_3 : MonoBehaviour {
 
 	public GameObject key;
 	public Text scoreStr;
-	public GameObject hero;
-	private AudioSource audioSource;
+	public GameObject hero1;
+	public GameObject hero2;
+	public AudioClip key1;
+	public AudioClip key2;
+	public AudioClip key3;
+	public AudioClip key4;
+	public AudioClip lostKey;
 
 	private int numberOfKeys;
 	private int score;
@@ -38,11 +43,10 @@ public class HsWeek1_3 : MonoBehaviour {
 		this.numberOfKeys = 135;
 		this.TheLevel();
 		this.longStrike = strike = 0;
-		this.audioSource = GetComponent<AudioSource> ();
 	}
 
 	private void Update () {
-		scoreStr.text = "SCORE: " + score;
+		scoreStr.text = "SCORE : " + score;
 		if(numberOfKeys <= 0){
 			EndStrike ();//Se nao errar nao entra
 			PlayerPrefs.SetInt ("StrikeLv1-3", longStrike);
@@ -191,11 +195,7 @@ public class HsWeek1_3 : MonoBehaviour {
 		Invoke ("CreateKey1", interval*100);	
 		Invoke ("CreateKey1", interval*101);	
 	}
-
-	private void BackFrame(){
-		hero.SetActive(false);
-	}
-
+		
 	private void CreateKey1 () {
 		Instantiate (key, new Vector3 (x1, y, z), Quaternion.identity);
 	}
@@ -212,10 +212,38 @@ public class HsWeek1_3 : MonoBehaviour {
 		Instantiate (key, new Vector3 (x4, y, z), Quaternion.identity);	
 	}
 
-	public void AddScore () {
-		audioSource.Play ();
-		hero.SetActive(true);
-		Invoke ("BackFrame", 0.25f);
+	private void playAudio(float posX){
+		if(posX == x1){
+			HsAudioManager.instance.PlayAudioClip (key1);
+			return;
+		}
+		if(posX == x2){
+			HsAudioManager.instance.PlayAudioClip (key2);
+			return;
+		}
+		if(posX == x3){
+			HsAudioManager.instance.PlayAudioClip (key3);
+			return;
+		}
+		if(posX == x4){
+			HsAudioManager.instance.PlayAudioClip (key4);
+		}
+	}
+
+	private void SetFrame1(){
+		hero1.SetActive(false);
+		hero2.SetActive(true);
+	}
+
+	private void SetFrame2(){
+		hero2.SetActive(false);
+	}
+
+	public void AddScore (float posX) {
+		playAudio (posX);
+		hero1.SetActive(true);
+		Invoke ("SetFrame1", 0.20f);
+		Invoke ("SetFrame2", 0.40f);
 		score++;
 	}
 
@@ -228,6 +256,7 @@ public class HsWeek1_3 : MonoBehaviour {
 	}
 
 	public void Error(){
+		HsAudioManager.instance.PlayAudioClip (lostKey);
 		error++;
 	}
 
