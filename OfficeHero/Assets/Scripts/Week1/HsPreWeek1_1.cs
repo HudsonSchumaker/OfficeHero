@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Advertisements;
 
 /* 
 	@author Hudson Schumaker
@@ -8,26 +9,29 @@ using UnityEngine.SceneManagement;
 
 public class HsPreWeek1_1 : MonoBehaviour {
 
-		private SpriteRenderer grafico;
-		private float larguraImagem;
-		private float alturaImagem;
-		private float alturaTela;
-		private float larguraTela;
-		private float delay;
+	private SpriteRenderer grafico;
+	private float larguraImagem;
+	private float alturaImagem;
+	private float alturaTela;
+	private float larguraTela;
+	private float delay;
 
-		private void Start () {
-			this.delay = 1.0f;
+	private void Start () {
+		this.delay = 5.0f;
 
-			this.grafico = GetComponent<SpriteRenderer> ();
-			this.larguraImagem = grafico.sprite.bounds.size.x;
-			this.alturaImagem = grafico.sprite.bounds.size.y;
-			this.alturaTela = Camera.main.orthographicSize * 2.0f;
-			this.larguraTela = alturaTela / Screen.height * Screen.width;
-			Vector2 novaEscala = transform.localScale;
-			novaEscala.x = larguraTela/larguraImagem;
-			novaEscala.y = alturaTela/alturaImagem;
-			this.transform.localScale = novaEscala;
-		}
+		this.grafico = GetComponent<SpriteRenderer> ();
+		this.larguraImagem = grafico.sprite.bounds.size.x;
+		this.alturaImagem = grafico.sprite.bounds.size.y;
+		this.alturaTela = Camera.main.orthographicSize * 2.0f;
+		this.larguraTela = alturaTela / Screen.height * Screen.width;
+		Vector2 novaEscala = transform.localScale;
+		novaEscala.x = larguraTela/larguraImagem;
+		novaEscala.y = alturaTela/alturaImagem;
+		this.transform.localScale = novaEscala;
+		if (Advertisement.IsReady()){
+			Advertisement.Show();
+ 		}
+ }
 
 		private void Update () {
 			delay -= Time.deltaTime;
@@ -35,4 +39,4 @@ public class HsPreWeek1_1 : MonoBehaviour {
 			SceneManager.LoadScene("_Week1-1");
 			}
 		}
-	}
+ }

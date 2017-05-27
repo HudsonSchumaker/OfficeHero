@@ -219,6 +219,7 @@ public class HsWeek1_4 : MonoBehaviour {
 	}
 
 	public void AddScore () {
+		audioSource.Play ();
 		hero.SetActive(true);
 		Invoke ("BackFrame", 0.25f);
 		score++;

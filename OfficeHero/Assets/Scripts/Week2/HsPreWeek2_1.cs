@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Advertisements;
 
 /* 
 	@author Hudson Schumaker
@@ -16,7 +17,7 @@ public class HsPreWeek2_1 : MonoBehaviour {
 	private float delay;
 
 	private void Start () {
-		this.delay = 1.0f;
+		this.delay = 5.0f;
 
 		this.grafico = GetComponent<SpriteRenderer> ();
 		this.larguraImagem = grafico.sprite.bounds.size.x;
@@ -27,6 +28,9 @@ public class HsPreWeek2_1 : MonoBehaviour {
 		novaEscala.x = larguraTela/larguraImagem;
 		novaEscala.y = alturaTela/alturaImagem;
 		this.transform.localScale = novaEscala;
+		if (Advertisement.IsReady()){
+			Advertisement.Show();
+		}
 	}
 
 	private void Update () {
