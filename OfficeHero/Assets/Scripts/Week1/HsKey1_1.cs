@@ -15,6 +15,8 @@ public class HsKey1_1 : MonoBehaviour {
 		this.speed = 1.5f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsEngine = (HsWeek1_1) gameEngine.GetComponent (typeof(HsWeek1_1));
+		Behaviour h = (Behaviour)GetComponent("Halo");
+		h.enabled = false;
 	}
 
 	private void Update () {
@@ -32,6 +34,10 @@ public class HsKey1_1 : MonoBehaviour {
 					}
 				}
 			}	
+		}
+		if (transform.position.y < -1.8f) {
+			Behaviour h = (Behaviour)GetComponent("Halo");
+			h.enabled = true;
 		}
 		this.transform.Translate (new Vector3 (0.0f,-speed * Time.deltaTime,0.0f));// Make fall
 		this.isOutOfScreen ();

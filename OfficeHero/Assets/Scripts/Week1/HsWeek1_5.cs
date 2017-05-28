@@ -204,10 +204,10 @@ public class HsWeek1_5 : MonoBehaviour {
 		Invoke ("CreateKey2", interval *50.5f);
 		Invoke ("CreateKey3", interval *50.5f);
 		Invoke ("CreateKey4", interval *50.5f);
-		Invoke ("CreateKey1", interval *60);
-		Invoke ("CreateKey2", interval *60.1f);
-		Invoke ("CreateKey3", interval *60.2f);
-		Invoke ("CreateKey4", interval *60.3f);
+		Invoke ("CreateKey1", interval *51.5f);
+		Invoke ("CreateKey2", interval *51.8f);
+		Invoke ("CreateKey3", interval *52);
+		Invoke ("CreateKey4", interval *52);
 	}
 		
 	private void CreateKey1 () {
