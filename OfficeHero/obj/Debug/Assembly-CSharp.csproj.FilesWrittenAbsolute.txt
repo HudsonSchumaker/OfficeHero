@@ -20,3 +20,4 @@
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/Assembly-CSharp.dll
 /Users/hudsonschumaker/UnityProjects/OfficeHero/obj/Debug/Assembly-CSharp.dll
 /Users/hudsonschumaker/UnityProjects/OfficeHero/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/UnityEngine.Advertisements.dll
