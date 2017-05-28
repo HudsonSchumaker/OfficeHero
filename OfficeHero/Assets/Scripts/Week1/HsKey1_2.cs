@@ -24,10 +24,10 @@ public class HsKey1_2 : MonoBehaviour {
 				if (hit.collider != null) {
 					if (hit.collider.gameObject == this.gameObject) {
 						if(transform.position.y < -2.0f){
-							hsEngine.AddScore (transform.position.x);
+							Destroy (this.gameObject);
+							hsEngine.AddScore ();
 							hsEngine.RemoveOneKey ();
 							hsEngine.Strike ();
-							Destroy (this.gameObject);
 						}
 					}
 				}
@@ -38,7 +38,7 @@ public class HsKey1_2 : MonoBehaviour {
 	}
 
 	private void isOutOfScreen(){
-		if(this.transform.position.y < -6.20f) {
+		if(this.transform.position.y < -6.0f) {
 			Destroy (this.gameObject);
 			Handheld.Vibrate();
 			hsEngine.RemoveOneKey ();

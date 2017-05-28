@@ -20,11 +20,11 @@ public class HsKey1_4 : MonoBehaviour {
 				RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (t.position), -Vector2.up);
 				if (hit.collider != null) {
 					if (hit.collider.gameObject == this.gameObject) {
-						if(transform.position.y < -2.0f){
-							hsEngine.AddScore (transform.position.x);
+						if(transform.position.y < -1.99f){
+							Destroy (this.gameObject);
+							hsEngine.AddScore ();
 							hsEngine.RemoveOneKey ();
 							hsEngine.Strike ();
-							Destroy (this.gameObject);
 						}
 					}
 				}
@@ -35,7 +35,7 @@ public class HsKey1_4 : MonoBehaviour {
 	}
 
 	private void isOutOfScreen(){
-		if(this.transform.position.y < -6.20f) {
+		if(this.transform.position.y < -6.10f) {
 			Destroy (this.gameObject);
 			Handheld.Vibrate();
 			hsEngine.RemoveOneKey ();
