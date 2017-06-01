@@ -10,7 +10,9 @@ using UnityEngine.SceneManagement;
 public class HsWeek1_2 : MonoBehaviour {
 
 	public GameObject key;
+	public GameObject keyX2;
 	public Text scoreStr;
+	public Text comboStr;
 	public GameObject hero1;
 	public GameObject hero2;
 	public AudioClip key1;
@@ -21,18 +23,22 @@ public class HsWeek1_2 : MonoBehaviour {
 
 	private int numberOfKeys;
 	private int score;
+	private int hitPoint;
 	private int longStrike;
 	private int error;
 	private int strike;
+	private int combo;
+	private int comboKeyX2;
 	private float x1, x2, x3, x4;
 	private float y;
 	private float z;
 	private float interval;
 
 	private void Start () {
+		this.numberOfKeys = 125;
 		this.error = 0;
 		this.score = 0;
-		scoreStr.text = "Score: " + score;
+		this.scoreStr.text = "SCORE: " + score;
 		this.x1 = -2.0f;
 		this.x2 = -0.7f;
 		this.x3 = 0.7f;
@@ -40,13 +46,16 @@ public class HsWeek1_2 : MonoBehaviour {
 		this.y = 5.5f;
 		this.z = 0.0f;
 		this.interval = 1.1f;
-		this.numberOfKeys = 125;
-		this.TheLevel();
+		this.TheLevel ();
 		this.longStrike = strike = 0;
+		this.hitPoint = 50;
+		this.combo = 1;
+		this.comboKeyX2 = 1;
 	}
 
 	private void Update () {
 		scoreStr.text = "SCORE : " + score;
+		this.CheckBonus ();
 		if(numberOfKeys <= 0){
 			EndStrike ();//Se nao errar nao entra
 			PlayerPrefs.SetInt ("StrikeLv1-2", longStrike);
@@ -86,6 +95,7 @@ public class HsWeek1_2 : MonoBehaviour {
 		Invoke ("CreateKey2", interval*16);
 		Invoke ("CreateKey2", interval*17);
 		Invoke ("CreateKey2", interval*18);
+		Invoke ("CreateKeyX2", interval*20);//Aqui keyComboX2
 		Invoke ("CreateKey2", interval*19);
 		Invoke ("CreateKey4", interval*15);
 		Invoke ("CreateKey4", interval*16);
@@ -202,6 +212,10 @@ public class HsWeek1_2 : MonoBehaviour {
 		Instantiate (key, new Vector3 (x4, y, z), Quaternion.identity);	
 	}
 
+	private void CreateKeyX2 () {
+		Instantiate (keyX2, new Vector3 (x1, y, z), Quaternion.identity);//Atenção aqui
+	}
+
 	private void playAudio(float posX){
 		if(posX == x1){
 			HsAudioManager.instance.PlayAudioClip (key1);
@@ -229,12 +243,39 @@ public class HsWeek1_2 : MonoBehaviour {
 		hero2.SetActive(false);
 	}
 
+	private void CheckBonus(){
+		if(strike < 20){
+			combo = 1;
+			comboStr.text = "COMBO : X1";
+			return;
+		}
+		if(strike >19 && strike <40){
+			combo = 2;
+			comboStr.text = "COMBO : X2";
+			return;
+		}
+		if(strike >39 && strike <60){
+			combo = 3;
+			comboStr.text = "COMBO : X3";
+			return;
+		}
+		if(strike >59 && strike <80){
+			combo = 4;
+			comboStr.text = "COMBO : X4";
+			return;
+		}
+		if(strike >79 && strike <100){
+			combo = 5;
+			comboStr.text = "COMBO : X5";
+		}
+	}
+
 	public void AddScore (float posX) {
 		playAudio (posX);
 		hero1.SetActive(true);
 		Invoke ("SetFrame1", 0.20f);
 		Invoke ("SetFrame2", 0.40f);
-		score++;
+		score += (hitPoint*combo*comboKeyX2);//Aqui Combos
 	}
 
 	public void AddScore (int value) {
@@ -259,5 +300,14 @@ public class HsWeek1_2 : MonoBehaviour {
 			longStrike = strike;
 		}
 		strike = 0;
+	}
+
+	public void SetComboKeyX2(){
+		comboKeyX2 = 2;
+		Invoke ("RemoveComboKeyX2", 14.99f);
+	}
+
+	private void RemoveComboKeyX2(){
+		comboKeyX2 = 1;
 	}
 }

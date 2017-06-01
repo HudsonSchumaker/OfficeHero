@@ -10,6 +10,8 @@ using UnityEngine.SceneManagement;
 public class HsWeek2_1 : MonoBehaviour {
 
 	public GameObject key;
+	public GameObject keyLeft;
+	public GameObject keyRight;
 	public Text scoreStr;
 	public GameObject hero1;
 	public GameObject hero2;
@@ -58,156 +60,17 @@ public class HsWeek2_1 : MonoBehaviour {
 		}
 	}
 	private void TheLevel(){		
-		Invoke ("CreateKey1", 0.1f);
-		Invoke ("CreateKey2", 0.1f);
-		Invoke ("CreateKey3", 0.1f);
-		Invoke ("CreateKey4", 0.1f);
-		Invoke ("CreateKey1", 1.0f);
-		Invoke ("CreateKey2", 1.0f);
-		Invoke ("CreateKey3", 1.0f);
-		Invoke ("CreateKey4", 1.0f);
-		Invoke ("CreateKey1", interval *2);
-		Invoke ("CreateKey2", interval *3);
-		Invoke ("CreateKey3", interval *4);
-		Invoke ("CreateKey4", interval *5);
-		Invoke ("CreateKey1", interval *6);
-		Invoke ("CreateKey2", interval *7);
-		Invoke ("CreateKey3", interval *8);
-		Invoke ("CreateKey4", interval *9);
-		Invoke ("CreateKey1", interval *10);
-		Invoke ("CreateKey2", interval *10);
-		Invoke ("CreateKey3", interval *10);
-		Invoke ("CreateKey4", interval *10);
-		Invoke ("CreateKey1", interval *11);
-		Invoke ("CreateKey2", interval *11);
-		Invoke ("CreateKey3", interval *11);
-		Invoke ("CreateKey4", interval *11);
-		Invoke ("CreateKey1", interval *12);
-		Invoke ("CreateKey4", interval *12);
-		Invoke ("CreateKey2", interval *13);
-		Invoke ("CreateKey3", interval *13);
-		Invoke ("CreateKey1", interval *14);
-		Invoke ("CreateKey4", interval *14);
-		Invoke ("CreateKey2", interval *15);
-		Invoke ("CreateKey3", interval *15);
-		Invoke ("CreateKey1", interval *16);
-		Invoke ("CreateKey3", interval *16);
-		Invoke ("CreateKey2", interval *17);
-		Invoke ("CreateKey4", interval *17);
-		Invoke ("CreateKey1", interval *18);
-		Invoke ("CreateKey4", interval *18);
-		Invoke ("CreateKey1", interval *19);
-		Invoke ("CreateKey3", interval *19);
-		Invoke ("CreateKey1", interval *20);
-		Invoke ("CreateKey2", interval *20);
-		Invoke ("CreateKey1", interval *21);
-		Invoke ("CreateKey2", interval *21);
-		Invoke ("CreateKey3", interval *21);
-		Invoke ("CreateKey4", interval *21);
-		Invoke ("CreateKey1", interval *22);
-		Invoke ("CreateKey2", interval *22);
-		Invoke ("CreateKey3", interval *22);
-		Invoke ("CreateKey4", interval *22);
-		Invoke ("CreateKey1", interval *22.5f);
-		Invoke ("CreateKey2", interval *22.5f);
-		Invoke ("CreateKey3", interval *22.5f);
-		Invoke ("CreateKey4", interval *22.5f);
-		Invoke ("CreateKey1", interval *23);
-		Invoke ("CreateKey2", interval *23.5f);
-		Invoke ("CreateKey3", interval *24);
-		Invoke ("CreateKey4", interval *24.5f);
-		Invoke ("CreateKey4", interval *25);
-		Invoke ("CreateKey1", interval *26);
-		Invoke ("CreateKey2", interval *26);
-		Invoke ("CreateKey3", interval *26);
-		Invoke ("CreateKey4", interval *26);
-		Invoke ("CreateKey1", interval *27);
-		Invoke ("CreateKey4", interval *27);
-		Invoke ("CreateKey2", interval *27.5f);
-		Invoke ("CreateKey3", interval *27.5f);
-		Invoke ("CreateKey1", interval *28);
-		Invoke ("CreateKey4", interval *28);
-		Invoke ("CreateKey1", interval *29);
-		Invoke ("CreateKey2", interval *29);
-		Invoke ("CreateKey3", interval *29);
-		Invoke ("CreateKey4", interval *29);
-		Invoke ("CreateKey1", interval *29.5f);
-		Invoke ("CreateKey2", interval *29.5f);
-		Invoke ("CreateKey3", interval *29.5f);
-		Invoke ("CreateKey4", interval *29.5f);
-		Invoke ("CreateKey2", interval *30);
-		Invoke ("CreateKey3", interval *30);
-		Invoke ("CreateKey1", interval *31);
-		Invoke ("CreateKey4", interval *31);
-		Invoke ("CreateKey1", interval *32);
-		Invoke ("CreateKey1", interval *32.5f);
-		Invoke ("CreateKey1", interval *33);
-		Invoke ("CreateKey1", interval *33.5f);
-		Invoke ("CreateKey1", interval *34);
-		Invoke ("CreateKey1", interval *34.5f);
-		Invoke ("CreateKey1", interval *35);
-		Invoke ("CreateKey1", interval *35.5f);
-		Invoke ("CreateKey1", interval *36);
-		Invoke ("CreateKey1", interval *36.5f);
-		Invoke ("CreateKey4", interval *32);
-		Invoke ("CreateKey4", interval *33);
-		Invoke ("CreateKey4", interval *34);
-		Invoke ("CreateKey4", interval *35);
-		Invoke ("CreateKey4", interval *36);
-		Invoke ("CreateKey2", interval *33);
-		Invoke ("CreateKey2", interval *36);
-		Invoke ("CreateKey1", interval *37);
-		Invoke ("CreateKey2", interval *37);
-		Invoke ("CreateKey3", interval *37);
-		Invoke ("CreateKey4", interval *37);
-		Invoke ("CreateKey1", interval *38);
-		Invoke ("CreateKey2", interval *39);
-		Invoke ("CreateKey3", interval *40);
-		Invoke ("CreateKey4", interval *40);
-		Invoke ("CreateKey1", interval *41);
-		Invoke ("CreateKey2", interval *41);
-		Invoke ("CreateKey3", interval *41);
-		Invoke ("CreateKey4", interval *41);
-		Invoke ("CreateKey1", interval *41.5f);
-		Invoke ("CreateKey2", interval *41.5f);
-		Invoke ("CreateKey3", interval *41.5f);
-		Invoke ("CreateKey4", interval *41.5f);
-		Invoke ("CreateKey1", interval *42);
-		Invoke ("CreateKey2", interval *42);
-		Invoke ("CreateKey3", interval *42);
-		Invoke ("CreateKey4", interval *42);
-		Invoke ("CreateKey1", interval *42.5f);
-		Invoke ("CreateKey2", interval *42.5f);
-		Invoke ("CreateKey3", interval *42.5f);
-		Invoke ("CreateKey4", interval *42.5f);
-		Invoke ("CreateKey4", interval *43);
-		Invoke ("CreateKey1", interval *44);
-		Invoke ("CreateKey2", interval *44);
-		Invoke ("CreateKey2", interval *44.5f);
-		Invoke ("CreateKey3", interval *44);
-		Invoke ("CreateKey4", interval *44);
-		Invoke ("CreateKey1", interval *45);
-		Invoke ("CreateKey4", interval *45);
-		Invoke ("CreateKey2", interval *46);
-		Invoke ("CreateKey4", interval *46);
-		Invoke ("CreateKey1", interval *47);
-		Invoke ("CreateKey3", interval *47);
-		Invoke ("CreateKey4", interval *48);
-		Invoke ("CreateKey1", interval *48);
-		Invoke ("CreateKey4", interval *49);
-		Invoke ("CreateKey3", interval *49);
-		Invoke ("CreateKey1", interval *50);
-		Invoke ("CreateKey2", interval *50);
-		Invoke ("CreateKey3", interval *50);
-		Invoke ("CreateKey4", interval *50);
-		Invoke ("CreateKey1", interval *50.5f);
-		Invoke ("CreateKey2", interval *50.5f);
-		Invoke ("CreateKey3", interval *50.5f);
-		Invoke ("CreateKey4", interval *50.5f);
-		Invoke ("CreateKey1", interval *60);
-		Invoke ("CreateKey2", interval *60.1f);
-		Invoke ("CreateKey3", interval *60.2f);
-		Invoke ("CreateKey4", interval *60.3f);
+		Invoke ("CreateKeyLeft", 0.1f);
+		Invoke ("CreateKeyLeft", 1.1f);
+		Invoke ("CreateKeyLeft", 2.1f);
+		Invoke ("CreateKeyRight", 3.1f);
+		Invoke ("CreateKeyLeft", 4.1f);
+		Invoke ("CreateKeyRight", 5.1f);
+		Invoke ("CreateKeyLeft", 6.1f);
+		Invoke ("CreateKeyRight", 7.1f);
+		Invoke ("CreateKeyLeft", 8.1f);
+		Invoke ("CreateKeyRight", 9.1f);
+		Invoke ("CreateKeyLeft", 10.1f);
 	}
 
 	private void CreateKey1 () {
@@ -226,6 +89,14 @@ public class HsWeek2_1 : MonoBehaviour {
 		Instantiate (key, new Vector3 (x4, y, z), Quaternion.identity);	
 	}
 
+	private void CreateKeyLeft () {
+		Instantiate (keyLeft, new Vector3 (x3, y, z), Quaternion.identity);	
+	}
+
+	private void CreateKeyRight () {
+		Instantiate (keyRight, new Vector3 (x3, y, z), Quaternion.identity);	
+	}
+		
 	private void playAudio(float posX){
 		if(posX == x1){
 			HsAudioManager.instance.PlayAudioClip (key1);

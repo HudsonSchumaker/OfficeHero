@@ -72,7 +72,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 321}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 47
+  controlID: 26
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 471}
   m_MaxSize: {x: 18006, y: 14021}
   vertical: 0
-  controlID: 103
+  controlID: 25
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,8 +180,8 @@ MonoBehaviour:
     y: 0
     width: 1311
     height: 678
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 471}
   m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 104
+  controlID: 81
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -283,8 +283,8 @@ MonoBehaviour:
     y: 395
     width: 332
     height: 503
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 234, y: 271}
+  m_MaxSize: {x: 10004, y: 10021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -679,33 +679,33 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Week1
+    - Assets/Prefabs/Lv1
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Week1
+  - Assets/Prefabs/Lv1
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /Users/hudsonschumaker/UnityProjects/OfficeHero
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b2250000
-    m_LastClickedID: 9650
-    m_ExpandedIDs: 00000000e4240000882500000a26000000ca9a3bffffff7f
+    m_SelectedIDs: 6e2d0000
+    m_LastClickedID: 11630
+    m_ExpandedIDs: 00000000ec240000962500009026000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: _Week2
+      m_OriginalName: _Week2
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 9712
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_SearchString: 
@@ -719,7 +719,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e4240000722500000a260000
+    m_ExpandedIDs: 00000000ec240000802500009625000020260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -744,10 +744,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 44060000
-    m_LastClickedInstanceID: 1604
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300005e2800000000000046050000
+    m_ExpandedInstanceIDs: c62300005e28000000000000460500007ca3fdff
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -843,7 +843,7 @@ MonoBehaviour:
       width: 2618
       height: 1280
     m_MinimalGUI: 1
-  m_defaultScale: 0.5
+  m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 1309, y: 657}
@@ -877,14 +877,14 @@ MonoBehaviour:
     width: 1309
     height: 657
   m_SceneLighting: 1
-  lastFramingTime: 366.248860001564
+  lastFramingTime: 6207.124772012234
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 1
   m_Position:
-    m_Target: {x: 0, y: 0.00000047683716, z: 0}
+    m_Target: {x: 0, y: 0, z: -10}
     speed: 2
-    m_Value: {x: 0, y: 0.00000047683716, z: 0}
+    m_Value: {x: 0, y: 0, z: -10}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -911,9 +911,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 15.318098
+    m_Target: 13.370015
     speed: 2
-    m_Value: 15.318098
+    m_Value: 13.370015
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -952,9 +952,9 @@ MonoBehaviour:
     height: 374
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 44060000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 9c51ffff72faffffdafbffff00000000
+    m_ExpandedIDs: e22bfdfff42bfdff768efdff2a93fdff9a94fdffac94fdff5298fdff0ab8fdffbeb8fdff4225feff5425feffe28cfeffec8cfefff6a7fefff87effffa8f9ffffb2f9ffffdafbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -970,7 +970,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
   m_ExpandedScenes:
   - _Week1-5
