@@ -10,9 +10,12 @@ using UnityEngine.SceneManagement;
 public class HsWeek2_1 : MonoBehaviour {
 
 	public GameObject key;
+	public GameObject keyPurple;
+	public GameObject keyX2;
 	public GameObject keyLeft;
 	public GameObject keyRight;
 	public Text scoreStr;
+	public Text comboStr;
 	public GameObject hero1;
 	public GameObject hero2;
 	public AudioClip key1;
@@ -23,18 +26,29 @@ public class HsWeek2_1 : MonoBehaviour {
 
 	private int numberOfKeys;
 	private int score;
+	private int hitPoint;
 	private int longStrike;
 	private int error;
 	private int strike;
+	private int combo;
+	private int comboKeyX2;
+	private int normalKey;
 	private float x1, x2, x3, x4;
 	private float y;
 	private float z;
 	private float interval;
 
 	private void Start () {
+		this.numberOfKeys = 150;
+		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
 		this.score = 0;
-		scoreStr.text = "Score: " + score;
+		this.strike = 0;
+		this.longStrike = 0;
+		this.normalKey = 0;
+		this.hitPoint = 50;
+		this.combo = 1;
+		this.comboKeyX2 = 1;
 		this.x1 = -2.0f;
 		this.x2 = -0.7f;
 		this.x3 = 0.7f;
@@ -42,9 +56,7 @@ public class HsWeek2_1 : MonoBehaviour {
 		this.y = 5.5f;
 		this.z = 0.0f;
 		this.interval = 1.1f;
-		this.numberOfKeys = 150;
-		this.TheLevel();
-		this.longStrike = strike = 0;
+		this.TheLevel ();
 	}
 
 	private void Update () {
@@ -59,20 +71,7 @@ public class HsWeek2_1 : MonoBehaviour {
 			SceneManager.LoadScene("_GameOver");
 		}
 	}
-	private void TheLevel(){		
-		Invoke ("CreateKeyLeft", 0.1f);
-		Invoke ("CreateKeyLeft", 1.1f);
-		Invoke ("CreateKeyLeft", 2.1f);
-		Invoke ("CreateKeyRight", 3.1f);
-		Invoke ("CreateKeyLeft", 4.1f);
-		Invoke ("CreateKeyRight", 5.1f);
-		Invoke ("CreateKeyLeft", 6.1f);
-		Invoke ("CreateKeyRight", 7.1f);
-		Invoke ("CreateKeyLeft", 8.1f);
-		Invoke ("CreateKeyRight", 9.1f);
-		Invoke ("CreateKeyLeft", 10.1f);
-	}
-
+		
 	private void CreateKey1 () {
 		Instantiate (key, new Vector3 (x1, y, z), Quaternion.identity);
 	}
@@ -154,5 +153,19 @@ public class HsWeek2_1 : MonoBehaviour {
 			longStrike = strike;
 		}
 		strike = 0;
+	}
+
+	private void TheLevel(){		
+		Invoke ("CreateKeyLeft", 0.1f);
+		Invoke ("CreateKeyLeft", 1.1f);
+		Invoke ("CreateKeyLeft", 2.1f);
+		Invoke ("CreateKeyRight", 3.1f);
+		Invoke ("CreateKeyLeft", 4.1f);
+		Invoke ("CreateKeyRight", 5.1f);
+		Invoke ("CreateKeyLeft", 6.1f);
+		Invoke ("CreateKeyRight", 7.1f);
+		Invoke ("CreateKeyLeft", 8.1f);
+		Invoke ("CreateKeyRight", 9.1f);
+		Invoke ("CreateKeyLeft", 10.1f);
 	}
 }

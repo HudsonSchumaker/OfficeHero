@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 public class HsWeek1_3 : MonoBehaviour {
 
 	public GameObject key;
+	public GameObject keyPurple;
 	public GameObject keyX2;
 	public Text scoreStr;
 	public Text comboStr;
@@ -29,6 +30,7 @@ public class HsWeek1_3 : MonoBehaviour {
 	private int strike;
 	private int combo;
 	private int comboKeyX2;
+	private int normalKey;
 	private float x1, x2, x3, x4;
 	private float y;
 	private float z;
@@ -36,9 +38,15 @@ public class HsWeek1_3 : MonoBehaviour {
 
 	private void Start () {
 		this.numberOfKeys = 135;
+		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
 		this.score = 0;
-		this.scoreStr.text = "SCORE: " + score;
+		this.strike = 0;
+		this.longStrike = 0;
+		this.normalKey = 0;
+		this.hitPoint = 50;
+		this.combo = 1;
+		this.comboKeyX2 = 1;
 		this.x1 = -2.0f;
 		this.x2 = -0.7f;
 		this.x3 = 0.7f;
@@ -47,10 +55,6 @@ public class HsWeek1_3 : MonoBehaviour {
 		this.z = 0.0f;
 		this.interval = 1.1f;
 		this.TheLevel ();
-		this.longStrike = strike = 0;
-		this.hitPoint = 50;
-		this.combo = 1;
-		this.comboKeyX2 = 1;
 	}
 
 	private void Update () {
@@ -66,10 +70,148 @@ public class HsWeek1_3 : MonoBehaviour {
 			SceneManager.LoadScene("_GameOver");
 		}
 	}
+		
+	private void CreateKey1 () {
+		if(normalKey == 0){
+			Instantiate (key, new Vector3 (x1, y, z), Quaternion.identity);
+		}
+		else{
+			Instantiate (keyPurple, new Vector3 (x1, y, z), Quaternion.identity);
+		}
+	}
 
-	private void TheLevel(){	
+	private void CreateKey2 () {
+		if (normalKey == 0) {
+			Instantiate (key, new Vector3 (x2, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (keyPurple, new Vector3 (x2, y, z), Quaternion.identity);	
+		}
+	}
+
+	private void CreateKey3 () {
+		if (normalKey == 0) {
+			Instantiate (key, new Vector3 (x3, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (keyPurple, new Vector3 (x3, y, z), Quaternion.identity);	
+		}
+	}
+
+	private void CreateKey4 () {
+		if (normalKey == 0) {
+			Instantiate (key, new Vector3 (x4, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (keyPurple, new Vector3 (x4, y, z), Quaternion.identity);
+		}
+	}
+
+	private void CreateKeyX2 () {
+		Instantiate (keyX2, new Vector3 (x2, y, z), Quaternion.identity);//Atenção aqui
+	}
+
+	private void playAudio(float posX){
+		if(posX == x1){
+			HsAudioManager.instance.PlayAudioClip (key1);
+			return;
+		}
+		if(posX == x2){
+			HsAudioManager.instance.PlayAudioClip (key2);
+			return;
+		}
+		if(posX == x3){
+			HsAudioManager.instance.PlayAudioClip (key3);
+			return;
+		}
+		if(posX == x4){
+			HsAudioManager.instance.PlayAudioClip (key4);
+		}
+	}
+
+	private void SetFrame1(){
+		hero1.SetActive(false);
+		hero2.SetActive(true);
+	}
+
+	private void SetFrame2(){
+		hero2.SetActive(false);
+	}
+
+	private void CheckBonus(){
+		if(strike < 20){
+			combo = 1;
+			comboStr.text = "COMBO : X1";
+			return;
+		}
+		if(strike >19 && strike <40){
+			combo = 2;
+			comboStr.text = "COMBO : X2";
+			return;
+		}
+		if(strike >39 && strike <60){
+			combo = 3;
+			comboStr.text = "COMBO : X3";
+			return;
+		}
+		if(strike >59 && strike <80){
+			combo = 4;
+			comboStr.text = "COMBO : X4";
+			return;
+		}
+		if(strike >79 && strike <100){
+			combo = 5;
+			comboStr.text = "COMBO : X5";
+		}
+	}
+
+	public void AddScore (float posX) {
+		playAudio (posX);
+		hero1.SetActive(true);
+		Invoke ("SetFrame1", 0.20f);
+		Invoke ("SetFrame2", 0.40f);
+		score += (hitPoint*combo*comboKeyX2);//Aqui Combos
+	}
+
+	public void AddScore (int value) {
+		score += value;
+	}
+
+	public void RemoveOneKey(){
+		numberOfKeys--;
+	}
+
+	public void Error(){
+		HsAudioManager.instance.PlayAudioClip (lostKey);
+		error++;
+	}
+
+	public void Strike(){
+		strike++;
+	}
+
+	public void EndStrike(){
+		if(strike > longStrike){
+			longStrike = strike;
+		}
+		strike = 0;
+	}
+
+	public void SetComboKeyX2(){
+		normalKey = 1;// ativa key roxa
+		comboKeyX2 = 2;
+		Invoke ("RemoveComboKeyX2", 14.99f);
+	}
+
+	private void RemoveComboKeyX2(){
+		normalKey = 0;// desativa key rox
+		comboKeyX2 = 1;
+	}
+	
+    private void TheLevel(){	
 		Invoke ("CreateKeyX2", interval*20);//Aqui keyComboX2	
 		Invoke ("CreateKeyX2", interval*65);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*82);//Aqui keyComboX2	
 		Invoke ("CreateKey4", 0.1f);
 		Invoke ("CreateKey1", 0.5f);
 		Invoke ("CreateKey4", interval);
@@ -204,121 +346,6 @@ public class HsWeek1_3 : MonoBehaviour {
 		Invoke ("CreateKey4", interval*99);
 		Invoke ("CreateKey4", interval*100);
 		Invoke ("CreateKey1", interval*100);	
-		Invoke ("CreateKey1", interval*101);	
-	}
-		
-	private void CreateKey1 () {
-		Instantiate (key, new Vector3 (x1, y, z), Quaternion.identity);
-	}
-
-	private void CreateKey2 () {
-		Instantiate (key, new Vector3 (x2, y, z), Quaternion.identity);	
-	}
-
-	private void CreateKey3 () {
-		Instantiate (key, new Vector3 (x3, y, z), Quaternion.identity);	
-	}
-
-	private void CreateKey4 () {
-		Instantiate (key, new Vector3 (x4, y, z), Quaternion.identity);	
-	}
-
-	private void CreateKeyX2 () {
-		Instantiate (keyX2, new Vector3 (x2, y, z), Quaternion.identity);//Atenção aqui
-	}
-
-	private void playAudio(float posX){
-		if(posX == x1){
-			HsAudioManager.instance.PlayAudioClip (key1);
-			return;
-		}
-		if(posX == x2){
-			HsAudioManager.instance.PlayAudioClip (key2);
-			return;
-		}
-		if(posX == x3){
-			HsAudioManager.instance.PlayAudioClip (key3);
-			return;
-		}
-		if(posX == x4){
-			HsAudioManager.instance.PlayAudioClip (key4);
-		}
-	}
-
-	private void SetFrame1(){
-		hero1.SetActive(false);
-		hero2.SetActive(true);
-	}
-
-	private void SetFrame2(){
-		hero2.SetActive(false);
-	}
-
-	private void CheckBonus(){
-		if(strike < 20){
-			combo = 1;
-			comboStr.text = "COMBO : X1";
-			return;
-		}
-		if(strike >19 && strike <40){
-			combo = 2;
-			comboStr.text = "COMBO : X2";
-			return;
-		}
-		if(strike >39 && strike <60){
-			combo = 3;
-			comboStr.text = "COMBO : X3";
-			return;
-		}
-		if(strike >59 && strike <80){
-			combo = 4;
-			comboStr.text = "COMBO : X4";
-			return;
-		}
-		if(strike >79 && strike <100){
-			combo = 5;
-			comboStr.text = "COMBO : X5";
-		}
-	}
-
-	public void AddScore (float posX) {
-		playAudio (posX);
-		hero1.SetActive(true);
-		Invoke ("SetFrame1", 0.20f);
-		Invoke ("SetFrame2", 0.40f);
-		score += (hitPoint*combo*comboKeyX2);//Aqui Combos
-	}
-
-	public void AddScore (int value) {
-		score += value;
-	}
-
-	public void RemoveOneKey(){
-		numberOfKeys--;
-	}
-
-	public void Error(){
-		HsAudioManager.instance.PlayAudioClip (lostKey);
-		error++;
-	}
-
-	public void Strike(){
-		strike++;
-	}
-
-	public void EndStrike(){
-		if(strike > longStrike){
-			longStrike = strike;
-		}
-		strike = 0;
-	}
-
-	public void SetComboKeyX2(){
-		comboKeyX2 = 2;
-		Invoke ("RemoveComboKeyX2", 14.99f);
-	}
-
-	private void RemoveComboKeyX2(){
-		comboKeyX2 = 1;
-	}
+		Invoke ("CreateKey1", interval*101);
+   }
 }
