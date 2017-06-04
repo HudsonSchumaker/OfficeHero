@@ -16,6 +16,7 @@ public class HsWeek1_5 : MonoBehaviour {
 	public Text comboStr;
 	public GameObject hero1;
 	public GameObject hero2;
+	public GameObject finished;
 	public AudioClip key1;
 	public AudioClip key2;
 	public AudioClip key3;
@@ -62,13 +63,18 @@ public class HsWeek1_5 : MonoBehaviour {
 		this.CheckBonus ();
 		if(numberOfKeys <= 0){
 			EndStrike ();//Se nao errar nao entra
+			finished.SetActive (true);
 			PlayerPrefs.SetInt ("StrikeLv1-5", longStrike);
 			PlayerPrefs.SetInt ("ScoreLv1-5", score);
-			SceneManager.LoadScene("_EndWeek1-5");
+			Invoke ("NextScreen", 3.0f);
 		}
 		if(error >= 8){
 			SceneManager.LoadScene("_GameOver");
 		}
+	}
+
+	private void NextScreen(){
+		SceneManager.LoadScene("_EndWeek1-5");
 	}
 		
 	private void CreateKey1 () {

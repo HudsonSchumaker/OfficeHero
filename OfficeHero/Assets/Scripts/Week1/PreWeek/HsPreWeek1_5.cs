@@ -28,9 +28,6 @@ public class HsPreWeek1_5 : MonoBehaviour {
 		novaEscala.x = larguraTela/larguraImagem;
 		novaEscala.y = alturaTela/alturaImagem;
 		this.transform.localScale = novaEscala;
-		if (Advertisement.IsReady()){
-			Advertisement.Show();
-		}
 	}
 
 	private void Update () {

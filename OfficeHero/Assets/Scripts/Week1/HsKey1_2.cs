@@ -12,7 +12,7 @@ public class HsKey1_2 : MonoBehaviour {
 	private HsWeek1_2 hsEngine;
 
 	private void Start () {
-		this.speed = 1.5f;
+		this.speed = 1.7f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsEngine = (HsWeek1_2) gameEngine.GetComponent (typeof(HsWeek1_2));
 		Behaviour h = (Behaviour)GetComponent("Halo");
@@ -25,7 +25,7 @@ public class HsKey1_2 : MonoBehaviour {
 				RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (t.position), -Vector2.up);
 				if (hit.collider != null) {
 					if (hit.collider.gameObject == this.gameObject) {
-						if(transform.position.y < -2.0f){
+						if(transform.position.y < -1.20f){
 							hsEngine.AddScore (transform.position.x);
 							hsEngine.RemoveOneKey ();
 							hsEngine.Strike ();
@@ -35,7 +35,7 @@ public class HsKey1_2 : MonoBehaviour {
 				}
 			}	
 		}
-		if (transform.position.y < -1.8f) {
+		if (transform.position.y < -1.5f) {
 			Behaviour h = (Behaviour)GetComponent("Halo");
 			h.enabled = true;
 		}
@@ -44,7 +44,7 @@ public class HsKey1_2 : MonoBehaviour {
 	}
 
 	private void isOutOfScreen(){
-		if(this.transform.position.y < -6.20f) {
+		if(this.transform.position.y < -6.00f) {
 			Destroy (this.gameObject);
 			Handheld.Vibrate();
 			hsEngine.RemoveOneKey ();

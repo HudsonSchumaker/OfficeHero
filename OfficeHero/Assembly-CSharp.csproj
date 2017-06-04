@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\HsAudioManager.cs" />
      <Compile Include="Assets\Scripts\HsBackground.cs" />
      <Compile Include="Assets\Scripts\HsEngine.cs" />
+     <Compile Include="Assets\Scripts\HsFinished.cs" />
      <Compile Include="Assets\Scripts\HsGameOver.cs" />
      <Compile Include="Assets\Scripts\HsKey.cs" />
      <Compile Include="Assets\Scripts\HsMainMenu.cs" />
@@ -84,10 +85,24 @@
      <Compile Include="Assets\Scripts\Week2\HsKey2_1.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKeyLeft2_1.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKeyRight2_1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKeyX2Lv2_1.cs" />
      <Compile Include="Assets\Scripts\Week2\HsPreWeek2_1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsPreWeek2_2.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsPreWeek2_3.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsPreWeek2_4.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsPreWeek2_5.cs" />
      <Compile Include="Assets\Scripts\Week2\HsScore2_1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsScore2_2.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsScore2_3.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsScore2_4.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsScore2_5.cs" />
      <Compile Include="Assets\Scripts\Week2\HsWeek2_1.cs" />
      <Compile Include="Assets\Scripts\Week2\HsWeekCalendar2.cs" />
+     <Compile Include="Assets\Scripts\week3\HsPreWeek3_1.cs" />
+     <Compile Include="Assets\Scripts\week3\HsPreWeek3_2.cs" />
+     <Compile Include="Assets\Scripts\week3\HsPreWeek3_3.cs" />
+     <Compile Include="Assets\Scripts\week3\HsPreWeek3_4.cs" />
+     <Compile Include="Assets\Scripts\week3\HsPreWeek3_5.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

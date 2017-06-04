@@ -21,9 +21,16 @@ public class HsKeyLeft2_1 : MonoBehaviour {
 
 	private void Update () {
 		if (transform.position.y < -2.0f) {
-			if (Input.acceleration.x < 0) {
+			if (Input.touchCount >= 1) {
+				Touch touch = Input.GetTouch (0);
+				float x = -7.5f + 15.0f * touch.position.x / Screen.width;
+				float y = -4.5f + 9 * touch.position.y / Screen.height;
+				transform.position = new Vector3 (x, y, 0.0f);
+			}
+
+			if (transform.position.x < -2.0f) {
 				//transform.Translate (Input.acceleration.x * Time.deltaTime, 0.0f, 0.0f);
-				hsEngine.AddScore (transform.position.x);
+				hsEngine.AddScore (10.0f);//Pre set for play audio
 				hsEngine.RemoveOneKey ();
 				hsEngine.Strike ();
 				Destroy (this.gameObject);
