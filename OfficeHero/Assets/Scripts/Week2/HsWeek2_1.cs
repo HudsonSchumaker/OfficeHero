@@ -117,19 +117,20 @@ public class HsWeek2_1 : MonoBehaviour {
 	private void CreateKeyX2 () {
 		Instantiate (keyX2, new Vector3 (x4, y, z), Quaternion.identity);//Atenção aqui
 	}
+
 	private void CreateKeyLeft () {
 		if (normalKey == 0) {
-			Instantiate (keyLeft, new Vector3 (x3, y, z), Quaternion.identity);	
+			Instantiate (keyLeft, new Vector3 (x4, y, z), Quaternion.identity);	
 		}else{
-			Instantiate (keyLeftPurple, new Vector3 (x3, y, z), Quaternion.identity);	
+			Instantiate (keyLeftPurple, new Vector3 (x4, y, z), Quaternion.identity);	
 		}
 	}
 
 	private void CreateKeyRight () {
 		if (normalKey == 0) {
-			Instantiate (keyRight, new Vector3 (x3, y, z), Quaternion.identity);	
+			Instantiate (keyRight, new Vector3 (x1, y, z), Quaternion.identity);	
 		}else{
-			Instantiate (keyRightPurple, new Vector3 (x3, y, z), Quaternion.identity);
+			Instantiate (keyRightPurple, new Vector3 (x1, y, z), Quaternion.identity);
 		}
 	}
 		
@@ -239,13 +240,13 @@ public class HsWeek2_1 : MonoBehaviour {
 		Invoke ("CreateKeyLeft", 0.1f);
 		Invoke ("CreateKeyLeft", 1.1f);
 		Invoke ("CreateKeyLeft", 2.1f);
-		Invoke ("CreateKeyRight", 3.1f);
+		//Invoke ("CreateKeyRight", 3.1f);
 		Invoke ("CreateKeyLeft", 4.1f);
-		Invoke ("CreateKeyRight", 5.1f);
+	//	Invoke ("CreateKeyRight", 5.1f);
 		Invoke ("CreateKeyLeft", 6.1f);
-		Invoke ("CreateKeyRight", 7.1f);
+	//	Invoke ("CreateKeyRight", 7.1f);
 		Invoke ("CreateKeyLeft", 8.1f);
-		Invoke ("CreateKeyRight", 9.1f);
+	//	Invoke ("CreateKeyRight", 9.1f);
 		Invoke ("CreateKeyLeft", 10.1f);
 
 		Invoke ("CreateKey1", interval *14);

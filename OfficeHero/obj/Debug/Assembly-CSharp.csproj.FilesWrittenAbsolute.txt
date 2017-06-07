@@ -1,3 +1,7 @@
+/Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/hudsonschumaker/UnityProjects/OfficeHero/obj/Debug/Assembly-CSharp.dll
+/Users/hudsonschumaker/UnityProjects/OfficeHero/obj/Debug/Assembly-CSharp.dll.mdb
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/UnityEngine.dll
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/UnityEditor.dll
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/UnityEngine.Analytics.dll
@@ -5,6 +9,7 @@
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/nunit.framework.dll
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/UnityEngine.Networking.dll
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/UnityEngine.Advertisements.dll
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/UnityEngine.HoloLens.dll
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/UnityEngine.VR.dll
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/Mono.Cecil.dll
@@ -16,8 +21,3 @@
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/Mono.Cecil.Mdb.dll
-/Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/Assembly-CSharp.dll.mdb
-/Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/Assembly-CSharp.dll
-/Users/hudsonschumaker/UnityProjects/OfficeHero/obj/Debug/Assembly-CSharp.dll
-/Users/hudsonschumaker/UnityProjects/OfficeHero/obj/Debug/Assembly-CSharp.dll.mdb
-/Users/hudsonschumaker/UnityProjects/OfficeHero/Temp/bin/Debug/UnityEngine.Advertisements.dll

@@ -1,6 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
 
 /* 
 	@author Hudson Schumaker
@@ -67,8 +70,16 @@ public class HsWeek1_1 : MonoBehaviour {
 			PlayerPrefs.SetInt ("StrikeLv1-1", longStrike);
 			PlayerPrefs.SetInt ("ScoreLv1-1", score);
 			Invoke ("NextScreen", 3.0f);
+			Analytics.CustomEvent("WinLv1-1", new Dictionary<string, object>{
+				{ "score", score },
+				{ "strike", longStrike }
+			});
 		}
 		if(error >= 8){
+			Analytics.CustomEvent("gameOverLv1-1", new Dictionary<string, object>{
+					{ "score", score },
+					{ "strike", longStrike }
+			});
 			SceneManager.LoadScene("_GameOver");
 		}
 	}

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 /* 
@@ -67,8 +69,16 @@ public class HsWeek1_2 : MonoBehaviour {
 			PlayerPrefs.SetInt ("StrikeLv1-2", longStrike);
 			PlayerPrefs.SetInt ("ScoreLv1-2", score);
 			Invoke ("NextScreen", 3.0f);
+			Analytics.CustomEvent("WinLv1-2", new Dictionary<string, object>{
+				{ "score", score },
+				{ "strike", longStrike }
+			});
 		}
 		if(error >= 8){
+			Analytics.CustomEvent("WinLv1-2", new Dictionary<string, object>{
+				{ "score", score },
+				{ "strike", longStrike }
+			});
 			SceneManager.LoadScene("_GameOver");
 		}
 	}
