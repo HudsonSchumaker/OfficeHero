@@ -16,9 +16,9 @@ public class HsPreWeek1_1 : MonoBehaviour {
 	private float delay;
 
 	private void Start () {
-		this.delay = 5.5f;
-
 		AdManager.instance.ShowBanner ();
+
+		this.delay = 5.5f;
 
 		this.grafico = GetComponent<SpriteRenderer> ();
 		this.larguraImagem = grafico.sprite.bounds.size.x;
@@ -34,6 +34,7 @@ public class HsPreWeek1_1 : MonoBehaviour {
 	private void Update () {
 		delay -= Time.deltaTime;
 		if(delay <= 0.0f){
+			AdManager.instance.RemoveBanners ();
 			SceneManager.LoadScene("_Week1-1");
 		}
 	}
