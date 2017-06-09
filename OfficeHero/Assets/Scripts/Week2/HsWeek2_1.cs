@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 /* 
@@ -71,11 +73,24 @@ public class HsWeek2_1 : MonoBehaviour {
 			EndStrike ();//Se nao errar nao entra
 			PlayerPrefs.SetInt ("StrikeLv2-1", longStrike);
 			PlayerPrefs.SetInt ("ScoreLv2-1", score);
-			SceneManager.LoadScene("_EndWeek2-1s");
+			SceneManager.LoadScene("_EndWeek2-1");
+			Invoke ("NextScreen", 3.0f);
+			Analytics.CustomEvent("WinLv2-1", new Dictionary<string, object>{
+				{ "score", score },
+				{ "strike", longStrike }
+			});
 		}
 		if(error >= 8){
+			Analytics.CustomEvent("gameOverLv2-1", new Dictionary<string, object>{
+				{ "score", score },
+				{ "strike", longStrike }
+			});
 			SceneManager.LoadScene("_GameOver");
 		}
+	}
+
+	private void NextScreen(){
+		SceneManager.LoadScene("_EndWeek2-1");
 	}
 		
 	private void CreateKey1 () {
@@ -151,7 +166,6 @@ public class HsWeek2_1 : MonoBehaviour {
 			HsAudioManager.instance.PlayAudioClip (key4);
 			return;
 		}
-
 		if (posX == ks) {
 			HsAudioManager.instance.PlayAudioClip (slideKey);
 		}

@@ -13,6 +13,8 @@ public class HsWeek1_3 : MonoBehaviour {
 
 	public GameObject key;
 	public GameObject keyPurple;
+	public GameObject spaceBar;
+	public GameObject spaceBarPurple;
 	public GameObject keyX2;
 	public Text scoreStr;
 	public Text comboStr;
@@ -35,6 +37,7 @@ public class HsWeek1_3 : MonoBehaviour {
 	private int comboKeyX2;
 	private int normalKey;
 	private float x1, x2, x3, x4;
+	private float spb;
 	private float y;
 	private float z;
 	private float interval;
@@ -54,6 +57,7 @@ public class HsWeek1_3 : MonoBehaviour {
 		this.x2 = -0.7f;
 		this.x3 = 0.7f;
 		this.x4 = 2.0f;
+		this.spb = 0.0f;
 		this.y = 5.5f;
 		this.z = 0.0f;
 		this.interval = 1.1f;
@@ -120,6 +124,15 @@ public class HsWeek1_3 : MonoBehaviour {
 		}
 		else{
 			Instantiate (keyPurple, new Vector3 (x4, y, z), Quaternion.identity);
+		}
+	}
+
+	private void CreareSpacebar(){
+		if (normalKey == 0) {
+			Instantiate (spaceBar, new Vector3 (spb, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (spaceBarPurple, new Vector3 (spb, y, z), Quaternion.identity);
 		}
 	}
 
@@ -216,7 +229,7 @@ public class HsWeek1_3 : MonoBehaviour {
 	public void SetComboKeyX2(){
 		normalKey = 1;// ativa key roxa
 		comboKeyX2 = 2;
-		Invoke ("RemoveComboKeyX2", 14.99f);
+		Invoke ("RemoveComboKeyX2", 19.99f);
 	}
 
 	private void RemoveComboKeyX2(){
@@ -227,7 +240,7 @@ public class HsWeek1_3 : MonoBehaviour {
     private void TheLevel(){	
 		Invoke ("CreateKeyX2", interval*20);//Aqui keyComboX2	
 		Invoke ("CreateKeyX2", interval*65);//Aqui keyComboX2	
-		Invoke ("CreateKeyX2", interval*82);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*86);//Aqui keyComboX2	
 		Invoke ("CreateKey4", 0.1f);
 		Invoke ("CreateKey1", 0.5f);
 		Invoke ("CreateKey4", interval);

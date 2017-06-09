@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AdManager.cs" />
      <Compile Include="Assets\Scripts\HsAudioManager.cs" />
      <Compile Include="Assets\Scripts\HsBackground.cs" />
      <Compile Include="Assets\Scripts\HsEngine.cs" />
@@ -103,6 +104,7 @@
      <Compile Include="Assets\Scripts\week3\HsPreWeek3_3.cs" />
      <Compile Include="Assets\Scripts\week3\HsPreWeek3_4.cs" />
      <Compile Include="Assets\Scripts\week3\HsPreWeek3_5.cs" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -127,6 +129,10 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{CE1AC7A7-31A6-062C-58A0-18C7DE26D129}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

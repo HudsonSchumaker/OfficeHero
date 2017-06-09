@@ -17,7 +17,7 @@ public class HsPreWeek2_3 : MonoBehaviour {
 	private float delay;
 
 	private void Start () {
-		this.delay = 5.0f;
+		this.delay = 5.5f;
 
 		this.grafico = GetComponent<SpriteRenderer> ();
 		this.larguraImagem = grafico.sprite.bounds.size.x;

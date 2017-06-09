@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class HsMainMenu : MonoBehaviour {
@@ -36,6 +34,14 @@ public class HsMainMenu : MonoBehaviour {
 	}
 
 	public void LoadEndlessMode(){
+		
+	}
+
+	public void LoadLeaderBoards(){
+		
+	}
+
+	public void LoadSettings(){
 		
 	}
 }
