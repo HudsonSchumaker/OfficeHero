@@ -27,8 +27,6 @@ public class AdManager : MonoBehaviour {
 
 	public void ShowBanner(){
 		Admob.Instance ().showBannerRelative (AdSize.Banner, AdPosition.TOP_CENTER, 5);
-
-		Admob.Instance ().
 	}
 
 	public void ShowBannerDown(){
