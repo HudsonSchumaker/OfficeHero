@@ -22,7 +22,7 @@ public class AdManager : MonoBehaviour {
 		}
 		DontDestroyOnLoad(this.gameObject);
 	}
-
+		
 	public void ShowBanner(){
 		Admob.Instance ().showBannerRelative (AdSize.Banner, AdPosition.TOP_CENTER, 5);
 	}
