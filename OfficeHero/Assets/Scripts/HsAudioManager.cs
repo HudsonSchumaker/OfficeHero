@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* 
+	@author Hudson Schumaker
+	@version 1.0.0
+*/
+
 public class HsAudioManager : MonoBehaviour {
 
 	public AudioSource source;
@@ -11,10 +16,15 @@ public class HsAudioManager : MonoBehaviour {
 		if (instance == null){
 			instance = this;
 		}
+		DontDestroyOnLoad(this.gameObject);
 	}
 
 	public void PlayAudioClip(AudioClip clip){
 		this.source.clip = clip;
 		this.source.Play ();
+	}
+
+	public void StopAudioClip(){
+		this.source.Stop ();
 	}
 }

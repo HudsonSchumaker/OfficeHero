@@ -18,6 +18,7 @@ public class HsWeekCalendar1 : MonoBehaviour {
 
 	private void Start () {
 		this.delay = 5.0f;
+		HsAudioManager.instance.StopAudioClip ();
 
 		this.grafico = GetComponent<SpriteRenderer> ();
 		this.larguraImagem = grafico.sprite.bounds.size.x;
@@ -28,9 +29,7 @@ public class HsWeekCalendar1 : MonoBehaviour {
 		novaEscala.x = larguraTela/larguraImagem;
 		novaEscala.y = alturaTela/alturaImagem;
 		this.transform.localScale = novaEscala;
-		if (Advertisement.IsReady()){
-			Advertisement.Show();
-		}
+		AdManager.instance.ShowVideo ();
 	}
 
 	private void Update () {

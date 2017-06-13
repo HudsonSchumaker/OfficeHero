@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using admob;
 
 /* 
@@ -15,7 +13,6 @@ public class AdManager : MonoBehaviour {
 	private string bannerId = "ca-app-pub-1780770631989213/7118088880";
 	private string videoId  = "ca-app-pub-1780770631989213/8594822082";
 
-
 	private void Awake() {
 		Admob.Instance ().initAdmob (bannerId, videoId);
 		//Admob.Instance ().setTesting (true);
@@ -23,6 +20,7 @@ public class AdManager : MonoBehaviour {
 		if (instance == null){
 			instance = this;
 		}
+		DontDestroyOnLoad(this.gameObject);
 	}
 
 	public void ShowBanner(){

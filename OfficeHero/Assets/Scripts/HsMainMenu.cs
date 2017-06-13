@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class HsMainMenu : MonoBehaviour {
 
+	public AudioClip key1;
+
 	private SpriteRenderer grafico;
 	private float larguraImagem;
 	private float alturaImagem;
@@ -26,22 +28,23 @@ public class HsMainMenu : MonoBehaviour {
 		this.transform.localScale = novaEscala;
 	}
 
-	private void Update () {
-	}
-
-	public void LoadStoryMode(){
+	public void LoadArcadeMode(){
+		HsAudioManager.instance.PlayAudioClip (key1);
 		SceneManager.LoadScene("_WeekCalendar1");
 	}
 
 	public void LoadEndlessMode(){
+		HsAudioManager.instance.PlayAudioClip (key1);
 		
 	}
 
 	public void LoadLeaderBoards(){
+		HsAudioManager.instance.PlayAudioClip (key1);
 		
 	}
 
 	public void LoadSettings(){
+		HsAudioManager.instance.PlayAudioClip (key1);
 		
 	}
 }

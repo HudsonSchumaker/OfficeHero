@@ -16,7 +16,7 @@ public class HsSplash : MonoBehaviour {
 	private float delay;
 
 	private void Start () {
-		this.delay = 1.9f;
+		this.delay = 2.2f;
 
 		this.grafico = GetComponent<SpriteRenderer> ();
 		this.larguraImagem = grafico.sprite.bounds.size.x;
