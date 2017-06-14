@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class HsMainMenu : MonoBehaviour {
 
 	public AudioClip key1;
+	public Text userName;
 
 	private SpriteRenderer grafico;
 	private float larguraImagem;
@@ -12,6 +14,9 @@ public class HsMainMenu : MonoBehaviour {
 	private float larguraTela;
 
 	private void Start () {
+		AdManager.instance.RemoveBanners ();
+		userName.text = PlayerPrefs.GetString("playerName");
+
 		grafico = GetComponent<SpriteRenderer> ();
 
 		// Width and Heigth do sprite

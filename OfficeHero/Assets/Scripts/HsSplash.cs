@@ -16,7 +16,7 @@ public class HsSplash : MonoBehaviour {
 	private float delay;
 
 	private void Start () {
-		this.delay = 2.2f;
+		this.delay = 5.5f;
 
 		this.grafico = GetComponent<SpriteRenderer> ();
 		this.larguraImagem = grafico.sprite.bounds.size.x;
@@ -32,7 +32,7 @@ public class HsSplash : MonoBehaviour {
 	private void Update () {
 		delay -= Time.deltaTime;
 		if(delay <= 0.0f){
-			SceneManager.LoadScene("_MainScreen");
+			SceneManager.LoadScene("_Login");
 		}
 	}
 }
