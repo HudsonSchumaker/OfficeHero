@@ -16,6 +16,7 @@ public class HsGameOver : MonoBehaviour {
 
 	private void Start () {
 		AdManager.instance.ShowBanner ();
+		AdManager.instance.LoadBigBanner ();
 		this.delay = 3.0f;
 
 		this.grafico = GetComponent<SpriteRenderer> ();
