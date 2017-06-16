@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -17,6 +16,7 @@ public class HsWeek1_1 : MonoBehaviour {
 	public GameObject keyX2;
 	public Text scoreStr;
 	public Text comboStr;
+	public Text errorsStr;
 	public GameObject hero1;
 	public GameObject hero2;
 	public GameObject finished;
@@ -31,6 +31,7 @@ public class HsWeek1_1 : MonoBehaviour {
 	private int hitPoint;
 	private int longStrike;
 	private int error;
+	private int maxErrors;
 	private int strike;
 	private int combo;
 	private int comboKeyX2;
@@ -45,6 +46,7 @@ public class HsWeek1_1 : MonoBehaviour {
 		this.numberOfKeys = 62;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
+		this.maxErrors = 8;
 		this.score = 0;
 		this.strike = 0;
 		this.longStrike = 0;
@@ -64,6 +66,7 @@ public class HsWeek1_1 : MonoBehaviour {
 
 	private void Update () {
 		this.scoreStr.text = "SCORE : " + score;
+		this.errorsStr.text = "ERRORS : " + error + " / " + maxErrors;
 		this.CheckBonus ();
 		if(numberOfKeys <= 0){
 			EndStrike ();//Se nao errar nao entra
@@ -76,7 +79,7 @@ public class HsWeek1_1 : MonoBehaviour {
 				{ "strike", longStrike }
 			});
 		}
-		if(error >= 8){
+		if(error >= maxErrors){
 			Analytics.CustomEvent("gameOverLv1-1", new Dictionary<string, object>{
 					{ "score", score },
 					{ "strike", longStrike }
@@ -131,20 +134,24 @@ public class HsWeek1_1 : MonoBehaviour {
 
 	private void playAudio(float posX){
 		if(posX == x1){
-			HsAudioManager.instance.PlayAudioClip (key1);
+			PlayKeySound (key1);
 			return;
 		}
 		if(posX == x2){
-			HsAudioManager.instance.PlayAudioClip (key2);
+			PlayKeySound (key2);
 			return;
 		}
 		if(posX == x3){
-			HsAudioManager.instance.PlayAudioClip (key3);
+			PlayKeySound (key3);
 			return;
 		}
 		if(posX == x4){
-			HsAudioManager.instance.PlayAudioClip (key4);
+			PlayKeySound (key4);
 		}
+	}
+
+	private void PlayKeySound(AudioClip clip){
+		HsAudioManager.instance.PlayAudioClip (clip);
 	}
 		
 	private void SetFrame1(){
@@ -200,7 +207,7 @@ public class HsWeek1_1 : MonoBehaviour {
 	}
 
 	public void Error(){
-		HsAudioManager.instance.PlayAudioClip (lostKey);
+		PlayKeySound (lostKey);
 		error++;
 	}
 

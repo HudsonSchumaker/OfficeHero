@@ -83,9 +83,6 @@
  <Reference Include="Facebook.Unity">
  <HintPath>/Users/hudsonschumaker/UnityProjects/OfficeHero/Assets/FacebookSDK/Plugins/Facebook.Unity.dll</HintPath>
  </Reference>
- <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Users/hudsonschumaker/UnityProjects/OfficeHero/Assets/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll</HintPath>
- </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

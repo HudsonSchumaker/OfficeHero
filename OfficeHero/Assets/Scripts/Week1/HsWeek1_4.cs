@@ -13,9 +13,14 @@ public class HsWeek1_4 : MonoBehaviour {
 
 	public GameObject key;
 	public GameObject keyPurple;
+	public GameObject spaceBar;
+	public GameObject spaceBarPurple;
+	public GameObject keyEnter;
+	public GameObject keyEnterPurple;
 	public GameObject keyX2;
 	public Text scoreStr;
 	public Text comboStr;
+	public Text errorsStr;
 	public GameObject hero1;
 	public GameObject hero2;
 	public GameObject finished;
@@ -31,19 +36,22 @@ public class HsWeek1_4 : MonoBehaviour {
 	private int longStrike;
 	private int error;
 	private int strike;
+	private int maxErrors;
 	private int combo;
 	private int comboKeyX2;
 	private int normalKey;
 	private float x1, x2, x3, x4;
+	private float spb;
 	private float y;
 	private float z;
 	private float interval;
 
 	private void Start () {
 		AdManager.instance.RemoveBanners ();
-		this.numberOfKeys = 60;
+		this.numberOfKeys = 71;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
+		this.maxErrors = 8;
 		this.score = 0;
 		this.strike = 0;
 		this.longStrike = 0;
@@ -55,6 +63,7 @@ public class HsWeek1_4 : MonoBehaviour {
 		this.x2 = -0.7f;
 		this.x3 = 0.7f;
 		this.x4 = 2.0f;
+		this.spb = 0.0f;
 		this.y = 5.5f;
 		this.z = 0.0f;
 		this.interval = 1.1f;
@@ -62,7 +71,8 @@ public class HsWeek1_4 : MonoBehaviour {
 	}
 
 	private void Update () {
-		scoreStr.text = "SCORE : " + score;
+		this.scoreStr.text = "SCORE : " + score;
+		this.errorsStr.text = "ERRORS : " + error + " / " + maxErrors;
 		this.CheckBonus ();
 		if(numberOfKeys <= 0){
 			EndStrike ();//Se nao errar nao entra
@@ -75,7 +85,7 @@ public class HsWeek1_4 : MonoBehaviour {
 				{ "strike", longStrike }
 			});
 		}
-		if(error >= 8){
+		if(error >= maxErrors){
 			Analytics.CustomEvent("gameOverLv1-4", new Dictionary<string, object>{
 				{ "score", score },
 				{ "strike", longStrike }
@@ -124,26 +134,75 @@ public class HsWeek1_4 : MonoBehaviour {
 		}
 	}
 
+	private void CreateSpacebar(){
+		if (normalKey == 0) {
+			Instantiate (spaceBar, new Vector3 (spb, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (spaceBarPurple, new Vector3 (spb, y, z), Quaternion.identity);
+		}
+	}
+
+	private void CreateEnter1 () {
+		if(normalKey == 0){
+			Instantiate (keyEnter, new Vector3 (x1, y, z), Quaternion.identity);
+		}
+		else{
+			Instantiate (keyEnterPurple, new Vector3 (x1, y, z), Quaternion.identity);
+		}
+	}
+
+	private void CreateEnter2 () {
+		if (normalKey == 0) {
+			Instantiate (keyEnter, new Vector3 (x2, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (keyEnterPurple, new Vector3 (x2, y, z), Quaternion.identity);	
+		}
+	}
+
+	private void CreateEnter3 () {
+		if (normalKey == 0) {
+			Instantiate (keyEnter, new Vector3 (x3, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (keyEnterPurple, new Vector3 (x3, y, z), Quaternion.identity);	
+		}
+	}
+
+	private void CreateEnter4 () {
+		if (normalKey == 0) {
+			Instantiate (keyEnter, new Vector3 (x4, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (keyEnterPurple, new Vector3 (x4, y, z), Quaternion.identity);
+		}
+	}
+
 	private void CreateKeyX2 () {
 		Instantiate (keyX2, new Vector3 (x4, y, z), Quaternion.identity);//Atenção aqui
 	}
 
 	private void playAudio(float posX){
 		if(posX == x1){
-			HsAudioManager.instance.PlayAudioClip (key1);
+			PlayKeySound (key1);
 			return;
 		}
 		if(posX == x2){
-			HsAudioManager.instance.PlayAudioClip (key2);
+			PlayKeySound (key2);
 			return;
 		}
 		if(posX == x3){
-			HsAudioManager.instance.PlayAudioClip (key3);
+			PlayKeySound (key3);
 			return;
 		}
 		if(posX == x4){
-			HsAudioManager.instance.PlayAudioClip (key4);
+			PlayKeySound (key4);
 		}
+	}
+
+	private void PlayKeySound(AudioClip clip){
+		HsAudioManager.instance.PlayAudioClip (clip);
 	}
 
 	private void SetFrame1(){
@@ -199,7 +258,7 @@ public class HsWeek1_4 : MonoBehaviour {
 	}
 
 	public void Error(){
-		HsAudioManager.instance.PlayAudioClip (lostKey);
+		PlayKeySound (lostKey);
 		error++;
 	}
 
@@ -226,148 +285,79 @@ public class HsWeek1_4 : MonoBehaviour {
 	}
 
 	private void TheLevel(){
-		Invoke ("CreateKeyX2", interval*20);//Aqui keyComboX2	
-		Invoke ("CreateKeyX2", interval*50);//Aqui keyComboX2	
-		Invoke ("CreateKeyX2", interval*78);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*18);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*48);//Aqui keyComboX2	
+
 		Invoke ("CreateKey1", 0.01f);
-		Invoke ("CreateKey2", 0.5f);
-		Invoke ("CreateKey3", 1.0f);
-		Invoke ("CreateKey1", 1.0f);
-		Invoke ("CreateKey3", 1.699f);
-		Invoke ("CreateKey1", interval *2);
-		Invoke ("CreateKey2", interval *3);
-		Invoke ("CreateKey3", interval *4);
-		Invoke ("CreateKey1", interval *5);
-		Invoke ("CreateKey2", interval *6);
-		Invoke ("CreateKey3", interval *7);
-		Invoke ("CreateKey3", interval *8);
-		Invoke ("CreateKey2", interval *9);
-		Invoke ("CreateKey1", interval *10);
-		Invoke ("CreateKey1", interval *11);
-		Invoke ("CreateKey2", interval *12);
-		Invoke ("CreateKey3", interval *13);
-		Invoke ("CreateKey2", interval *14);
-		Invoke ("CreateKey2", interval *15);
-		Invoke ("CreateKey2", interval *16);
-		Invoke ("CreateKey1", interval *17);
-		Invoke ("CreateKey3", interval *17);
-		Invoke ("CreateKey2", interval *18);
-		Invoke ("CreateKey1", interval *19);
-		Invoke ("CreateKey2", interval *19);
-		Invoke ("CreateKey3", interval *20);
-		Invoke ("CreateKey1", interval *21);
-		Invoke ("CreateKey2", interval *22);
-		Invoke ("CreateKey3", interval *23);
-		Invoke ("CreateKey2", interval *23.5f);
-		Invoke ("CreateKey1", interval *24);
-		Invoke ("CreateKey1", interval *25);
-		Invoke ("CreateKey1", interval *26);
-		Invoke ("CreateKey1", interval *27);
-		Invoke ("CreateKey1", interval *28);
-		Invoke ("CreateKey2", interval *26);
-		Invoke ("CreateKey3", interval *28);
-		Invoke ("CreateKey3", interval *29);
-		Invoke ("CreateKey3", interval *30);
-		Invoke ("CreateKey3", interval *31);
-		Invoke ("CreateKey3", interval *32);
-		Invoke ("CreateKey3", interval *33);
-		Invoke ("CreateKey3", interval *34);
-		Invoke ("CreateKey3", interval *35);
-		Invoke ("CreateKey1", interval *30);
-		Invoke ("CreateKey2", interval *31);
-		Invoke ("CreateKey1", interval *32);
-		Invoke ("CreateKey2", interval *32);
-		Invoke ("CreateKey2", interval *33);
-		Invoke ("CreateKey1", interval *34);
-		Invoke ("CreateKey1", interval *35);
-		Invoke ("CreateKey1", interval *36);
-		Invoke ("CreateKey3", interval *37);
-		Invoke ("CreateKey1", interval *38);
-		Invoke ("CreateKey2", interval *39);
-		Invoke ("CreateKey1", interval *40);
-		Invoke ("CreateKey1", interval *42);
-		Invoke ("CreateKey1", interval *44);
-		Invoke ("CreateKey2", interval *41);
-		Invoke ("CreateKey2", interval *43);
-		Invoke ("CreateKey2", interval *45);
-		Invoke ("CreateKey2", interval *47);
-		Invoke ("CreateKey2", interval *49);
-		Invoke ("CreateKey1", interval *50);
-		Invoke ("CreateKey2", interval *50);
-		Invoke ("CreateKey3", interval *50);
-		Invoke ("CreateKey1", interval *51);
-		Invoke ("CreateKey2", interval *51);
-		Invoke ("CreateKey3", interval *51);
-		Invoke ("CreateKey1", interval *52);
-		Invoke ("CreateKey2", interval *52);
-		Invoke ("CreateKey3", interval *52);
-		Invoke ("CreateKey1", interval *53);
-		Invoke ("CreateKey2", interval *53);
-		Invoke ("CreateKey3", interval *53);
-		Invoke ("CreateKey1", interval *54);
-		Invoke ("CreateKey2", interval *54);
-		Invoke ("CreateKey3", interval *54);
-		Invoke ("CreateKey1", interval *55);
-		Invoke ("CreateKey2", interval *56);
-		Invoke ("CreateKey3", interval *57);
-		Invoke ("CreateKey1", interval *58);
-		Invoke ("CreateKey2", interval *58);
-		Invoke ("CreateKey3", interval *58);
-		Invoke ("CreateKey1", interval *58.5f);
-		Invoke ("CreateKey2", interval *59);
-		Invoke ("CreateKey1", interval *60);
-		Invoke ("CreateKey1", interval *61);
-		Invoke ("CreateKey2", interval *62);
-		Invoke ("CreateKey3", interval *62);
-		Invoke ("CreateKey1", interval *63);
-		Invoke ("CreateKey2", interval *64);
-		Invoke ("CreateKey3", interval *64);
-		Invoke ("CreateKey2", interval *65);
-		Invoke ("CreateKey3", interval *65);
-		Invoke ("CreateKey1", interval *66);
-		Invoke ("CreateKey3", interval *67);
-		Invoke ("CreateKey2", interval *67.5f);
-		Invoke ("CreateKey1", interval *67);
-		Invoke ("CreateKey1", interval *68);
-		Invoke ("CreateKey2", interval *68);
-		Invoke ("CreateKey3", interval *68);
-		Invoke ("CreateKey1", interval *69);
-		Invoke ("CreateKey2", interval *69);
-		Invoke ("CreateKey3", interval *69);
-		Invoke ("CreateKey1", interval *70);
-		Invoke ("CreateKey2", interval *71);
-		Invoke ("CreateKey3", interval *70);
-		Invoke ("CreateKey1", interval *72);
-		Invoke ("CreateKey3", interval *72);
-		Invoke ("CreateKey2", interval *73);
-		Invoke ("CreateKey1", interval *74);
-		Invoke ("CreateKey3", interval *74);
-		Invoke ("CreateKey2", interval *75);
-		Invoke ("CreateKey1", interval *76);
-		Invoke ("CreateKey3", interval *76);
-		Invoke ("CreateKey2", interval *77);
-		Invoke ("CreateKey1", interval *78);
-		Invoke ("CreateKey3", interval *78);
-		Invoke ("CreateKey2", interval *78);
-		Invoke ("CreateKey1", interval *79);
-		Invoke ("CreateKey3", interval *79);
-		Invoke ("CreateKey2", interval *79);
-		Invoke ("CreateKey3", interval *80);
-		Invoke ("CreateKey2", interval *80);
-		Invoke ("CreateKey1", interval *81);
-		Invoke ("CreateKey3", interval *81);
-		Invoke ("CreateKey2", interval *82);
-		Invoke ("CreateKey3", interval *83);
-		Invoke ("CreateKey1", interval *83);
-		Invoke ("CreateKey3", interval *84);
-		Invoke ("CreateKey1", interval *85);
-		Invoke ("CreateKey2", interval *86);
-		Invoke ("CreateKey3", interval *87);
-		Invoke ("CreateKey1", interval *87);
-		Invoke ("CreateKey2", interval *88);
-		Invoke ("CreateKey1", interval *89);
-		Invoke ("CreateKey3", interval *89);
-		Invoke ("CreateKey2", interval *90);
-		Invoke ("CreateKey2", interval * 90.5f);
+		Invoke ("CreateEnter4", 0.01f);
+		Invoke ("CreateKey2", interval*2);
+		Invoke ("CreateKey3", interval*2);
+		Invoke ("CreateKey4", interval*3);
+		Invoke ("CreateKey1", interval*4);
+		Invoke ("CreateEnter1", interval*5);
+		Invoke ("CreateKey3", interval*5);
+		Invoke ("CreateKey4", interval*6);
+		Invoke ("CreateKey4", interval*7);
+		Invoke ("CreateSpacebar", interval*8);
+		Invoke ("CreateEnter4", interval*9);
+		Invoke ("CreateKey2", interval*10);
+		Invoke ("CreateKey2", interval*11);
+		Invoke ("CreateSpacebar", interval*12);
+		Invoke ("CreateKey1", interval*13);
+		Invoke ("CreateEnter1", interval*14);
+		Invoke ("CreateKey2", interval*15);
+		Invoke ("CreateKey3", interval*16);
+		Invoke ("CreateEnter2", interval*17);
+		Invoke ("CreateKey3", interval*18);
+		Invoke ("CreateKey2", interval*19);
+		Invoke ("CreateKey3", interval*20);
+		Invoke ("CreateKey1", interval*21);
+		Invoke ("CreateKey4", interval*22);
+		Invoke ("CreateKey2", interval*23);
+		Invoke ("CreateKey3", interval*23);
+		Invoke ("CreateSpacebar", interval*24);
+		Invoke ("CreateEnter1", interval*25);
+		Invoke ("CreateKey2", interval*26);
+		Invoke ("CreateKey4", interval*26);
+		Invoke ("CreateEnter4", interval*27);
+		Invoke ("CreateKey2", interval*28);
+		Invoke ("CreateKey4", interval*28);
+		Invoke ("CreateKey2", interval*29);
+		Invoke ("CreateSpacebar", interval*30);
+		Invoke ("CreateKey1", interval*31);
+		Invoke ("CreateKey4", interval*32);
+		Invoke ("CreateKey2", interval*33);
+		Invoke ("CreateKey1", interval*34);
+		Invoke ("CreateKey2", interval*34);
+		Invoke ("CreateSpacebar", interval*35);
+		Invoke ("CreateKey4", interval*36);
+		Invoke ("CreateEnter4", interval*37);
+		Invoke ("CreateSpacebar", interval*38);
+		Invoke ("CreateSpacebar", interval*39);
+		Invoke ("CreateEnter1", interval*40);
+		Invoke ("CreateKey2", interval*41);
+		Invoke ("CreateEnter4", interval*42);
+		Invoke ("CreateSpacebar", interval*43);
+		Invoke ("CreateKey4", interval*44);
+		Invoke ("CreateKey1", interval*45);
+		Invoke ("CreateKey1", interval*45);
+		Invoke ("CreateKey3", interval*46);
+		Invoke ("CreateSpacebar", interval*47);
+		Invoke ("CreateKey2", interval*48);
+		Invoke ("CreateKey2", interval*49);
+		Invoke ("CreateEnter3", interval*50);
+		Invoke ("CreateKey1", interval*51);
+		Invoke ("CreateKey4", interval*51);
+		Invoke ("CreateKey1", interval*52);
+		Invoke ("CreateKey3", interval*52);
+		Invoke ("CreateKey1", interval*53);
+		Invoke ("CreateKey2", interval*53);
+		Invoke ("CreateKey1", interval*54);
+		Invoke ("CreateKey1", interval*55);
+		Invoke ("CreateKey2", interval*55);
+		Invoke ("CreateKey1", interval*56);
+		Invoke ("CreateKey3", interval*56);
+		Invoke ("CreateKey1", interval*57);
+		Invoke ("CreateKey4", interval*57);
 	}
 }
