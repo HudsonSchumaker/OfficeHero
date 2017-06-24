@@ -18,7 +18,7 @@ public class HsKeyLeft2_1 : MonoBehaviour {
 		this.hsEngine = (HsWeek2_1)gameEngine.GetComponent (typeof(HsWeek2_1));
 		Behaviour h = (Behaviour)GetComponent ("Halo");
 		h.enabled = false;
-		this.keyExclamation = (GameObject) Instantiate(Resources.Load("keyExclamation"));
+		this.keyExclamation = (GameObject) Instantiate(Resources.Load("keyExclamation"));//ExclamationKey
 		this.keyExclamation.transform.Translate (new Vector3(-2.0f,0.0f,0.0f));
 	}
 

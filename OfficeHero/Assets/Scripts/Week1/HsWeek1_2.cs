@@ -160,6 +160,10 @@ public class HsWeek1_2 : MonoBehaviour {
 		}
 		if(posX == x4){
 			PlayKeySound (key4);
+			return;
+		}
+		if(posX == spb){
+			PlayKeySound (key4);
 		}
 	}
 

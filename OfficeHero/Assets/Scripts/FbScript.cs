@@ -21,7 +21,7 @@ public class FbScript : MonoBehaviour {
 	}
 
 	public void FBLogin(){
-		var perms = new List<string>(){"public_profile", "email", "user_friends"};
+		var perms = new List<string>(){"public_profile"};
 		FB.LogInWithReadPermissions(perms, AuthCallback);
 		
 	}
@@ -30,10 +30,7 @@ public class FbScript : MonoBehaviour {
 		if (FB.IsLoggedIn) {
 			var aToken = Facebook.Unity.AccessToken.CurrentAccessToken;
 			Debug.Log(aToken.UserId);
-			foreach (string perm in aToken.Permissions) {
-				Debug.Log(perm);
-			}
-			FB.API ("/me?fields=id,name", HttpMethod.GET, DisplayUserName);
+			FB.API ("/me?fields=id,name,email", HttpMethod.GET, DisplayUserName);
 
 		} else {
 			Debug.Log("User cancelled login");
@@ -43,9 +40,11 @@ public class FbScript : MonoBehaviour {
 	public void DisplayUserName(IResult result){
 		Debug.Log("Hi there, "+result.ResultDictionary["id"]);
 		Debug.Log("Hi there, "+result.ResultDictionary["name"]);
+		Debug.Log("Hi there, "+result.ResultDictionary["email"]);
 
 		PlayerPrefs.SetString ("id", (string)result.ResultDictionary["id"]);
 		PlayerPrefs.SetString ("playerName",(string) result.ResultDictionary["name"]);
+		PlayerPrefs.SetString ("playerEmail",(string) result.ResultDictionary["email"]);
 
 		SceneManager.LoadScene("_MainScreen");
 	}

@@ -46,19 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\ConsoleBase.cs" />
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\LogView.cs" />
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\MenuBase.cs" />
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AccessTokenMenu.cs" />
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AppEvents.cs" />
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AppInvites.cs" />
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AppLinks.cs" />
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\AppRequests.cs" />
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\DialogShare.cs" />
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\GameGroups.cs" />
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\GraphRequest.cs" />
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\MainMenu.cs" />
-     <Compile Include="Assets\FacebookSDK\Examples\Scripts\SubMenus\Pay.cs" />
      <Compile Include="Assets\Scripts\AdManager.cs" />
      <Compile Include="Assets\Scripts\FbScript.cs" />
      <Compile Include="Assets\Scripts\HsAudioManager.cs" />
@@ -67,6 +54,7 @@
      <Compile Include="Assets\Scripts\HsFinished.cs" />
      <Compile Include="Assets\Scripts\HsGameOver.cs" />
      <Compile Include="Assets\Scripts\HsKey.cs" />
+     <Compile Include="Assets\Scripts\HsLeaderBoards.cs" />
      <Compile Include="Assets\Scripts\HsLogin.cs" />
      <Compile Include="Assets\Scripts\HsMainMenu.cs" />
      <Compile Include="Assets\Scripts\HsSchumakerTeam.cs" />
@@ -99,9 +87,19 @@
      <Compile Include="Assets\Scripts\Week1\Score\HsScore1_4.cs" />
      <Compile Include="Assets\Scripts\Week1\Score\HsScore1_5.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKey2_1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKey2_2.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKey2_3.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKeyLeft2_1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKeyLeft2_2.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKeyLeft2_3.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKeyRight2_1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKeyRight2_2.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKeyRight2_3.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKeyX2Lv2_1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKeyX2Lv2_2.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKeyX2Lv2_3.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKeyX2Lv2_4.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKeyX2Lv2_5.cs" />
      <Compile Include="Assets\Scripts\Week2\HsPreWeek2_1.cs" />
      <Compile Include="Assets\Scripts\Week2\HsPreWeek2_2.cs" />
      <Compile Include="Assets\Scripts\Week2\HsPreWeek2_3.cs" />
@@ -113,6 +111,8 @@
      <Compile Include="Assets\Scripts\Week2\HsScore2_4.cs" />
      <Compile Include="Assets\Scripts\Week2\HsScore2_5.cs" />
      <Compile Include="Assets\Scripts\Week2\HsWeek2_1.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsWeek2_2.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsWeek2_3.cs" />
      <Compile Include="Assets\Scripts\Week2\HsWeekCalendar2.cs" />
      <Compile Include="Assets\Scripts\week3\HsPreWeek3_1.cs" />
      <Compile Include="Assets\Scripts\week3\HsPreWeek3_2.cs" />

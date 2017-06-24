@@ -85,7 +85,7 @@ public class HsWeek1_5 : MonoBehaviour {
 				{ "strike", longStrike }
 			});
 		}
-		if(error >= 8){
+		if(error >= maxErrors){
 			Analytics.CustomEvent("gameOverLv1-5", new Dictionary<string, object>{
 				{ "score", score },
 				{ "strike", longStrike }
@@ -197,6 +197,14 @@ public class HsWeek1_5 : MonoBehaviour {
 			return;
 		}
 		if(posX == x4){
+			PlayKeySound (key4);
+			return;
+		}
+		if(posX == x4){
+			PlayKeySound (key4);
+			return;
+		}
+		if(posX == spb){
 			PlayKeySound (key4);
 		}
 	}
