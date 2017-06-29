@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Week2/_Week2-3.unity
+- path: Assets/_SchumakerTeam.unity
   isLoaded: 1
   isActive: 1

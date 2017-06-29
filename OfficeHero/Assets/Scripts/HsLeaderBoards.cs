@@ -30,9 +30,8 @@ public class HsLeaderBoards : MonoBehaviour {
 	IEnumerator WaitForRequest(WWW www){
 		yield return www;
 
-		if (www.error == null)
-		{
-			Debug.Log("WWW Ok!: " + www.data);
+		if (www.error == null){
+			Debug.Log("WWW Ok!: " + www.text);
 		} else {
 			Debug.Log("WWW Error: "+ www.error);
 		}    

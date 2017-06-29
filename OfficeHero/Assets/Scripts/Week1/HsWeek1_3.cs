@@ -29,6 +29,7 @@ public class HsWeek1_3 : MonoBehaviour {
 	public AudioClip key3;
 	public AudioClip key4;
 	public AudioClip lostKey;
+	public AudioSource music;
 
 	private int numberOfKeys;
 	private int score;
@@ -45,6 +46,7 @@ public class HsWeek1_3 : MonoBehaviour {
 	private float y;
 	private float z;
 	private float interval;
+	private bool isGameShown;
 
 	private void Start () {
 		AdManager.instance.RemoveBanners ();
@@ -67,6 +69,7 @@ public class HsWeek1_3 : MonoBehaviour {
 		this.y = 5.5f;
 		this.z = 0.0f;
 		this.interval = 1.1f;
+		this.isGameShown = true;
 		this.TheLevel ();
 	}
 
@@ -287,7 +290,24 @@ public class HsWeek1_3 : MonoBehaviour {
 		normalKey = 0;// desativa key rox
 		comboKeyX2 = 1;
 	}
-	
+
+	public void HsPauseGame (){
+
+		if(isGameShown){
+			this.isGameShown = false;
+		}else{
+			this.isGameShown = true;
+		}
+
+		if (!isGameShown) {
+			Time.timeScale = 0;
+			music.Pause ();
+		} else {
+			Time.timeScale = 1;
+			music.Play ();
+		}
+	}
+
     private void TheLevel(){	
 		Invoke ("CreateKeyX2", interval*10);//Aqui keyComboX2	
 		Invoke ("CreateKeyX2", interval*38);//Aqui keyComboX2	

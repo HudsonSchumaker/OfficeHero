@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\HsEngine.cs" />
      <Compile Include="Assets\Scripts\HsFinished.cs" />
      <Compile Include="Assets\Scripts\HsGameOver.cs" />
+     <Compile Include="Assets\Scripts\HsInternet.cs" />
      <Compile Include="Assets\Scripts\HsKey.cs" />
      <Compile Include="Assets\Scripts\HsLeaderBoards.cs" />
      <Compile Include="Assets\Scripts\HsLogin.cs" />
