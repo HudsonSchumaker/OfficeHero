@@ -20,6 +20,7 @@ public class HsWeek1_1 : MonoBehaviour {
 	public GameObject hero1;
 	public GameObject hero2;
 	public GameObject finished;
+	public GameObject paused;
 	public AudioClip key1;
 	public AudioClip key2;
 	public AudioClip key3;
@@ -44,7 +45,7 @@ public class HsWeek1_1 : MonoBehaviour {
 	private bool isGameShown;
 
 	private void Start () {
-		//AdManager.instance.RemoveBanners ();
+		AdManager.instance.RemoveBanners ();
 		this.numberOfKeys = 62;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
@@ -62,7 +63,7 @@ public class HsWeek1_1 : MonoBehaviour {
 		this.x4 = 2.0f;
 		this.y = 5.5f;
 		this.z = 0.0f;
-		this.interval = 1.1f;
+		this.interval = 0.8f;
 		this.isGameShown = true;
 		this.TheLevel ();
 	}
@@ -92,6 +93,7 @@ public class HsWeek1_1 : MonoBehaviour {
 	}
 
 	private void NextScreen(){
+		PlayerPrefs.SetInt ("okLv1-1", 1);
 		SceneManager.LoadScene("_EndWeek1-1");
 	}
 		
@@ -154,7 +156,7 @@ public class HsWeek1_1 : MonoBehaviour {
 	}
 
 	private void PlayKeySound(AudioClip clip){
-		//HsAudioManager.instance.PlayAudioClip (clip);
+		HsAudioManager.instance.PlayAudioClip (clip);
 	}
 		
 	private void SetFrame1(){
@@ -246,15 +248,21 @@ public class HsWeek1_1 : MonoBehaviour {
 
 		if (!isGameShown) {
 			Time.timeScale = 0;
+			paused.SetActive (true);
 			music.Pause ();
 		} else {
 			Time.timeScale = 1;
+			paused.SetActive (false);
 			music.Play ();
 		}
 	}
 
+	public void HsBack(){
+		SceneManager.LoadScene("_MainScreen");
+	}
+
 	private void TheLevel(){	
-		Invoke ("CreateKeyX2", interval*20);//Aqui keyComboX2
+		Invoke ("CreateKeyX2", interval*19);//Aqui keyComboX2
 
 		Invoke ("CreateKey3", 0.1f);
 		Invoke ("CreateKey2", interval);

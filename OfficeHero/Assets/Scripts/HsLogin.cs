@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
-
 /* 
 	@author Hudson Schumaker
 	@version 1.0.0

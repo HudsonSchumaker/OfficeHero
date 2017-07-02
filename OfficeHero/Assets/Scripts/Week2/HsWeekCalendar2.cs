@@ -16,7 +16,7 @@ public class HsWeekCalendar2 : MonoBehaviour {
 	private float delay;
 
 	private void Start () {
-		this.delay = 1.0f;
+		this.delay = 4.0f;
 
 		this.grafico = GetComponent<SpriteRenderer> ();
 		this.larguraImagem = grafico.sprite.bounds.size.x;
@@ -32,7 +32,7 @@ public class HsWeekCalendar2 : MonoBehaviour {
 	private void Update () {
 		delay -= Time.deltaTime;
 		if(delay <= 0.0f){
-			SceneManager.LoadScene("_PreWeek2-1");
+			SceneManager.LoadScene("_Lv2");
 		}
 	}
 }

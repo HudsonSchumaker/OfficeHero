@@ -56,8 +56,11 @@
      <Compile Include="Assets\Scripts\HsInternet.cs" />
      <Compile Include="Assets\Scripts\HsKey.cs" />
      <Compile Include="Assets\Scripts\HsLeaderBoards.cs" />
+     <Compile Include="Assets\Scripts\HsLevelMenu.cs" />
      <Compile Include="Assets\Scripts\HsLogin.cs" />
      <Compile Include="Assets\Scripts\HsMainMenu.cs" />
+     <Compile Include="Assets\Scripts\HsNoConnection.cs" />
+     <Compile Include="Assets\Scripts\HsPaused.cs" />
      <Compile Include="Assets\Scripts\HsSchumakerTeam.cs" />
      <Compile Include="Assets\Scripts\HsSplash.cs" />
      <Compile Include="Assets\Scripts\HsTitle.cs" />
@@ -71,6 +74,7 @@
      <Compile Include="Assets\Scripts\Week1\HsKeyX2Lv1_3.cs" />
      <Compile Include="Assets\Scripts\Week1\HsKeyX2Lv1_4.cs" />
      <Compile Include="Assets\Scripts\Week1\HsKeyX2Lv1_5.cs" />
+     <Compile Include="Assets\Scripts\Week1\HsLv1Select.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_1.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_2.cs" />
      <Compile Include="Assets\Scripts\Week1\HsWeek1_3.cs" />
@@ -101,6 +105,7 @@
      <Compile Include="Assets\Scripts\Week2\HsKeyX2Lv2_3.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKeyX2Lv2_4.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKeyX2Lv2_5.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsLv2Select.cs" />
      <Compile Include="Assets\Scripts\Week2\HsPreWeek2_1.cs" />
      <Compile Include="Assets\Scripts\Week2\HsPreWeek2_2.cs" />
      <Compile Include="Assets\Scripts\Week2\HsPreWeek2_3.cs" />
@@ -115,11 +120,15 @@
      <Compile Include="Assets\Scripts\Week2\HsWeek2_2.cs" />
      <Compile Include="Assets\Scripts\Week2\HsWeek2_3.cs" />
      <Compile Include="Assets\Scripts\Week2\HsWeekCalendar2.cs" />
+     <Compile Include="Assets\Scripts\week3\HsLv3Select.cs" />
      <Compile Include="Assets\Scripts\week3\HsPreWeek3_1.cs" />
      <Compile Include="Assets\Scripts\week3\HsPreWeek3_2.cs" />
      <Compile Include="Assets\Scripts\week3\HsPreWeek3_3.cs" />
      <Compile Include="Assets\Scripts\week3\HsPreWeek3_4.cs" />
      <Compile Include="Assets\Scripts\week3\HsPreWeek3_5.cs" />
+     <Compile Include="Assets\Scripts\week3\HsWeekCalendar3.cs" />
+     <Compile Include="Assets\Scripts\week4\HsLv4Select.cs" />
+     <Compile Include="Assets\Scripts\week4\HsWeekCalendar4.cs" />
      <None Include="Assets\FacebookSDK\link.xml" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
  <Reference Include="UnityEngine.Analytics">

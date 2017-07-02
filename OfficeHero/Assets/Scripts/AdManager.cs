@@ -15,14 +15,14 @@ public class AdManager : MonoBehaviour {
 
 	private void Awake() {
 		Admob.Instance ().initAdmob (bannerId, videoId);
-		Admob.Instance ().setTesting (true);
+		//Admob.Instance ().setTesting (true);
 		Admob.Instance ().loadInterstitial ();
 		if (instance == null){
 			instance = this;
 		}
 		DontDestroyOnLoad(this.gameObject);
 	}
-
+		
 	public void LoadBigBanner(){
 		Admob.Instance ().loadInterstitial ();
 	}

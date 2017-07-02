@@ -66,7 +66,7 @@ public class HsWeek1_2 : MonoBehaviour {
 		this.spb = 0.0f;
 		this.y = 5.5f;
 		this.z = 0.0f;
-		this.interval = 1.1f;
+		this.interval = 0.8f;
 		this.isGameShown = true;
 		this.TheLevel ();
 	}
@@ -96,6 +96,7 @@ public class HsWeek1_2 : MonoBehaviour {
 	}
 
 	private void NextScreen(){
+		PlayerPrefs.SetInt ("okLv1-2", 1);
 		SceneManager.LoadScene("_EndWeek1-2");
 	}
 		
@@ -268,6 +269,10 @@ public class HsWeek1_2 : MonoBehaviour {
 			Time.timeScale = 1;
 			music.Play ();
 		}
+	}
+
+	public void HsBack(){
+		SceneManager.LoadScene("_MainScreen");
 	}
 		
 	private void TheLevel(){
