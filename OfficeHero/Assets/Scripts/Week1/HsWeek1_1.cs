@@ -239,13 +239,11 @@ public class HsWeek1_1 : MonoBehaviour {
 	}
 
 	public void HsPauseGame (){
-
 		if(isGameShown){
 			this.isGameShown = false;
 		}else{
 			this.isGameShown = true;
 		}
-
 		if (!isGameShown) {
 			Time.timeScale = 0;
 			paused.SetActive (true);

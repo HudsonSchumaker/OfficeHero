@@ -17,6 +17,7 @@ public class HsPreWeek1_2 : MonoBehaviour {
 	private float delay;
 
 	private void Start () {
+		AdManager.instance.ShowBanner();
 		this.delay = 4.0f;
 
 		this.grafico = GetComponent<SpriteRenderer> ();

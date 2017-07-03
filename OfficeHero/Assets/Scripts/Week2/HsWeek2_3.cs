@@ -53,7 +53,7 @@ public class HsWeek2_3 : MonoBehaviour {
 	private float interval;
 
 	private void Start () {
-		//AdManager.instance.RemoveBanners ();
+		AdManager.instance.RemoveBanners ();
 		this.numberOfKeys = 91;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
@@ -233,7 +233,7 @@ public class HsWeek2_3 : MonoBehaviour {
 	}
 
 	private void PlayKeySound(AudioClip clip){
-		//HsAudioManager.instance.PlayAudioClip (clip);
+		HsAudioManager.instance.PlayAudioClip (clip);
 	}
 
 	private void SetFrame1(){

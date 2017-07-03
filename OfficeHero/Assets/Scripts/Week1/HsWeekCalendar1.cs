@@ -17,6 +17,7 @@ public class HsWeekCalendar1 : MonoBehaviour {
 	private float delay;
 
 	private void Start () {
+		AdManager.instance.ShowVideo();
 		this.delay = 4.0f;
 
 		this.grafico = GetComponent<SpriteRenderer> ();

@@ -24,6 +24,7 @@ public class HsWeek1_4 : MonoBehaviour {
 	public GameObject hero1;
 	public GameObject hero2;
 	public GameObject finished;
+	public GameObject paused;
 	public AudioClip key1;
 	public AudioClip key2;
 	public AudioClip key3;
@@ -293,21 +294,20 @@ public class HsWeek1_4 : MonoBehaviour {
 	}
 
 	public void HsPauseGame (){
-
 		if(isGameShown){
 			this.isGameShown = false;
 		}else{
 			this.isGameShown = true;
 		}
-
 		if (!isGameShown) {
 			Time.timeScale = 0;
+			paused.SetActive (true);
 			music.Pause ();
 		} else {
 			Time.timeScale = 1;
+			paused.SetActive (false);
 			music.Play ();
 		}
-			
 	}
 
 	public void HsBack(){

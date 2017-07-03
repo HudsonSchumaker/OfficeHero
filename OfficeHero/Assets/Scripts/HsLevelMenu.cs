@@ -14,6 +14,7 @@ public class HsLevelMenu : MonoBehaviour {
 	public Text userName;
 
 	private void Start () {
+		AdManager.instance.ShowBannerDown ();
 		userName.text = PlayerPrefs.GetString ("playerName");
 	}
 

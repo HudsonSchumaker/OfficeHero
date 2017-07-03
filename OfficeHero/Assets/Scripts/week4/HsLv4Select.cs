@@ -16,6 +16,7 @@ public class HsLv4Select : MonoBehaviour {
 	public Button lv4_5;
 
 	private void Start () {
+		AdManager.instance.ShowBannerDown();
 		int lv35 = PlayerPrefs.GetInt ("okLv3-5");
 		int lv41 = PlayerPrefs.GetInt ("okLv4-1");
 		int lv42 = PlayerPrefs.GetInt ("okLv4-2");

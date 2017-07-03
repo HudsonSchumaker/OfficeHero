@@ -53,7 +53,7 @@ public class HsWeek2_2 : MonoBehaviour {
 	private float interval;
 
 	private void Start () {
-		//AdManager.instance.RemoveBanners ();
+		AdManager.instance.RemoveBanners ();
 		this.numberOfKeys = 50;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
