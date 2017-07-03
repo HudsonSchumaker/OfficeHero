@@ -19,7 +19,9 @@ public class HsScore2_5 : MonoBehaviour {
 	private float delay;
 
 	private void Start () {
-		this.delay = 5.5f;
+		AdManager.instance.ShowBanner ();
+		AdManager.instance.LoadBigBanner ();
+		this.delay = 4.0f;
 		this.grafico = GetComponent<SpriteRenderer> ();
 		this.larguraImagem = grafico.sprite.bounds.size.x;
 		this.alturaImagem = grafico.sprite.bounds.size.y;
