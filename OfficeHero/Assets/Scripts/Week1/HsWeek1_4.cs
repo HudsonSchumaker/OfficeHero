@@ -370,7 +370,7 @@ public class HsWeek1_4 : MonoBehaviour {
 		Invoke ("CreateSpacebar", interval*43);
 		Invoke ("CreateKey4", interval*44);
 		Invoke ("CreateKey1", interval*45);
-		Invoke ("CreateKey1", interval*45);
+		Invoke ("CreateKey1", interval*46);
 		Invoke ("CreateKey3", interval*46);
 		Invoke ("CreateSpacebar", interval*47);
 		Invoke ("CreateKey2", interval*48);
