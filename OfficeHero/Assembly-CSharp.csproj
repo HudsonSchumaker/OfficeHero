@@ -94,6 +94,7 @@
      <Compile Include="Assets\Scripts\Week2\HsKey2_1.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKey2_2.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKey2_3.cs" />
+     <Compile Include="Assets\Scripts\Week2\HsKey2_4.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKeyLeft2_1.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKeyLeft2_2.cs" />
      <Compile Include="Assets\Scripts\Week2\HsKeyLeft2_3.cs" />
