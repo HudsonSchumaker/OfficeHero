@@ -34,7 +34,7 @@ public class HsWeekCalendar1 : MonoBehaviour {
 	private void Update () {
 		delay -= Time.deltaTime;
 		if(delay <= 0.0f){
-			SceneManager.LoadScene("_Lv1");
+			SceneManager.LoadScene("_Week1-1");
 		}
 	}
 }

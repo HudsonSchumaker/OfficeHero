@@ -316,7 +316,6 @@ public class HsWeek2_1 : MonoBehaviour {
 	private void TheLevel(){	
 		Invoke ("CreateKeyX2", interval*18);//Aqui keyComboX2	
 		Invoke ("CreateKeyX2", interval*48);//Aqui keyComboX2	
-		Invoke ("CreateKeyX2", interval*68);//Aqui keyComboX2
 
 		Invoke ("CreateEnter4", 0.1f);
 		Invoke ("CreateKey2", interval *2);
@@ -328,7 +327,7 @@ public class HsWeek2_1 : MonoBehaviour {
 		Invoke ("CreateKey2", interval *8);
 		Invoke ("CreateKey2", interval *9);
 		Invoke ("CreateKey1", interval *10);
-		Invoke ("CreateKey1", interval *10);
+		Invoke ("CreateKey1", interval *11);
 		Invoke ("CreateKey3", interval *11);
 		Invoke ("CreateKey2", interval *12);
 		Invoke ("CreateKey2", interval *13);
@@ -410,6 +409,5 @@ public class HsWeek2_1 : MonoBehaviour {
 		Invoke ("CreateSpacebar", interval*76);
 		Invoke ("CreateSpacebar", interval*77);
 		Invoke ("CreateKey2", interval*78);
-
 	}
 }
