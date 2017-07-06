@@ -23,6 +23,10 @@ public class HsKeyLeft2_3 : MonoBehaviour {
 	}
 
 	private void Update () {
+		this.transform.Translate (new Vector3 (0.0f, -speed * Time.deltaTime, 0.0f));// Make fall
+		this.keyExclamation.transform.Translate(new Vector3 (0.0f, -speed * Time.deltaTime, 0.0f));// Make fall
+		this.isOutOfScreen ();
+
 		if (transform.position.y < -2.0f) {
 			if (Input.touchCount >= 1) {
 				Touch touch = Input.GetTouch (0);
@@ -40,11 +44,7 @@ public class HsKeyLeft2_3 : MonoBehaviour {
 				hsEngine.Strike ();
 			}
 		}
-
-		this.transform.Translate (new Vector3 (0.0f, -speed * Time.deltaTime, 0.0f));// Make fall
-		this.keyExclamation.transform.Translate(new Vector3 (0.0f, -speed * Time.deltaTime, 0.0f));// Make fall
-		this.isOutOfScreen ();
-
+			
 		if (transform.position.y < -1.8f) {
 			Behaviour h = (Behaviour)GetComponent ("Halo");
 			h.enabled = true;
