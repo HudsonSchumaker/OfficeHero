@@ -94,6 +94,7 @@ public class HsWeek2_1 : MonoBehaviour {
 				{ "score", score },
 				{ "strike", longStrike }
 			});
+			PlayerPrefs.SetInt ("gameOverStage", 2);
 			SceneManager.LoadScene("_GameOver");
 		}
 	}

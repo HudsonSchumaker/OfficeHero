@@ -98,6 +98,7 @@ public class HsWeek3_5 : MonoBehaviour {
 				{ "score", score },
 				{ "strike", longStrike }
 			});
+			PlayerPrefs.SetInt ("gameOverStage", 3);
 			SceneManager.LoadScene("_GameOver");
 		}
 	}

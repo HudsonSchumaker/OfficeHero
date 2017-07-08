@@ -52,12 +52,14 @@ public class HsMainMenu : MonoBehaviour {
 	public void LoadLeaderBoards(){
 		HsAudioManager.instance.PlayAudioClip (key1);
 		Application.OpenURL("http://schumakerteam.com/officeheroleaderboards.html");
-		
 	}
 
 	public void LoadSettings(){
 		HsAudioManager.instance.PlayAudioClip (key1);
-		SceneManager.LoadScene("_Settings");
-		
+		SceneManager.LoadScene("_Settings");	
+	}
+
+	public void Exit(){
+		Application.Quit ();
 	}
 }

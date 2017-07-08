@@ -7,33 +7,46 @@ using UnityEngine.SceneManagement;
 */
 
 public class HsGameOver : MonoBehaviour {
-	private SpriteRenderer grafico;
-	private float larguraImagem;
-	private float alturaImagem;
-	private float alturaTela;
-	private float larguraTela;
+
+	public GameObject stage1;
+	public GameObject stage2;
+	public GameObject stage3;
+	public GameObject stage4;
+
 	private float delay;
 
 	private void Start () {
 		AdManager.instance.ShowBanner ();
 		AdManager.instance.LoadBigBanner ();
-		this.delay = 3.0f;
-
-		this.grafico = GetComponent<SpriteRenderer> ();
-		this.larguraImagem = grafico.sprite.bounds.size.x;
-		this.alturaImagem = grafico.sprite.bounds.size.y;
-		this.alturaTela = Camera.main.orthographicSize * 2.0f;
-		this.larguraTela = alturaTela / Screen.height * Screen.width;
-		Vector2 novaEscala = transform.localScale;
-		novaEscala.x = larguraTela/larguraImagem;
-		novaEscala.y = alturaTela/alturaImagem;
-		this.transform.localScale = novaEscala;
+	
+		this.delay = 4.0f;
+		this.SetGameOverTheme ();
 	}
 
 	private void Update () {
 		delay -= Time.deltaTime;
 		if(delay <= 0.0f){
 			SceneManager.LoadScene("_MainScreen");
+		}
+	}
+
+	private void SetGameOverTheme(){
+		int gameOver = PlayerPrefs.GetInt("gameOverStage");
+
+		if (gameOver == 1){
+			stage1.SetActive (true);
+			return;
+		}
+		if (gameOver == 2){
+			stage2.SetActive (true);
+			return;
+		}
+		if (gameOver == 3){
+			stage3.SetActive (true);
+			return;
+		}
+		if (gameOver == 4){
+			stage4.SetActive (true);
 		}
 	}
 }
