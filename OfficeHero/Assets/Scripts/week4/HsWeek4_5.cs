@@ -18,6 +18,10 @@ public class HsWeek4_5 : MonoBehaviour {
 	public GameObject keyEnter;
 	public GameObject keyEnterPurple;
 	public GameObject keyX2;
+	public GameObject keyLeft;
+	public GameObject keyRight;
+	public GameObject keyLeftPurple;
+	public GameObject keyRightPurple;
 	public Text scoreStr;
 	public Text comboStr;
 	public Text errorsStr;
