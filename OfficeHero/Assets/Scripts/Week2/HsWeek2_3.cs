@@ -327,10 +327,12 @@ public class HsWeek2_3 : MonoBehaviour {
 			this.isGameShown = true;
 		}
 		if (!isGameShown) {
+			AdManager.instance.ShowBannerDown ();
 			Time.timeScale = 0;
 			paused.SetActive (true);
 			music.Pause ();
 		} else {
+			AdManager.instance.RemoveBanners ();
 			Time.timeScale = 1;
 			paused.SetActive (false);
 			music.Play ();
@@ -338,6 +340,7 @@ public class HsWeek2_3 : MonoBehaviour {
 	}
 
 	public void HsBack(){
+		AdManager.instance.LoadBigBanner ();
 		SceneManager.LoadScene("_MainScreen");
 	}
 
@@ -361,7 +364,7 @@ public class HsWeek2_3 : MonoBehaviour {
 		Invoke ("CreateSpacebar", interval*9);
 		Invoke ("CreateSpacebar", interval*10);
 		Invoke ("CreateKey2", interval *11);
-		Invoke ("CreateKey2", interval *11);
+		Invoke ("CreateKey3", interval *11);
 		Invoke ("CreateKey1", interval *12);
 		Invoke ("CreateKey2", interval *12);
 		Invoke ("CreateKey3", interval *13);

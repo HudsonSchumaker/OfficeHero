@@ -246,10 +246,12 @@ public class HsWeek1_1 : MonoBehaviour {
 			this.isGameShown = true;
 		}
 		if (!isGameShown) {
+			AdManager.instance.ShowBannerDown ();
 			Time.timeScale = 0;
 			paused.SetActive (true);
 			music.Pause ();
 		} else {
+			AdManager.instance.RemoveBanners ();
 			Time.timeScale = 1;
 			paused.SetActive (false);
 			music.Play ();
@@ -257,6 +259,7 @@ public class HsWeek1_1 : MonoBehaviour {
 	}
 
 	public void HsBack(){
+		AdManager.instance.LoadBigBanner ();
 		SceneManager.LoadScene("_MainScreen");
 	}
 
