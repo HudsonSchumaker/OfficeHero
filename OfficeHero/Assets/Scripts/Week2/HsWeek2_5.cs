@@ -88,16 +88,16 @@ public class HsWeek2_5 : MonoBehaviour {
 		if(numberOfKeys <= 0){
 			EndStrike ();//Se nao errar nao entra
 			finished.SetActive (true);
-			PlayerPrefs.SetInt ("StrikeLv2-4", longStrike);
-			PlayerPrefs.SetInt ("ScoreLv2-4", score);
+			PlayerPrefs.SetInt ("StrikeLv2-5", longStrike);
+			PlayerPrefs.SetInt ("ScoreLv2-5", score);
 			Invoke ("NextScreen", 3.0f);
-			Analytics.CustomEvent("WinLv2-4", new Dictionary<string, object>{
+			Analytics.CustomEvent("WinLv2-5", new Dictionary<string, object>{
 				{ "score", score },
 				{ "strike", longStrike }
 			});
 		}
 		if(error >= maxErrors){
-			Analytics.CustomEvent("gameOverLv2-4", new Dictionary<string, object>{
+			Analytics.CustomEvent("gameOverLv2-5", new Dictionary<string, object>{
 				{ "score", score },
 				{ "strike", longStrike }
 			});
@@ -106,7 +106,7 @@ public class HsWeek2_5 : MonoBehaviour {
 	}
 
 	private void NextScreen(){
-		SceneManager.LoadScene("_EndWeek2-4");
+		SceneManager.LoadScene("_EndWeek2-5");
 	}
 
 	private void CreateKey1 () {
