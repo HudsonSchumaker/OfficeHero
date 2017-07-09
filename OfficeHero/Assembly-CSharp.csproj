@@ -196,7 +196,15 @@
      <Compile Include="Assets\Scripts\week4\HsKeyX2Lv4_5.cs" />
      <Compile Include="Assets\Scripts\week4\HsLv4Select.cs" />
      <Compile Include="Assets\Scripts\week4\HsMouseLeft4_1.cs" />
+     <Compile Include="Assets\Scripts\week4\HsMouseLeft4_2.cs" />
+     <Compile Include="Assets\Scripts\week4\HsMouseLeft4_3.cs" />
+     <Compile Include="Assets\Scripts\week4\HsMouseLeft4_4.cs" />
+     <Compile Include="Assets\Scripts\week4\HsMouseLeft4_5.cs" />
      <Compile Include="Assets\Scripts\week4\HsMouseRight4_1.cs" />
+     <Compile Include="Assets\Scripts\week4\HsMouseRight4_2.cs" />
+     <Compile Include="Assets\Scripts\week4\HsMouseRight4_3.cs" />
+     <Compile Include="Assets\Scripts\week4\HsMouseRight4_4.cs" />
+     <Compile Include="Assets\Scripts\week4\HsMouseRight4_5.cs" />
      <Compile Include="Assets\Scripts\week4\HsWeek4_1.cs" />
      <Compile Include="Assets\Scripts\week4\HsWeek4_2.cs" />
      <Compile Include="Assets\Scripts\week4\HsWeek4_3.cs" />
