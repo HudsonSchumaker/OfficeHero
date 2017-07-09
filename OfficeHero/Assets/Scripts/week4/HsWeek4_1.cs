@@ -22,6 +22,10 @@ public class HsWeek4_1 : MonoBehaviour {
 	public GameObject keyRight;
 	public GameObject keyLeftPurple;
 	public GameObject keyRightPurple;
+	public GameObject mouseRight;
+	//public GameObject mouseRightPurple;
+	public GameObject mouseLeft;
+	//public GameObject mouseLeftPurple;
 	public Text scoreStr;
 	public Text comboStr;
 	public Text errorsStr;
@@ -48,6 +52,7 @@ public class HsWeek4_1 : MonoBehaviour {
 	private int normalKey;
 	private float x1, x2, x3, x4;
 	private float spb;
+	private float mouse;
 	private float y;
 	private float z;
 	private float interval;
@@ -71,6 +76,7 @@ public class HsWeek4_1 : MonoBehaviour {
 		this.x3 = 0.7f;
 		this.x4 = 2.0f;
 		this.spb = 0.0f;
+		this.mouse = 0.0f;
 		this.y = 5.5f;
 		this.z = 0.0f;
 		this.interval = 0.7f;
@@ -185,6 +191,24 @@ public class HsWeek4_1 : MonoBehaviour {
 		}
 		else{
 			Instantiate (keyEnterPurple, new Vector3 (x4, y, z), Quaternion.identity);
+		}
+	}
+
+	private void CreateMouseLeft(){
+		if (normalKey == 0) {
+			Instantiate (mouseLeft, new Vector3 (mouse, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (mouseLeft, new Vector3 (mouse, y, z), Quaternion.identity);
+		}
+	}
+
+	private void CreateMouseRight(){
+		if (normalKey == 0) {
+			Instantiate (mouseRight, new Vector3 (mouse, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (mouseRight, new Vector3 (mouse, y, z), Quaternion.identity);
 		}
 	}
 

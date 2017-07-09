@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class HsLv3Select : MonoBehaviour {
 
 	public Button lv3_1;
-	public Button lv3_2;
+	public Button lv4_1;
 	public Button lv3_3;
 	public Button lv3_4;
 	public Button lv3_5;
@@ -27,7 +27,7 @@ public class HsLv3Select : MonoBehaviour {
 			lv3_1.interactable = true;
 		}
 		if(lv31 == 1){
-			lv3_2.interactable = true;
+			lv4_1.interactable = true;
 		}
 		if(lv32 == 1){
 			lv3_3.interactable = true;
@@ -44,7 +44,7 @@ public class HsLv3Select : MonoBehaviour {
 		SceneManager.LoadScene("_PreWeek3-1");
 	}
 
-	public void LoadLv3_2(){
+	public void LoadLv4_1(){
 		SceneManager.LoadScene("_PreWeek3-2");
 	}
 
