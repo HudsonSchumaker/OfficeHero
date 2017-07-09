@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 23
+  controlID: 43
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 471}
   m_MaxSize: {x: 18008, y: 14021}
   vertical: 0
-  controlID: 99
+  controlID: 76
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 471}
   m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 100
+  controlID: 77
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -563,33 +563,33 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Lv3/lv3-2
+    - Assets/Prefabs/Lv3/lv3-5
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Lv3/lv3-2
+  - Assets/Prefabs/Lv3/lv3-5
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /Users/hudsonschumaker/UnityProjects/OfficeHero
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 65}
-    m_SelectedIDs: 66270000
-    m_LastClickedID: 10086
-    m_ExpandedIDs: 00000000602600004a270000fc27000004280000ec290000142b0000682d00006a2d00006c2d00006e2d000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 7a290000
+    m_LastClickedID: 10618
+    m_ExpandedIDs: 000000006426000052270000042800000c2800001e2b0000642e0000662e0000682e00006a2e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: lv3-3
-      m_OriginalName: lv3-3
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10042
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_SearchString: 
@@ -603,7 +603,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000602600004a270000fc270000ec290000682d00006a2d00006c2d00006e2d0000
+    m_ExpandedIDs: 000000006426000052270000042800000c280000f62900001e2b0000642e0000662e0000682e00006a2e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -634,20 +634,20 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: HsMouseLeft3_5
+      m_OriginalName: HsMouseLeft3_5
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 13292
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 12}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -836,9 +836,9 @@ MonoBehaviour:
     height: 276
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b0520000
-    m_LastClickedID: 21168
-    m_ExpandedIDs: e09efffffac3ffff0cc5ffffaec6ffffb4c6ffffbcc6ffffc4c6ffffccc6ffffd4c6ffffdcc6ffffe4c6ffffecc6fffff4c6fffffcc6ffff04c7ffff10c7ffff16c7ffff1ec7ffff24c7ffff32c7ffff7ac7ffffc2c7ffff0ac8ffff52c8ffff5ac8ffff62c8ffff6ac8ffff72c8ffffbac8ffffc2c8ffffcac8ffffd2c8ffffdac8ffffe2c8ffff00c9ffff1ec9ffff3cc9ffff5ac9ffffa8c9fffff6c9ffff44caffff92caffffb0caffff06cbffff0ecbffff16cbffff34cbffff3ccbffff5acbffff62cbffff80cbffff88cbffffa6cbffffaecbffffb6cbffffbecbffffdccbffffe4cbffff32ccffff80ccffffceccffff1ccdffff68cdffffbccdffffcccdffffd8cdffffdecdffffe0d9ffff06dbffffa8dcffffaedcffffb6dcffffbedcffffc6dcffffcedcffffd6dcffffdedcffffe6dcffffeedcfffff6dcfffffedcffff0addffff10ddffff18ddffff1eddffff2cddffff74ddffffbcddffff04deffff4cdeffff54deffff5cdeffff64deffff6cdeffffb4deffffbcdeffffc4deffffccdeffffd4deffffdcdefffffadeffff18dfffff36dfffff54dfffffa2dffffff0dfffff3ee0ffff8ce0ffffaae0ffff00e1ffff08e1ffff10e1ffff2ee1ffff36e1ffff54e1ffff5ce1ffff7ae1ffff82e1ffffa0e1ffffa8e1ffffb0e1ffffb8e1ffffd6e1ffffdee1ffff2ce2ffff7ae2ffffc8e2ffff16e3ffff62e3ffffb6e3ffffc6e3ffffd2e3ffffd8e3ffffdafbffff00000000
+    m_SelectedIDs: 4a330000
+    m_LastClickedID: 13130
+    m_ExpandedIDs: 2eb2ffff42b4ffff6ab6ffff44b7ffff16bfffffb4f9ffffdafbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -857,7 +857,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
   m_ExpandedScenes:
-  - _Week3-2
+  - _Week3-5
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
