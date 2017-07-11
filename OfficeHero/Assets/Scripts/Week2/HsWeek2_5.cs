@@ -107,6 +107,7 @@ public class HsWeek2_5 : MonoBehaviour {
 	}
 
 	private void NextScreen(){
+		PlayerPrefs.SetInt ("okLv2-5", 1);
 		SceneManager.LoadScene("_EndWeek2-5");
 	}
 

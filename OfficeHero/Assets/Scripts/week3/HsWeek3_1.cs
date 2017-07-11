@@ -54,7 +54,7 @@ public class HsWeek3_1 : MonoBehaviour {
 	private bool isGameShown;
 
 	private void Start () {
-		AdManager.instance.RemoveBanners ();
+	//	AdManager.instance.RemoveBanners ();
 		this.numberOfKeys = 113;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
@@ -104,7 +104,7 @@ public class HsWeek3_1 : MonoBehaviour {
 	}
 
 	private void NextScreen(){
-		SceneManager.LoadScene("_EndWeek3-1");
+		SceneManager.LoadScene("_EndWeek3_1");
 	}
 
 	private void CreateKey1 () {

@@ -57,7 +57,7 @@ public class HsWeek2_3 : MonoBehaviour {
 
 	private void Start () {
 		AdManager.instance.RemoveBanners ();
-		this.numberOfKeys = 91;
+		this.numberOfKeys = 92;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
 		this.maxErrors = 8;
@@ -348,6 +348,7 @@ public class HsWeek2_3 : MonoBehaviour {
 		Invoke ("CreateKeyX2", interval*18);//Aqui keyComboX2	
 		Invoke ("CreateKeyX2", interval*28);//Aqui keyComboX2	
 
+		Invoke ("CreateEnter4", 0.1f);
 		Invoke ("CreateEnter2", interval *2);
 		Invoke ("CreateKeyLeft", interval*3);
 		Invoke ("CreateKeyLeft", interval*4);

@@ -110,7 +110,8 @@ public class HsWeek3_5 : MonoBehaviour {
 	}
 
 	private void NextScreen(){
-		SceneManager.LoadScene("_EndWeek3-5");
+		PlayerPrefs.SetInt ("okLv3-5", 1);
+		SceneManager.LoadScene("_EndWeek3_5");
 	}
 
 	private void CreateKey1 () {

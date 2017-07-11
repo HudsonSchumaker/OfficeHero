@@ -108,7 +108,7 @@ public class HsWeek4_3 : MonoBehaviour {
 	}
 
 	private void NextScreen(){
-		SceneManager.LoadScene("_EndWeek4-3");
+		SceneManager.LoadScene("_EndWeek4_3");
 	}
 
 	private void CreateKey1 () {
