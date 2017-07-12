@@ -29,9 +29,6 @@ public class HsPreWeek4_3: MonoBehaviour {
 		novaEscala.x = larguraTela/larguraImagem;
 		novaEscala.y = alturaTela/alturaImagem;
 		this.transform.localScale = novaEscala;
-
-		//ADs
-
 	}
 
 	private void Update () {

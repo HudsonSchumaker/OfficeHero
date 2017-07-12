@@ -56,7 +56,7 @@ public class HsMainMenu : MonoBehaviour {
 
 	public void LoadSettings(){
 		HsAudioManager.instance.PlayAudioClip (key1);
-		SceneManager.LoadScene("_Settings");	
+		SceneManager.LoadScene("_Tutorial");	
 	}
 
 	public void Exit(){

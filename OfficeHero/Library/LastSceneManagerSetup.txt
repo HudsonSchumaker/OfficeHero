@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_MainScreen.unity
+- path: Assets/_Week3/_PreWeek3_1.unity
   isLoaded: 1
   isActive: 1

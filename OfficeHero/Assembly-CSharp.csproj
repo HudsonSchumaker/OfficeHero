@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\HsSchumakerTeam.cs" />
      <Compile Include="Assets\Scripts\HsSplash.cs" />
      <Compile Include="Assets\Scripts\HsTitle.cs" />
+     <Compile Include="Assets\Scripts\HsTutorial.cs" />
      <Compile Include="Assets\Scripts\endless\HsEndless.cs" />
      <Compile Include="Assets\Scripts\week1\HsKey1_1.cs" />
      <Compile Include="Assets\Scripts\week1\HsKey1_2.cs" />

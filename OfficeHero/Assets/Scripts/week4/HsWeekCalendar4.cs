@@ -17,6 +17,7 @@ public class HsWeekCalendar4 : MonoBehaviour {
 	private float delay;
 
 	private void Start () {
+		AdManager.instance.RemoveBanners ();
 		AdManager.instance.ShowVideo();
 		this.delay = 2.2f;
 

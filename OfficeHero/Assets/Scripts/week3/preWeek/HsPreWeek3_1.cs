@@ -17,7 +17,7 @@ public class HsPreWeek3_1 : MonoBehaviour {
 	private float delay;
 
 	private void Start () {
-		//AdManager.instance.ShowBanner();
+		AdManager.instance.ShowBanner();
 		this.delay = 5.0f;
 
 		this.grafico = GetComponent<SpriteRenderer> ();
@@ -29,9 +29,6 @@ public class HsPreWeek3_1 : MonoBehaviour {
 		novaEscala.x = larguraTela/larguraImagem;
 		novaEscala.y = alturaTela/alturaImagem;
 		this.transform.localScale = novaEscala;
-
-		//ADs
-
 	}
 
 	private void Update () {
