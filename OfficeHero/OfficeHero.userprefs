@@ -1,6 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/week2/HsWeek2_3.cs">
+    <Files>
+      <File FileName="Assets/Scripts/week2/HsKeyLeft2_3.cs" Line="18" Column="71" />
+      <File FileName="Assets/Scripts/week2/HsWeek2_3.cs" Line="410" Column="3" />
+      <File FileName="Assets/Scripts/week2/HsWeek2_2.cs" Line="63" Column="25" />
+      <File FileName="Assets/Scripts/week2/HsKeyRight2_3.cs" Line="57" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

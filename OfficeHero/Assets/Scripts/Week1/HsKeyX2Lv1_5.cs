@@ -12,7 +12,7 @@ public class HsKeyX2Lv1_5 : MonoBehaviour {
 	private HsWeek1_5 hsEngine;
 
 	private void Start () {
-		this.speed = 1.5f;
+		this.speed = 2.8f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsEngine = (HsWeek1_5) gameEngine.GetComponent (typeof(HsWeek1_5));
 	}

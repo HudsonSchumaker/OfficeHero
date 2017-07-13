@@ -63,7 +63,7 @@ public class HsWeek3_2 : MonoBehaviour {
 		this.numberOfKeys = 98;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
-		this.maxErrors = 8;
+		this.maxErrors = 80000;
 		this.score = 0;
 		this.strike = 0;
 		this.longStrike = 0;
@@ -214,6 +214,22 @@ public class HsWeek3_2 : MonoBehaviour {
 
 	private void CreateKeyX2 () {
 		Instantiate (keyX2, new Vector3 (x4, y, z), Quaternion.identity);//Atenção aqui
+	}
+
+	private void CreateKeyLeft () {
+		if (normalKey == 0) {
+			Instantiate (keyLeft, new Vector3 (x4, y, z), Quaternion.identity);	
+		}else{
+			Instantiate (keyLeftPurple, new Vector3 (x4, y, z), Quaternion.identity);	
+		}
+	}
+
+	private void CreateKeyRight () {
+		if (normalKey == 0) {
+			Instantiate (keyRight, new Vector3 (x1, y, z), Quaternion.identity);	
+		}else{
+			Instantiate (keyRightPurple, new Vector3 (x1, y, z), Quaternion.identity);
+		}
 	}
 
 	private void playAudio(float posX){

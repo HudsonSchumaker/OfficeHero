@@ -212,6 +212,22 @@ public class HsWeek4_1 : MonoBehaviour {
 		}
 	}
 
+	private void CreateKeyLeft () {
+		if (normalKey == 0) {
+			Instantiate (keyLeft, new Vector3 (x4, y, z), Quaternion.identity);	
+		}else{
+			Instantiate (keyLeftPurple, new Vector3 (x4, y, z), Quaternion.identity);	
+		}
+	}
+
+	private void CreateKeyRight () {
+		if (normalKey == 0) {
+			Instantiate (keyRight, new Vector3 (x1, y, z), Quaternion.identity);	
+		}else{
+			Instantiate (keyRightPurple, new Vector3 (x1, y, z), Quaternion.identity);
+		}
+	}
+
 	private void CreateKeyX2 () {
 		Instantiate (keyX2, new Vector3 (x4, y, z), Quaternion.identity);//Atenção aqui
 	}

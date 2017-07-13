@@ -31,5 +31,4 @@ public class HsLogin : MonoBehaviour {
 		novaEscala.y = alturaTela/alturaImagem;
 		this.transform.localScale = novaEscala;
 	}
-
 }

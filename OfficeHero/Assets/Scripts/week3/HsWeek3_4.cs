@@ -63,7 +63,7 @@ public class HsWeek3_4 : MonoBehaviour {
 		this.numberOfKeys = 123;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
-		this.maxErrors = 8;
+		this.maxErrors = 899;
 		this.score = 0;
 		this.strike = 0;
 		this.longStrike = 0;
@@ -349,7 +349,6 @@ public class HsWeek3_4 : MonoBehaviour {
 		Invoke ("CreateKeyX2", interval*18);//Aqui keyComboX2	
 		Invoke ("CreateKeyX2", interval*48);//Aqui keyComboX2	
 		Invoke ("CreateKeyX2", interval*78);//Aqui keyComboX2	
-		Invoke ("CreateKeyX2", interval*99);//Aqui keyComboX2	
 
 		Invoke ("CreateSpacebar", interval * 0.1f);
 		Invoke ("CreateKey2", interval *2);

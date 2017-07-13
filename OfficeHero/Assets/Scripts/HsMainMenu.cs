@@ -46,7 +46,7 @@ public class HsMainMenu : MonoBehaviour {
 
 	public void LoadEndlessMode(){
 		HsAudioManager.instance.PlayAudioClip (key1);
-		SceneManager.LoadScene("_Endless");
+		SceneManager.LoadScene("_Login");
 	}
 
 	public void LoadLeaderBoards(){

@@ -56,7 +56,7 @@ public class HsWeek2_4 : MonoBehaviour {
 	private bool isGameShown;
 
 	private void Start () {
-		AdManager.instance.RemoveBanners ();
+	 	AdManager.instance.RemoveBanners ();
 		this.numberOfKeys = 85;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
@@ -345,7 +345,7 @@ public class HsWeek2_4 : MonoBehaviour {
 	}
 		
 	private void TheLevel(){		
-		Invoke ("CreateKeyX2", interval*18);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*19);//Aqui keyComboX2	
 		Invoke ("CreateKeyX2", interval*36);//Aqui keyComboX2	
 
 		Invoke ("CreateKeyRight", 0.1f);

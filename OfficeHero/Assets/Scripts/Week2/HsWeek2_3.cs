@@ -56,7 +56,7 @@ public class HsWeek2_3 : MonoBehaviour {
 	private bool isGameShown;
 
 	private void Start () {
-		AdManager.instance.RemoveBanners ();
+		//AdManager.instance.RemoveBanners ();
 		this.numberOfKeys = 92;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
@@ -238,7 +238,7 @@ public class HsWeek2_3 : MonoBehaviour {
 	}
 
 	private void PlayKeySound(AudioClip clip){
-		HsAudioManager.instance.PlayAudioClip (clip);
+		//HsAudioManager.instance.PlayAudioClip (clip);
 	}
 
 	private void SetFrame1(){
@@ -351,7 +351,7 @@ public class HsWeek2_3 : MonoBehaviour {
 		Invoke ("CreateEnter4", 0.1f);
 		Invoke ("CreateEnter2", interval *2);
 		Invoke ("CreateKeyLeft", interval*3);
-		Invoke ("CreateKeyLeft", interval*4);
+    	Invoke ("CreateKeyLeft", interval*4);
 		Invoke ("CreateKey2", interval *5);
 		Invoke ("CreateKey3", interval *5);
 		Invoke ("CreateKey2", interval *6);
@@ -377,7 +377,7 @@ public class HsWeek2_3 : MonoBehaviour {
 		Invoke ("CreateKey3", interval *17);
 		Invoke ("CreateKeyRight", interval*18);
 		Invoke ("CreateKeyRight", interval*19);
-		Invoke ("CreateKeyRight", interval*20);
+	 	Invoke ("CreateKeyRight", interval*20);
 		Invoke ("CreateSpacebar", interval*21);
 		Invoke ("CreateKey2", interval *22);
 		Invoke ("CreateKey3", interval *22);
@@ -412,7 +412,7 @@ public class HsWeek2_3 : MonoBehaviour {
 		Invoke ("CreateKeyRight", interval*38);
 		Invoke ("CreateKeyLeft" , interval*39);
 		Invoke ("CreateKeyRight", interval*40);
-		Invoke ("CreateKeyLeft" , interval*41);
+	    Invoke ("CreateKeyLeft" , interval*41);
 		Invoke ("CreateKeyRight", interval*42);
 		Invoke ("CreateSpacebar", interval*43);
 		Invoke ("CreateKey3", interval *44);

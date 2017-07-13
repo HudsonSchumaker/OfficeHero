@@ -54,7 +54,7 @@ public class HsWeek3_1 : MonoBehaviour {
 	private bool isGameShown;
 
 	private void Start () {
-	//	AdManager.instance.RemoveBanners ();
+		AdManager.instance.RemoveBanners ();
 		this.numberOfKeys = 113;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
@@ -192,6 +192,22 @@ public class HsWeek3_1 : MonoBehaviour {
 		Instantiate (keyX2, new Vector3 (x4, y, z), Quaternion.identity);//Atenção aqui
 	}
 
+	private void CreateKeyLeft () {
+		if (normalKey == 0) {
+			Instantiate (keyLeft, new Vector3 (x4, y, z), Quaternion.identity);	
+		}else{
+			Instantiate (keyLeftPurple, new Vector3 (x4, y, z), Quaternion.identity);	
+		}
+	}
+
+	private void CreateKeyRight () {
+		if (normalKey == 0) {
+			Instantiate (keyRight, new Vector3 (x1, y, z), Quaternion.identity);	
+		}else{
+			Instantiate (keyRightPurple, new Vector3 (x1, y, z), Quaternion.identity);
+		}
+	}
+
 	private void playAudio(float posX){
 		if(posX == x1){
 			PlayKeySound (key1);
@@ -322,8 +338,8 @@ public class HsWeek3_1 : MonoBehaviour {
 	}
 
 	private void TheLevel(){	
-		Invoke ("CreateKeyX2", interval*18);//Aqui keyComboX2	
-		Invoke ("CreateKeyX2", interval*48);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*19);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*49);//Aqui keyComboX2	
 
 		Invoke ("CreateEnter2", 0.1f);
 		Invoke ("CreateSpacebar", interval*2);

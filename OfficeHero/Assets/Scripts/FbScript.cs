@@ -4,7 +4,6 @@ using UnityEngine;
 using Facebook.Unity;
 using UnityEngine.SceneManagement;
 
-
 /* 
 	@author Hudson Schumaker
 	@version 1.0.0
@@ -23,7 +22,6 @@ public class FbScript : MonoBehaviour {
 	public void FBLogin(){
 		var perms = new List<string>(){"public_profile"};
 		FB.LogInWithReadPermissions(perms, AuthCallback);
-		
 	}
 
 	private void AuthCallback (ILoginResult result) {
@@ -33,27 +31,23 @@ public class FbScript : MonoBehaviour {
 			FB.API ("/me?fields=id,name,email", HttpMethod.GET, DisplayUserName);
 
 		} else {
-			Debug.Log("User cancelled login");
+			//Debug.Log("User cancelled login");
 		}
 	}
 
 	public void DisplayUserName(IResult result){
-		Debug.Log("Hi there, "+result.ResultDictionary["id"]);
-		Debug.Log("Hi there, "+result.ResultDictionary["name"]);
-		Debug.Log("Hi there, "+result.ResultDictionary["email"]);
-
 		PlayerPrefs.SetString ("id", (string)result.ResultDictionary["id"]);
 		PlayerPrefs.SetString ("playerName",(string) result.ResultDictionary["name"]);
 		PlayerPrefs.SetString ("playerEmail",(string) result.ResultDictionary["email"]);
 
-		SceneManager.LoadScene("_MainScreen");
+		SceneManager.LoadScene("_Endless");
 	}
 
 	private void InitCallback (){
 		if (FB.IsInitialized) {
 			FB.ActivateApp();
 		} else {
-			Debug.Log("Failed to Initialize the Facebook SDK");
+			//Debug.Log("Failed to Initialize the Facebook SDK");
 		}
 	}
 

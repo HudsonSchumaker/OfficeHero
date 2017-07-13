@@ -207,6 +207,22 @@ public class HsWeek3_3 : MonoBehaviour {
 		Instantiate (keyX2, new Vector3 (x4, y, z), Quaternion.identity);//Atenção aqui
 	}
 
+	private void CreateKeyLeft () {
+		if (normalKey == 0) {
+			Instantiate (keyLeft, new Vector3 (x4, y, z), Quaternion.identity);	
+		}else{
+			Instantiate (keyLeftPurple, new Vector3 (x4, y, z), Quaternion.identity);	
+		}
+	}
+
+	private void CreateKeyRight () {
+		if (normalKey == 0) {
+			Instantiate (keyRight, new Vector3 (x1, y, z), Quaternion.identity);	
+		}else{
+			Instantiate (keyRightPurple, new Vector3 (x1, y, z), Quaternion.identity);
+		}
+	}
+
 	private void playAudio(float posX){
 		if(posX == x1){
 			PlayKeySound (key1);
@@ -339,8 +355,7 @@ public class HsWeek3_3 : MonoBehaviour {
 	private void TheLevel(){	
 		Invoke ("CreateKeyX2", interval*18);//Aqui keyComboX2	
 		Invoke ("CreateKeyX2", interval*48);//Aqui keyComboX2	
-		Invoke ("CreateKeyX2", interval*78);//Aqui keyComboX2
-		Invoke ("CreateKeyX2", interval*98);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*80);//Aqui keyComboX2
 
 		Invoke ("CreateSpacebar", 0.1f);
 		Invoke ("CreateEnter4", interval *2);

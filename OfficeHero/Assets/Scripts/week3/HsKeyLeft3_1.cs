@@ -13,10 +13,11 @@ public class HsKeyLeft3_1 : MonoBehaviour {
 	private HsWeek3_1 hsEngine;
 
 	private void Start () {
-		this.speed = 1.5f;
+		this.speed = 2.9f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsEngine = (HsWeek3_1)gameEngine.GetComponent (typeof(HsWeek3_1));
 		Behaviour h = (Behaviour)GetComponent ("Halo");
+		h.enabled = false;
 		h.enabled = false;
 		this.keyExclamation = (GameObject) Instantiate(Resources.Load("keyExclamation"));//ExclamationKey
 		this.keyExclamation.transform.Translate (new Vector3(-2.0f,0.0f,0.0f));
