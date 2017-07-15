@@ -37,7 +37,7 @@ public class HsScore4_2 : MonoBehaviour {
 	private void Update () {
 		delay -= Time.deltaTime;
 		if(delay <= 0.0f){
-			SceneManager.LoadScene("_PreWeek4-3");
+			SceneManager.LoadScene("_PreWeek4_3");
 		}
 	}
 }

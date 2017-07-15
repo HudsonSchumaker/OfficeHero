@@ -18,6 +18,7 @@ public class HsSchumakerTeam : MonoBehaviour {
 
 	private void Start () {
 		this.delay = 5.0f;
+		PlayerPrefs.SetInt ("okLv2-5", 1);
 
 		this.grafico = GetComponent<SpriteRenderer> ();
 		this.larguraImagem = grafico.sprite.bounds.size.x;

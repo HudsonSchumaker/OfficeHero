@@ -63,7 +63,7 @@ public class HsWeek3_4 : MonoBehaviour {
 		this.numberOfKeys = 123;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
-		this.maxErrors = 899;
+		this.maxErrors = 8;
 		this.score = 0;
 		this.strike = 0;
 		this.longStrike = 0;
@@ -79,7 +79,7 @@ public class HsWeek3_4 : MonoBehaviour {
 		this.mouse = 0.0f;
 		this.y = 5.5f;
 		this.z = 0.0f;
-		this.interval = 0.7f;
+		this.interval = 0.6f;
 		this.isGameShown = true;
 		this.TheLevel ();
 	}

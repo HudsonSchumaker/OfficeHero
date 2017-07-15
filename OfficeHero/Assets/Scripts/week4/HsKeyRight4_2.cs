@@ -7,16 +7,19 @@
 
 public class HsKeyRight4_2 : MonoBehaviour {
 
+	private GameObject keyExclamation;
 	private float speed;
 	private GameObject gameEngine;
 	private HsWeek4_2 hsEngine;
 
 	private void Start () {
-		this.speed = 1.5f;
+		this.speed = 4.0f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsEngine = (HsWeek4_2)gameEngine.GetComponent (typeof(HsWeek4_2));
 		Behaviour h = (Behaviour)GetComponent ("Halo");
 		h.enabled = false;
+		this.keyExclamation = (GameObject) Instantiate(Resources.Load("keyExclamation"));//ExclamationKey
+		this.keyExclamation.transform.Translate (new Vector3(2.0f,0.0f,0.0f));
 	}
 
 	private void Update () {
@@ -42,6 +45,7 @@ public class HsKeyRight4_2 : MonoBehaviour {
 			h.enabled = true;
 		}
 		this.transform.Translate (new Vector3 (0.0f, -speed * Time.deltaTime, 0.0f));// Make fall
+		this.keyExclamation.transform.Translate(new Vector3 (0.0f, -speed * Time.deltaTime, 0.0f));// Make fall
 		this.isOutOfScreen ();
 	}
 

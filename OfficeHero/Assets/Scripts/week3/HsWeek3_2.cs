@@ -63,7 +63,7 @@ public class HsWeek3_2 : MonoBehaviour {
 		this.numberOfKeys = 98;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
-		this.maxErrors = 80000;
+		this.maxErrors = 8;
 		this.score = 0;
 		this.strike = 0;
 		this.longStrike = 0;
@@ -79,7 +79,7 @@ public class HsWeek3_2 : MonoBehaviour {
 		this.mouse = 0.0f;
 		this.y = 5.5f;
 		this.z = 0.0f;
-		this.interval = 0.7f;
+		this.interval = 0.6f;
 		this.isGameShown = true;
 		this.TheLevel ();
 	}
@@ -365,7 +365,7 @@ public class HsWeek3_2 : MonoBehaviour {
 		Invoke ("CreateKeyX2", interval*18);//Aqui keyComboX2	
 		Invoke ("CreateKeyX2", interval*48);//Aqui keyComboX2	
 
-		Invoke ("CreateSpacebar", 0.1f);
+		Invoke ("CreateSpacebar", 0.6f);
 		Invoke ("CreateMouseLeft",interval *2);
 		Invoke ("CreateMouseRight",interval *3);
 		Invoke ("CreateSpacebar", interval*4);

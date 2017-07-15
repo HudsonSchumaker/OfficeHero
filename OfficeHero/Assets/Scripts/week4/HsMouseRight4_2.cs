@@ -9,7 +9,7 @@ public class HsMouseRight4_2 : MonoBehaviour {
 	private HsWeek4_2 hsEngine;
 
 	private void Start () {
-		this.speed = 2.6f;
+		this.speed = 4.0f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsEngine = (HsWeek4_2) gameEngine.GetComponent (typeof(HsWeek4_2));
 		Behaviour h = (Behaviour)GetComponent("Halo");
@@ -19,8 +19,9 @@ public class HsMouseRight4_2 : MonoBehaviour {
 	void Update () {
 		if (transform.position.y < -2.0f) {
 			if (Input.acceleration.x > 0) {
-				transform.Translate (Input.acceleration.x * -Time.deltaTime, 0.0f, 0.0f);
-				Destroy (this.gameObject);
+				transform.Translate (Input.acceleration.x * Time.deltaTime*14, 0.0f, 0.0f);
+				hsEngine.AddScore (transform.position.x);
+				Invoke ("ManageMouse", 1.9f);
 			}
 		}
 
@@ -30,6 +31,13 @@ public class HsMouseRight4_2 : MonoBehaviour {
 		}
 		this.transform.Translate (new Vector3 (0.0f,-speed * Time.deltaTime,0.0f));// Make fall
 		this.isOutOfScreen ();
+	}
+
+	private void ManageMouse(){
+		Destroy (this.gameObject);
+		hsEngine.AddScore (transform.position.x);
+		hsEngine.RemoveOneKey ();
+		hsEngine.Strike ();
 	}
 
 	private void isOutOfScreen(){

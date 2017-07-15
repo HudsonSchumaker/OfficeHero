@@ -12,7 +12,7 @@ public class HsMouseLeft3_5 : MonoBehaviour {
 	private HsWeek3_5 hsEngine;
 
 	private void Start () {
-		this.speed = 2.6f;
+		this.speed = 3.8f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsEngine = (HsWeek3_5) gameEngine.GetComponent (typeof(HsWeek3_5));
 		Behaviour h = (Behaviour)GetComponent("Halo");

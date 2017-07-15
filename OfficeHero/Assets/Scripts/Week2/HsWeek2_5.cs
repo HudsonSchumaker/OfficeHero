@@ -76,7 +76,7 @@ public class HsWeek2_5 : MonoBehaviour {
 		this.ks = 10.0f;
 		this.y = 5.5f;
 		this.z = 0.0f;
-		this.interval = 1.1f;
+		this.interval = 0.6f;
 		this.isGameShown = true;
 		this.TheLevel ();
 	}

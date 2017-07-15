@@ -7,16 +7,19 @@
 
 public class HsKeyRight3_2 : MonoBehaviour {
 
+	private GameObject keyExclamation;
 	private float speed;
 	private GameObject gameEngine;
 	private HsWeek3_2 hsEngine;
 
 	private void Start () {
-		this.speed = 2.6f;
+		this.speed = 3.4f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsEngine = (HsWeek3_2)gameEngine.GetComponent (typeof(HsWeek3_2));
 		Behaviour h = (Behaviour)GetComponent ("Halo");
 		h.enabled = false;
+		this.keyExclamation = (GameObject) Instantiate(Resources.Load("keyExclamation"));//ExclamationKey
+		this.keyExclamation.transform.Translate (new Vector3(2.0f,0.0f,0.0f));
 	}
 
 	private void Update () {
@@ -33,6 +36,7 @@ public class HsKeyRight3_2 : MonoBehaviour {
 				hsEngine.AddScore (10.0f);//Pre set for play audio
 				hsEngine.RemoveOneKey ();
 				hsEngine.Strike ();
+				Destroy (this.keyExclamation.gameObject);
 				Destroy (this.gameObject);
 			}
 		}
@@ -42,11 +46,13 @@ public class HsKeyRight3_2 : MonoBehaviour {
 			h.enabled = true;
 		}
 		this.transform.Translate (new Vector3 (0.0f, -speed * Time.deltaTime, 0.0f));// Make fall
+		this.keyExclamation.transform.Translate(new Vector3 (0.0f, -speed * Time.deltaTime, 0.0f));// Make fall
 		this.isOutOfScreen ();
 	}
 
 	private void isOutOfScreen () {
 		if (this.transform.position.y < -6.20f) {
+			Destroy (this.keyExclamation.gameObject);
 			Destroy (this.gameObject);
 			Handheld.Vibrate ();
 			hsEngine.RemoveOneKey ();

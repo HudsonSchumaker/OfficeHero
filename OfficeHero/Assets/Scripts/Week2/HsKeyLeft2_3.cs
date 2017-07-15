@@ -13,7 +13,7 @@ public class HsKeyLeft2_3 : MonoBehaviour {
 	private HsWeek2_3 hsEngine;
 
 	private void Start () {
-		this.speed = 2.8f;
+		this.speed = 3.2f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsEngine = (HsWeek2_3)gameEngine.GetComponent (typeof(HsWeek2_3));
 		Behaviour h = (Behaviour)GetComponent ("Halo");
@@ -37,7 +37,7 @@ public class HsKeyLeft2_3 : MonoBehaviour {
 				hsEngine.RemoveOneKey ();
 				hsEngine.Strike ();
 				Destroy (this.gameObject);
-				Destroy (keyExclamation.gameObject);
+				Destroy (this.keyExclamation.gameObject);
 			}
 		}
 

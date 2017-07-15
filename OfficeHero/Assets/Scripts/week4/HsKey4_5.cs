@@ -12,7 +12,7 @@ public class HsKey4_5 : MonoBehaviour {
 	private HsWeek4_5 hsEngine;
 
 	private void Start () {
-		this.speed = 2.6f;
+		this.speed = 4.0f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsEngine = (HsWeek4_5) gameEngine.GetComponent (typeof(HsWeek4_5));
 		Behaviour h = (Behaviour)GetComponent("Halo");

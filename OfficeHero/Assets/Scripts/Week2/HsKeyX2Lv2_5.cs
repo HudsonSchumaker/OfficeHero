@@ -12,7 +12,7 @@ public class HsKeyX2Lv2_5 : MonoBehaviour {
 	private HsWeek2_5 hsEngine;
 
 	private void Start () {
-		this.speed = 2.9f;
+		this.speed = 3.5f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsEngine = (HsWeek2_5) gameEngine.GetComponent (typeof(HsWeek2_5));
 	}
@@ -37,7 +37,6 @@ public class HsKeyX2Lv2_5 : MonoBehaviour {
 		if(this.transform.position.y < -6.20f) {
 			Destroy (this.gameObject);
 			Handheld.Vibrate();
-			hsEngine.RemoveOneKey ();
 		}
 	}
 }

@@ -13,7 +13,7 @@ public class HsKeyRight2_3 : MonoBehaviour {
 	private HsWeek2_3 hsEngine;
 
 	private void Start () {
-		this.speed = 2.8f;
+		this.speed = 3.2f;
 		this.gameEngine = GameObject.FindGameObjectWithTag ("MainCamera");
 		this.hsEngine = (HsWeek2_3)gameEngine.GetComponent (typeof(HsWeek2_3));
 		Behaviour h = (Behaviour)GetComponent ("Halo");
@@ -36,6 +36,7 @@ public class HsKeyRight2_3 : MonoBehaviour {
 				hsEngine.AddScore (10.0f);//Pre set for play audio
 				hsEngine.RemoveOneKey ();
 				hsEngine.Strike ();
+				Destroy (this.keyExclamation.gameObject);
 				Destroy (this.gameObject);
 			}
 		}
@@ -51,8 +52,8 @@ public class HsKeyRight2_3 : MonoBehaviour {
 
 	private void isOutOfScreen () {
 		if (this.transform.position.y < -6.20f) {
+			Destroy (this.keyExclamation.gameObject);
 			Destroy (this.gameObject);
-			Destroy (keyExclamation.gameObject);
 			Handheld.Vibrate ();
 			hsEngine.RemoveOneKey ();
 			hsEngine.Error ();

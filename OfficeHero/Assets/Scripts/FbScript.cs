@@ -11,6 +11,9 @@ using UnityEngine.SceneManagement;
 
 public class FbScript : MonoBehaviour {
 
+
+	public GameObject loading;
+
 	private void Awake (){
 		if (!FB.IsInitialized) {
 			FB.Init(InitCallback, OnHideUnity);
@@ -20,6 +23,7 @@ public class FbScript : MonoBehaviour {
 	}
 
 	public void FBLogin(){
+		loading.SetActive (true);
 		var perms = new List<string>(){"public_profile"};
 		FB.LogInWithReadPermissions(perms, AuthCallback);
 	}
@@ -28,8 +32,7 @@ public class FbScript : MonoBehaviour {
 		if (FB.IsLoggedIn) {
 			var aToken = Facebook.Unity.AccessToken.CurrentAccessToken;
 			Debug.Log(aToken.UserId);
-			FB.API ("/me?fields=id,name,email", HttpMethod.GET, DisplayUserName);
-
+			FB.API ("/me?fields=id,name", HttpMethod.GET, DisplayUserName);
 		} else {
 			//Debug.Log("User cancelled login");
 		}
@@ -38,8 +41,7 @@ public class FbScript : MonoBehaviour {
 	public void DisplayUserName(IResult result){
 		PlayerPrefs.SetString ("id", (string)result.ResultDictionary["id"]);
 		PlayerPrefs.SetString ("playerName",(string) result.ResultDictionary["name"]);
-		PlayerPrefs.SetString ("playerEmail",(string) result.ResultDictionary["email"]);
-
+		PlayerPrefs.SetString ("playerEmail","");
 		SceneManager.LoadScene("_Endless");
 	}
 
