@@ -24,7 +24,7 @@ public class HsMouseLeft3_2 : MonoBehaviour {
 			if (Input.acceleration.x < 0) {
 				transform.Translate (Input.acceleration.x * Time.deltaTime*14, 0.0f, 0.0f);
 				hsEngine.AddScore (transform.position.x);
-				Invoke ("ManageMouse", 1.9f);
+				Invoke ("ManageMouse", 0.1f);
 			}
 		}
 

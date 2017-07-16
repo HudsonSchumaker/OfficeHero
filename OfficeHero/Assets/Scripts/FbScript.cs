@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Facebook.Unity;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,7 @@ public class FbScript : MonoBehaviour {
 
 
 	public GameObject loading;
+	public Button btLogin;
 
 	private void Awake (){
 		if (!FB.IsInitialized) {
@@ -23,7 +25,8 @@ public class FbScript : MonoBehaviour {
 	}
 
 	public void FBLogin(){
-		loading.SetActive (true);
+		this.loading.SetActive (true);
+		this.btLogin.gameObject.SetActive (false);
 		var perms = new List<string>(){"public_profile"};
 		FB.LogInWithReadPermissions(perms, AuthCallback);
 	}
@@ -31,8 +34,9 @@ public class FbScript : MonoBehaviour {
 	private void AuthCallback (ILoginResult result) {
 		if (FB.IsLoggedIn) {
 			var aToken = Facebook.Unity.AccessToken.CurrentAccessToken;
-			Debug.Log(aToken.UserId);
+			//Debug.Log(aToken.UserId);
 			FB.API ("/me?fields=id,name", HttpMethod.GET, DisplayUserName);
+
 		} else {
 			//Debug.Log("User cancelled login");
 		}
