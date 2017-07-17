@@ -21,7 +21,9 @@ public class HsMouseLeft4_1 : MonoBehaviour {
 			if (Input.acceleration.x < 0) {
 				transform.Translate (Input.acceleration.x * Time.deltaTime*14, 0.0f, 0.0f);
 				hsEngine.AddScore (transform.position.x);
-				Invoke ("ManageMouse", 0.1f);
+				Destroy (this.gameObject);
+				hsEngine.RemoveOneKey ();
+				hsEngine.Strike ();
 			}
 		}
 
@@ -32,13 +34,7 @@ public class HsMouseLeft4_1 : MonoBehaviour {
 		this.transform.Translate (new Vector3 (0.0f,-speed * Time.deltaTime,0.0f));// Make fall
 		this.isOutOfScreen ();
 	}
-
-	private void ManageMouse(){
-		Destroy (this.gameObject);
-		hsEngine.RemoveOneKey ();
-		hsEngine.Strike ();
-	}
-
+		
 	private void isOutOfScreen(){
 		if(this.transform.position.y < -6.20f) {
 			Destroy (this.gameObject);

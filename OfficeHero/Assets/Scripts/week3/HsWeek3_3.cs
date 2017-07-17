@@ -60,7 +60,7 @@ public class HsWeek3_3 : MonoBehaviour {
 
 	private void Start () {
 		AdManager.instance.RemoveBanners ();
-		this.numberOfKeys = 130;
+		this.numberOfKeys = 129;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
 		this.maxErrors = 8;
@@ -79,7 +79,7 @@ public class HsWeek3_3 : MonoBehaviour {
 		this.mouse = 0.0f;
 		this.y = 5.5f;
 		this.z = 0.0f;
-		this.interval = 0.6f;
+		this.interval = 0.56f;
 		this.isGameShown = true;
 		this.TheLevel ();
 	}
@@ -299,6 +299,7 @@ public class HsWeek3_3 : MonoBehaviour {
 
 	public void RemoveOneKey(){
 		numberOfKeys--;
+		//Debug.Log (numberOfKeys);
 	}
 
 	public void Error(){
@@ -353,8 +354,8 @@ public class HsWeek3_3 : MonoBehaviour {
 	}
 
 	private void TheLevel(){	
-		Invoke ("CreateKeyX2", interval*18);//Aqui keyComboX2	
-		Invoke ("CreateKeyX2", interval*48);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*16);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*46);//Aqui keyComboX2	
 		Invoke ("CreateKeyX2", interval*80);//Aqui keyComboX2
 
 		Invoke ("CreateSpacebar", 0.1f);

@@ -63,7 +63,7 @@ public class HsWeek3_5 : MonoBehaviour {
 		this.numberOfKeys = 115;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
-		this.maxErrors = 8;
+		this.maxErrors = 888;
 		this.score = 0;
 		this.strike = 0;
 		this.longStrike = 0;
@@ -79,7 +79,7 @@ public class HsWeek3_5 : MonoBehaviour {
 		this.mouse = 0.0f;
 		this.y = 5.5f;
 		this.z = 0.0f;
-		this.interval = 0.6f;
+		this.interval = 0.5f;
 		this.isGameShown = true;
 		this.TheLevel ();
 	}
@@ -212,23 +212,7 @@ public class HsWeek3_5 : MonoBehaviour {
 			Instantiate (mouseRight, new Vector3 (mouse, y, z), Quaternion.identity);
 		}
 	}
-
-	private void CreateKeyLeft () {
-		if (normalKey == 0) {
-			Instantiate (keyLeft, new Vector3 (x4, y, z), Quaternion.identity);	
-		}else{
-			Instantiate (keyLeftPurple, new Vector3 (x4, y, z), Quaternion.identity);	
-		}
-	}
-
-	private void CreateKeyRight () {
-		if (normalKey == 0) {
-			Instantiate (keyRight, new Vector3 (x1, y, z), Quaternion.identity);	
-		}else{
-			Instantiate (keyRightPurple, new Vector3 (x1, y, z), Quaternion.identity);
-		}
-	}
-
+		
 	private void CreateKeyX2 () {
 		Instantiate (keyX2, new Vector3 (x4, y, z), Quaternion.identity);//Atenção aqui
 	}
@@ -366,7 +350,6 @@ public class HsWeek3_5 : MonoBehaviour {
 		Invoke ("CreateKeyX2", interval*18);//Aqui keyComboX2	
 		Invoke ("CreateKeyX2", interval*48);//Aqui keyComboX2
 		Invoke ("CreateKeyX2", interval*78);//Aqui keyComboX2	
-		Invoke ("CreateKeyX2", interval*99);//Aqui keyComboX2	
 
 		Invoke ("CreateEnter2", 0.1f);
 		Invoke ("CreateMouseLeft",interval *2);

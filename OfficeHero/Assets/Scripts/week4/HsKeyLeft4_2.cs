@@ -53,7 +53,7 @@ public class HsKeyLeft4_2 : MonoBehaviour {
 
 	private void isOutOfScreen () {
 		if (this.transform.position.y < -6.20f) {
-			Destroy (this.keyExclamation.gameObject);
+			Destroy (this.keyExclamation.gameObject);//!
 			Destroy (this.gameObject);
 			Handheld.Vibrate ();
 			hsEngine.RemoveOneKey ();

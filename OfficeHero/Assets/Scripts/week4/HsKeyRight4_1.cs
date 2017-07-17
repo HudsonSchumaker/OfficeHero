@@ -37,6 +37,7 @@ public class HsKeyRight4_1 : MonoBehaviour {
 				hsEngine.RemoveOneKey ();
 				hsEngine.Strike ();
 				Destroy (this.gameObject);
+				Destroy (keyExclamation.gameObject);//!
 			}
 		}
 
@@ -44,6 +45,7 @@ public class HsKeyRight4_1 : MonoBehaviour {
 			Behaviour h = (Behaviour)GetComponent ("Halo");
 			h.enabled = true;
 		}
+
 		this.transform.Translate (new Vector3 (0.0f, -speed * Time.deltaTime, 0.0f));// Make fall
 		this.keyExclamation.transform.Translate(new Vector3 (0.0f, -speed * Time.deltaTime, 0.0f));// Make fall
 		this.isOutOfScreen ();
@@ -51,6 +53,7 @@ public class HsKeyRight4_1 : MonoBehaviour {
 
 	private void isOutOfScreen () {
 		if (this.transform.position.y < -6.20f) {
+			Destroy (this.keyExclamation.gameObject);//!
 			Destroy (this.gameObject);
 			Handheld.Vibrate ();
 			hsEngine.RemoveOneKey ();

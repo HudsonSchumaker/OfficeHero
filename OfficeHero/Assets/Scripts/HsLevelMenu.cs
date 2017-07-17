@@ -30,7 +30,7 @@ public class HsLevelMenu : MonoBehaviour {
 			lvl3.interactable = true;
 		}
 		if(lv35 == 1){
-			lvl3.interactable = true;
+			lvl4.interactable = true;
 		}
 		userName.text = PlayerPrefs.GetString ("playerName");
 	}
