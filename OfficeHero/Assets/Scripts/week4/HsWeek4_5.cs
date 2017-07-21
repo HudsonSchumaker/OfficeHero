@@ -52,6 +52,7 @@ public class HsWeek4_5 : MonoBehaviour {
 	private int normalKey;
 	private float x1, x2, x3, x4;
 	private float spb;
+	private float mouse;
 	private float y;
 	private float z;
 	private float interval;
@@ -75,9 +76,10 @@ public class HsWeek4_5 : MonoBehaviour {
 		this.x3 = 0.7f;
 		this.x4 = 2.0f;
 		this.spb = 0.0f;
+		this.mouse = 0.0f;
 		this.y = 5.5f;
 		this.z = 0.0f;
-		this.interval = 0.6f;
+		this.interval = 0.44f;
 		this.isGameShown = true;
 		this.TheLevel ();
 	}
@@ -205,6 +207,24 @@ public class HsWeek4_5 : MonoBehaviour {
 			Instantiate (keyRight, new Vector3 (x1, y, z), Quaternion.identity);	
 		}else{
 			Instantiate (keyRightPurple, new Vector3 (x1, y, z), Quaternion.identity);
+		}
+	}
+
+	private void CreateMouseLeft(){
+		if (normalKey == 0) {
+			Instantiate (mouseLeft, new Vector3 (mouse, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (mouseLeft, new Vector3 (mouse, y, z), Quaternion.identity);
+		}
+	}
+
+	private void CreateMouseRight(){
+		if (normalKey == 0) {
+			Instantiate (mouseRight, new Vector3 (mouse, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (mouseRight, new Vector3 (mouse, y, z), Quaternion.identity);
 		}
 	}
 
@@ -342,10 +362,10 @@ public class HsWeek4_5 : MonoBehaviour {
 	}
 
 	private void TheLevel(){	
-		Invoke ("CreateKeyX2", interval*18);//Aqui keyComboX2	
-		Invoke ("CreateKeyX2", interval*48);//Aqui keyComboX2
-		Invoke ("CreateKeyX2", interval*78);//Aqui keyComboX2	
-		Invoke ("CreateKeyX2", interval*99);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*17);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*50);//Aqui keyComboX2
+		Invoke ("CreateKeyX2", interval*77);//Aqui keyComboX2	
+		Invoke ("CreateKeyX2", interval*97);//Aqui keyComboX2	
 
 		Invoke ("CreateSpacebar", 0.1f);
 		Invoke ("CreateMouseRight",interval *2);
@@ -435,7 +455,7 @@ public class HsWeek4_5 : MonoBehaviour {
 		Invoke ("CreateEnter2", interval *67);
 		Invoke ("CreateKey4", interval *67);
 		Invoke ("CreateEnter2", interval *68);
-		Invoke ("CreateKey2", interval *68);
+		Invoke ("CreateKey1", interval *68);
 		Invoke ("CreateKey3", interval *68);
 		Invoke ("CreateKey4", interval *68);
 		Invoke ("CreateKey1", interval *69);

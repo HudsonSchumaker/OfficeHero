@@ -52,6 +52,7 @@ public class HsWeek4_2 : MonoBehaviour {
 	private int normalKey;
 	private float x1, x2, x3, x4;
 	private float spb;
+	private float mouse;
 	private float y;
 	private float z;
 	private float interval;
@@ -62,7 +63,7 @@ public class HsWeek4_2 : MonoBehaviour {
 		this.numberOfKeys = 122;
 		this.scoreStr.text = "SCORE: " + score;
 		this.error = 0;
-		this.maxErrors = 8;
+		this.maxErrors = 8888;
 		this.score = 0;
 		this.strike = 0;
 		this.longStrike = 0;
@@ -75,9 +76,10 @@ public class HsWeek4_2 : MonoBehaviour {
 		this.x3 = 0.7f;
 		this.x4 = 2.0f;
 		this.spb = 0.0f;
+		this.mouse = 0.0f;
 		this.y = 5.5f;
 		this.z = 0.0f;
-		this.interval = 0.6f;
+		this.interval = 0.5f;
 		this.isGameShown = true;
 		this.TheLevel ();
 	}
@@ -205,6 +207,24 @@ public class HsWeek4_2 : MonoBehaviour {
 			Instantiate (keyRight, new Vector3 (x1, y, z), Quaternion.identity);	
 		}else{
 			Instantiate (keyRightPurple, new Vector3 (x1, y, z), Quaternion.identity);
+		}
+	}
+
+	private void CreateMouseLeft(){
+		if (normalKey == 0) {
+			Instantiate (mouseLeft, new Vector3 (mouse, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (mouseLeft, new Vector3 (mouse, y, z), Quaternion.identity);
+		}
+	}
+
+	private void CreateMouseRight(){
+		if (normalKey == 0) {
+			Instantiate (mouseRight, new Vector3 (mouse, y, z), Quaternion.identity);	
+		}
+		else{
+			Instantiate (mouseRight, new Vector3 (mouse, y, z), Quaternion.identity);
 		}
 	}
 
