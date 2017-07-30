@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AdManager.cs" />
      <Compile Include="Assets\Scripts\FbScript.cs" />
+     <Compile Include="Assets\Scripts\HsArrow.cs" />
      <Compile Include="Assets\Scripts\HsAudioManager.cs" />
      <Compile Include="Assets\Scripts\HsBackground.cs" />
      <Compile Include="Assets\Scripts\HsCredit.cs" />

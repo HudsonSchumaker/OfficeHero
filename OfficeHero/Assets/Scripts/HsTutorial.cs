@@ -60,9 +60,11 @@ public class HsTutorial : MonoBehaviour {
 			image1.SetActive (false);
 			image2.SetActive (false);
 			image3.SetActive (true);
+
 			return;
 		}
 		if (k == -1) {
+			PlayerPrefs.SetInt ("tutorial", 1);
 			SceneManager.LoadScene ("_MainScreen");
 		} 
 	}

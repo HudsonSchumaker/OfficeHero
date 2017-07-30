@@ -15,14 +15,12 @@ public class HsPreWeek1_1 : MonoBehaviour {
 	private float alturaTela;
 	private float larguraTela;
 	private float delay;
-	private SystemLanguage lingua;
 
 	public Text dia;
 	public Text texto;
 
 	private void Start () {
 		AdManager.instance.ShowBanner();
-		this.lingua = Application.systemLanguage;
 		this.delay = 5.0f;
 
 		this.grafico = GetComponent<SpriteRenderer> ();

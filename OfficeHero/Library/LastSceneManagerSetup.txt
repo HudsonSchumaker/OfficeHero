@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_MainScreen.unity
+- path: Assets/_SchumakerTeam.unity
   isLoaded: 1
   isActive: 1
