@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\HsGameOver.cs" />
      <Compile Include="Assets\Scripts\HsInternet.cs" />
      <Compile Include="Assets\Scripts\HsKey.cs" />
+     <Compile Include="Assets\Scripts\HsLanguage.cs" />
      <Compile Include="Assets\Scripts\HsLeaderBoards.cs" />
      <Compile Include="Assets\Scripts\HsLevelMenu.cs" />
      <Compile Include="Assets\Scripts\HsLogin.cs" />
