@@ -1,9 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HsArrow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HsInternet.cs">
     <Files>
-      <File FileName="Assets/Scripts/HsArrow.cs" Line="19" Column="30" />
-      <File FileName="Assets/Scripts/HsTutorial.cs" Line="67" Column="33" />
+      <File FileName="Assets/Scripts/HsNoConnection.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HsEngine.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HsSchumakerTeam.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HsSplash.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HsTitle.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HsTutorial.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HsFinished.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HsLeaderBoards.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HsInternet.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
