@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
 /* 
-	@author Hudson Schumaker
-	@version 1.0.0
+ @author Hudson Schumaker
+ @version 1.0.0
 */
 
 public class HsKey1_2 : MonoBehaviour {
