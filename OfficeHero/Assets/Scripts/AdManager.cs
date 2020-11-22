@@ -5,7 +5,6 @@ using admob;
 	@author Hudson Schumaker
 	@version 1.0.0
 */
-
 public class AdManager : MonoBehaviour {
 
 	public static AdManager instance = null;
