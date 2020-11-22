@@ -1,2 +1,2 @@
 # OfficeHero
-Android game based in guitar hero.<br>
+Android game based on guitar hero.<br>
