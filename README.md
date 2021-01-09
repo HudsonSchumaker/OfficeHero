@@ -1,18 +1,18 @@
 # OfficeHero
 Android game based on guitar hero.<br>
 
-Lvl 1-1 
-"First day at work";
-"Primer dia de trabajo";
-"Primeiro dia no trabalho";
+Lvl 1-1 <br>
+"First day at work" <br>
+"Primer dia de trabajo" <br>
+"Primeiro dia no trabalho"<br>
 
-Lvl1-2
-"It's so easy";
-"Es tan fácil";
-"É tão fácil";
+Lvl1-2 <br>
+"It's so easy" <br>
+"Es tan fácil" <br>
+"É tão fácil"<br>
 
-Lvl1-3
-"So, tap to win!";
+Lvl1-3 <br>
+"So, tap to win!" <br>
 "Por lo tanto, toque para ganar!";
 "Então, toque para ganhar!";
 
