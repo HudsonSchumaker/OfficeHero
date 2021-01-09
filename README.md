@@ -13,13 +13,13 @@ Lvl 1-2 <br>
 
 Lvl 1-3 <br>
 "So, tap to win!" <br>
-"Por lo tanto, toque para ganar!";
-"Então, toque para ganhar!";
+"Por lo tanto, toque para ganar!"<br>
+"Então, toque para ganhar!"<br>
 
-Lvl -4
-"I need one finger to do my job";
-"Necesito un dedo para hacer mi trabajo";
-"Preciso de um dedo para fazer meu trabalho";
+Lvl 1-4 <br>
+"I need one finger to do my job"<br>
+"Necesito un dedo para hacer mi trabajo"<br>
+"Preciso de um dedo para fazer meu trabalho"<br>
 
 Lvl 1-5
 "Friday, yes !!!";
