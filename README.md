@@ -92,9 +92,9 @@ Lvlv 4-3 <br>
 "E continua...";
 
 Lvl 4-4 <br>
-"Coffee, more coffee";
-"Café, más café";
-"Café, mais café";
+"Coffee, more coffee" <br>
+"Café, más café" <br>
+"Café, mais café" <br>
 
 Lvl 4-5 <br>
 "I quit!" <br>
