@@ -61,17 +61,17 @@ Lvl 3-2
 "Hora extra";
 "Hora extra";
 
-Lvl3-3
+Lvl 3-3
 "My favorite headache";
 "Mi dolor de cabeza favorito";
 "Minha dor de cabeça favorita";
 
-Lvl3-4
+Lvl 3-4
 "Fast and furious (to tap)";
 "Rápido y furioso (para tocar)";
 "Rápido e furioso (para apertar)";
 
-Lvl3-5
+Lvl 3-5
 "Final week, here I go";            
 "Semana final, aquí voy";
 "Semana final, aqui vou eu";
