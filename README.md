@@ -76,27 +76,27 @@ Lvl 3-5 <br>
 "Semana final, aquí voy";
 "Semana final, aqui vou eu";
 
-Lvl 4-1 
+Lvl 4-1 <br>
 "Money where did you go?";
 "Dinero a donde fuiste?";
 "Dinheiro onde você foi?";
 
-Lvl 4-2
+Lvl 4-2 <br>
 "So tired...";
 "Tan cansado...";
 "Tão cansado...";
 
-Lvlv 4-3
+Lvlv 4-3 <br>
 "And continue...";
 "Y continúe...";
 "E continua...";
 
-Lvl 4-4
+Lvl 4-4 <br>
 "Coffee, more coffee";
 "Café, más café";
 "Café, mais café";
 
-Lvl 4-5
+Lvl 4-5 <br>
 "I quit!";
 "¡Lo dejo!";
 "Eu me demito!";
