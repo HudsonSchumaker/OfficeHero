@@ -41,12 +41,12 @@ Lvl 2-3
 "Date prisa, el jefe está aquí!";
 "Apresse-se, o chefe está aqui!";
 
-Lvl 2-4
-"Faster like wind";
-"Más rápido que el viento";
-"Mais rápido que o vento";
+Lvl 2-4 <br>
+"Faster like wind" <br>
+"Más rápido que el viento" <br>
+"Mais rápido que o vento" <br>
 
-Lvl 2-5
+Lvl 2-5 <br>
 "I can do this everyday";
 "Puedo hacer esto todos los días";
 "Eu posso fazer isso todos os dias";
