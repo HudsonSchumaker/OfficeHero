@@ -21,15 +21,15 @@ Lvl 1-4 <br>
 "Necesito un dedo para hacer mi trabajo"<br>
 "Preciso de um dedo para fazer meu trabalho"<br>
 
-Lvl 1-5
-"Friday, yes !!!";
-"¡Viernes, sí !";
-"Sexta-feira, eba!!!";
+Lvl 1-5 <br>
+"Friday, yes !!!"<br>
+"¡Viernes, sí !" <br>
+"Sexta-feira, eba!!!"<br>
 
-Lvl 2-1
-"let's go again !";
-"otra vez";
-"Tudo de novo";
+Lvl 2-1<br>
+"let's go again !"<br>
+"otra vez"<br>
+"Tudo de novo"<br>
 
 Lvl 2-2
 "Reports for what?";
