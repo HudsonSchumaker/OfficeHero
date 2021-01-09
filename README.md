@@ -31,17 +31,17 @@ Lvl 2-1
 "otra vez";
 "Tudo de novo";
 
-Lvl2-2
+Lvl 2-2
 "Reports for what?";
 "¿Informes para qué?";
 "Relatórios para o quê?";
 
-Lvl2-3
+Lvl 2-3
 "Hurry up, the boss is here!";
 "Date prisa, el jefe está aquí!";
 "Apresse-se, o chefe está aqui!";
 
-Lvl2-4
+Lvl 2-4
 "Faster like wind";
 "Más rápido que el viento";
 "Mais rápido que o vento";
