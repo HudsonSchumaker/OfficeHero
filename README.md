@@ -87,9 +87,9 @@ Lvl 4-2 <br>
 "Tão cansado...";
 
 Lvlv 4-3 <br>
-"And continue...";
-"Y continúe...";
-"E continua...";
+"And continue..." <br>
+"Y continúe..." <br>
+"E continua..." <br>
 
 Lvl 4-4 <br>
 "Coffee, more coffee" <br>
