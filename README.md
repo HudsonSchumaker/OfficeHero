@@ -6,27 +6,27 @@ Lvl 1-1 <br>
 "Primer dia de trabajo" <br>
 "Primeiro dia no trabalho"<br>
 
-Lvl1-2 <br>
+Lvl 1-2 <br>
 "It's so easy" <br>
 "Es tan fácil" <br>
 "É tão fácil"<br>
 
-Lvl1-3 <br>
+Lvl 1-3 <br>
 "So, tap to win!" <br>
 "Por lo tanto, toque para ganar!";
 "Então, toque para ganhar!";
 
-Lvl1-4
+Lvl -4
 "I need one finger to do my job";
 "Necesito un dedo para hacer mi trabajo";
 "Preciso de um dedo para fazer meu trabalho";
 
-Lvl1-5
+Lvl 1-5
 "Friday, yes !!!";
 "¡Viernes, sí !";
 "Sexta-feira, eba!!!";
 
-Lvl2-1
+Lvl 2-1
 "let's go again !";
 "otra vez";
 "Tudo de novo";
