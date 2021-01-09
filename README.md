@@ -97,6 +97,6 @@ Lvl 4-4 <br>
 "Café, mais café";
 
 Lvl 4-5 <br>
-"I quit!";
-"¡Lo dejo!";
-"Eu me demito!";
+"I quit!" <br>
+"¡Lo dejo!" <br>
+"Eu me demito!" <br>
