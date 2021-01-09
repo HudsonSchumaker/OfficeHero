@@ -31,12 +31,12 @@ Lvl 2-1<br>
 "otra vez"<br>
 "Tudo de novo"<br>
 
-Lvl 2-2
+Lvl 2-2 <br>
 "Reports for what?";
 "¿Informes para qué?";
 "Relatórios para o quê?";
 
-Lvl 2-3
+Lvl 2-3 <br>
 "Hurry up, the boss is here!";
 "Date prisa, el jefe está aquí!";
 "Apresse-se, o chefe está aqui!";
@@ -51,32 +51,32 @@ Lvl 2-5 <br>
 "Puedo hacer esto todos los días";
 "Eu posso fazer isso todos os dias";
 
-Lvl 3-1
+Lvl 3-1 <br>
 "Promotion!";
 "¡Promoción!";
 "Promoção!";
 
-Lvl 3-2
+Lvl 3-2 <br>
 "Extra hour?";
 "Hora extra";
 "Hora extra";
 
-Lvl 3-3
+Lvl 3-3 <br>
 "My favorite headache";
 "Mi dolor de cabeza favorito";
 "Minha dor de cabeça favorita";
 
-Lvl 3-4
+Lvl 3-4 <br>
 "Fast and furious (to tap)";
 "Rápido y furioso (para tocar)";
 "Rápido e furioso (para apertar)";
 
-Lvl 3-5
+Lvl 3-5 <br>
 "Final week, here I go";            
 "Semana final, aquí voy";
 "Semana final, aqui vou eu";
 
-Lvl 4-1
+Lvl 4-1 
 "Money where did you go?";
 "Dinero a donde fuiste?";
 "Dinheiro onde você foi?";
