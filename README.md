@@ -46,17 +46,17 @@ Lvl 2-4
 "Más rápido que el viento";
 "Mais rápido que o vento";
 
-Lvl2-5
+Lvl 2-5
 "I can do this everyday";
 "Puedo hacer esto todos los días";
 "Eu posso fazer isso todos os dias";
 
-Lvl3-1
+Lvl 3-1
 "Promotion!";
 "¡Promoción!";
 "Promoção!";
 
-Lvl3-2
+Lvl 3-2
 "Extra hour?";
 "Hora extra";
 "Hora extra";
