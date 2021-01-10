@@ -67,9 +67,9 @@ Lvl 3-3 <br>
 "Minha dor de cabeça favorita"<br>
 
 Lvl 3-4 <br>
-"Fast and furious (to tap)";
-"Rápido y furioso (para tocar)";
-"Rápido e furioso (para apertar)";
+"Fast and furious (to tap)"<br>
+"Rápido y furioso (para tocar)"<br>
+"Rápido e furioso (para apertar)"<br>
 
 Lvl 3-5 <br>
 "Final week, here I go";            
