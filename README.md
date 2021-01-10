@@ -82,9 +82,9 @@ Lvl 4-1 <br>
 "Dinheiro onde você foi?";
 
 Lvl 4-2 <br>
-"So tired...";
-"Tan cansado...";
-"Tão cansado...";
+"So tired..."<br>
+"Tan cansado..."<br>
+"Tão cansado..."<br>
 
 Lvlv 4-3 <br>
 "And continue..." <br>
