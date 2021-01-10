@@ -62,9 +62,9 @@ Lvl 3-2 <br>
 "Hora extra"<br>
 
 Lvl 3-3 <br>
-"My favorite headache";
-"Mi dolor de cabeza favorito";
-"Minha dor de cabeça favorita";
+"My favorite headache"<br>
+"Mi dolor de cabeza favorito"<br>
+"Minha dor de cabeça favorita"<br>
 
 Lvl 3-4 <br>
 "Fast and furious (to tap)";
