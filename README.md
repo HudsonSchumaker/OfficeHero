@@ -77,9 +77,9 @@ Lvl 3-5 <br>
 "Semana final, aqui vou eu" <br>
 
 Lvl 4-1 <br>
-"Money where did you go?";
-"Dinero a donde fuiste?";
-"Dinheiro onde você foi?";
+"Money where did you go?" <br>
+"Dinero a donde fuiste?" <br>
+"Dinheiro onde você foi?" <br>
 
 Lvl 4-2 <br>
 "So tired..."<br>
