@@ -47,9 +47,9 @@ Lvl 2-4 <br>
 "Mais rápido que o vento" <br>
 
 Lvl 2-5 <br>
-"I can do this everyday";
-"Puedo hacer esto todos los días";
-"Eu posso fazer isso todos os dias";
+"I can do this everyday"<br>
+"Puedo hacer esto todos los días"<br>
+"Eu posso fazer isso todos os dias"<br>
 
 Lvl 3-1 <br>
 "Promotion!";
