@@ -32,9 +32,9 @@ Lvl 2-1<br>
 "Tudo de novo"<br>
 
 Lvl 2-2 <br>
-"Reports for what?";
-"¿Informes para qué?";
-"Relatórios para o quê?";
+"Reports for what?"<br>
+"¿Informes para qué?"<br>
+"Relatórios para o quê?"<br>
 
 Lvl 2-3 <br>
 "Hurry up, the boss is here!"<br>
