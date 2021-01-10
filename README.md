@@ -72,9 +72,9 @@ Lvl 3-4 <br>
 "Rápido e furioso (para apertar)"<br>
 
 Lvl 3-5 <br>
-"Final week, here I go";            
-"Semana final, aquí voy";
-"Semana final, aqui vou eu";
+"Final week, here I go" <br>            
+"Semana final, aquí voy" <br>
+"Semana final, aqui vou eu" <br>
 
 Lvl 4-1 <br>
 "Money where did you go?";
