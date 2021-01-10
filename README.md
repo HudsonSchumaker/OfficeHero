@@ -37,9 +37,9 @@ Lvl 2-2 <br>
 "Relatórios para o quê?";
 
 Lvl 2-3 <br>
-"Hurry up, the boss is here!";
-"Date prisa, el jefe está aquí!";
-"Apresse-se, o chefe está aqui!";
+"Hurry up, the boss is here!"<br>
+"Date prisa, el jefe está aquí!"<br>
+"Apresse-se, o chefe está aqui!"<br>
 
 Lvl 2-4 <br>
 "Faster like wind" <br>
