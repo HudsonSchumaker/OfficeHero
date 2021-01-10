@@ -52,9 +52,9 @@ Lvl 2-5 <br>
 "Eu posso fazer isso todos os dias"<br>
 
 Lvl 3-1 <br>
-"Promotion!";
-"¡Promoción!";
-"Promoção!";
+"Promotion!"<br>
+"¡Promoción!"<br>
+"Promoção!"<br>
 
 Lvl 3-2 <br>
 "Extra hour?";
