@@ -57,9 +57,9 @@ Lvl 3-1 <br>
 "Promoção!"<br>
 
 Lvl 3-2 <br>
-"Extra hour?";
-"Hora extra";
-"Hora extra";
+"Extra hour?"<br>
+"Hora extra"<br>
+"Hora extra"<br>
 
 Lvl 3-3 <br>
 "My favorite headache";
