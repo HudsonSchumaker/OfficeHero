@@ -3,8 +3,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 /* 
-	@author Hudson Schumaker
-	@version 1.0.0
+   @author Hudson Schumaker
+   @version 1.0.0
 */
 
 public class HsPreWeek1_1 : MonoBehaviour {
