@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 /* 
+   SchumakerTeam
    @author Hudson Schumaker
    @version 1.0.0
 */
