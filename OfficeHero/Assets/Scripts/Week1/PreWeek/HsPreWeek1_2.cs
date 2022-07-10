@@ -3,8 +3,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Advertisements;
 
 /* 
-	@author Hudson Schumaker
-	@version 1.0.0
+   SchumakerTeam
+   @author Hudson Schumaker
+   @version 1.0.0
 */
 
 public class HsPreWeek1_2 : MonoBehaviour {
