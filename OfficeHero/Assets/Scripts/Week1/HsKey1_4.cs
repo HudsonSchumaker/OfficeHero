@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /* 
+ SchumakerTeam
  @author Hudson Schumaker
  @version 1.0.0
 */
