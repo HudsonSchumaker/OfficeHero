@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Advertisements;
 
 /* 
+	SchumakerTeam
 	@author Hudson Schumaker
 	@version 1.0.0
 */
